@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - echo "Deploying personal site to https://tristan957.gitlab.io/me"
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
