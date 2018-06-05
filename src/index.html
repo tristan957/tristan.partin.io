@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" /> 
+  <link href="resources/css/styling.css" rel="stylesheet" type="text/css" />
+  <title>Tristan Partin</title>
+</head>
+<body>
+  <div class="topnav">
+    <a class="name" href="#home">Tristan Partin</a>
+    <a href="#contact">Contact</a>
+    <a href="#news">Experience</a>
+    <a href="#about">About</a>
+  </div>
+  <div id="background">
+    <div id="section-container">
+      <div class="section" id="home">
+        <div class="home" id="intro">
+          <h1>Tristan Partin</h1>
+          <p>
+            Computer Engineer<br/>
+            Texas A&M University<br/>
+            Class of 2019
+          </p>
+        </div>
+        <img class="home" id="headshot" src="./resources/images/lower_quality_headshot.jpg" alt="Headshot" />
+      </div>
+      <div class="section" id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a senior computer engineering major at Texas A&M. I have a focus in software development which includes a knowledge of C, C++, Java, Python, Go, and Rust.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script>
+    let background = document.getElementById("background");
+    let dimensions = background.getClientRects()[0];
+    let pattern = Trianglify({
+      width: dimensions.width,
+      height: dimensions.height,
+      x_colors: ["69D2E7", "A7DBD8", "E0E4CC", "F38630", "FA6900"],
+      variance: "1",
+      cell_size: 100
+    });
+    background.appendChild(pattern.svg())
+  </script>
+</body>
+</html>

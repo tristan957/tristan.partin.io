@@ -1,0 +1,92 @@
+* {
+    font-family: 'Ubuntu', 'Titillium Web', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.topnav {
+    background-color: #292961;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.topnav a {
+    padding: 7px !important;
+    margin: 7px;
+    float: right;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    transition: all .35s ease;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #4B4B7E;
+    border-radius: 4%;
+}
+
+.topnav a.name {
+    float: left;
+}
+
+#section-container {
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    z-index: 1;
+}
+
+.section {
+    height: 100vh;
+}
+
+#background {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about p {
+    width: 75%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#headshot {
+    border-radius: 1.5%;
+    vertical-align: 50%;
+    height: 40%;
+    /* box-shadow: 10px 10px 5px #454545; */
+}
+
+#intro {
+    /* display: inline-block; */
+}
