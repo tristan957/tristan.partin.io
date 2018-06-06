@@ -13,46 +13,33 @@ body {
 }
 
 .topnav {
-    background-color: #292961;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
-    overflow: hidden;
     z-index: 5;
     position: fixed;
     left: 0;
     right: 0;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .topnav a {
     padding: 7px !important;
-    margin: 7px;
-    float: right;
-    color: #FFFFFF;
+    color: black;
     text-align: center;
     padding: 14px 14px;
     text-decoration: none;
     transition: all .35s ease;
     font-size: 17px;
+    border-bottom: solid transparent 2px;
 }
 
 .topnav a:hover {
-    background-color: #4B4B7E;
-    border-radius: 4%;
+    border-bottom-color: black;
 }
 
-.topnav a.name {
-    float: left;
-}
-
-#section-container {
-    position: absolute;
-    overflow-y: scroll;
-    height: 100%;
-    z-index: 1;
-}
-
-.section {
-    height: 100vh;
-}
 
 #background {
     position: relative;
@@ -61,32 +48,103 @@ body {
     padding: 0;
 }
 
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+#section-container {
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
 }
 
-#about p {
-    width: 75%;
+.section {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    width: 100%;
     text-align: center;
-    font-size: 30px;
+    text-justify: center;
+    /* width: 10%; */
+    padding: 40px;
+}
+
+.header hr {
+    border: 0;
+    border-bottom: 2px dashed black;
+    width: 50%;
 }
 
 #home {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 #headshot {
-    border-radius: 1.5%;
     vertical-align: 50%;
     height: 40%;
-    /* box-shadow: 10px 10px 5px #454545; */
+    border-bottom: 0 none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    padding: 10px;
 }
 
-#intro {
-    /* display: inline-block; */
+#about {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#funny {
+    width: 550px;
+    height: auto;
+    border-bottom: 0 none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+#about #paragraphs div {
+    text-align: center;
+}
+
+#about #paragraphs p {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+}
+
+#experience {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#exp-set {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.exp-card {
+    margin: 20px;
+    text-align: center;
+}
+
+.exp-card img {
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.exp-card h4, h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.exp-card ul {
+    text-align: left;
 }

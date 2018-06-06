@@ -11,10 +11,12 @@
 </head>
 <body>
   <div class="topnav">
-    <a class="name" href="#home">Tristan Partin</a>
-    <a href="#contact">Contact</a>
-    <a href="#news">Experience</a>
-    <a href="#about">About</a>
+    <div id="name"><a href="#home">Tristan Partin</a></div>
+    <div id="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
   <div id="background">
     <div id="section-container">
@@ -27,13 +29,71 @@
             Class of 2019
           </p>
         </div>
-        <img class="home" id="headshot" src="./resources/images/lower_quality_headshot.jpg" alt="Headshot" />
+        <img class="home" id="headshot" src="./resources/images/headshot.jpg" alt="Headshot" />
       </div>
+      <div>
       <div class="section" id="about">
-        <h2>About Me</h2>
-        <p>
-          I am a senior computer engineering major at Texas A&M. I have a focus in software development which includes a knowledge of C, C++, Java, Python, Go, and Rust.
-        </p>
+        <div class="header">
+          <h2>About</h2>
+          <hr />
+        </div>
+        <div id="paragraphs">
+          <p>
+            My name is Tristan Partin. I am a senior at Texas A&M University. This upcoming May, I will be graduating
+            with a Bachelor of Science in Computer Engineering, along with Cybersecurity and Math minors.
+          </p>
+          <img id="funny" src="./resources/images/family.jpg" alt="Family"/>
+          <p>
+            I am seeking a full time job opportunity starting the summer of 2019. My passions include systems 
+            programming, performant computing, and backend web development. In my free time, I like to teach 
+            myself new technologies and concepts related to my field. When I am not in front of a computer, I 
+            enjoy playing basketball and hanging out with my friends.
+          </p>
+          <p>
+            Free and open source software is at the center of my computing mindset. I believe it makes the world a 
+            much better place. As a contributor to many open source projects, the developers and communities that I have 
+            come across have helped me become the developer I am today. To those that contribute to a free and open 
+            source world, I raise a glass 🍺.
+          </p>
+        </div>
+      </div>
+      <div class="section" id="experience">
+        <div class="header">
+          <h2>Experience</h2>
+          <hr />
+        </div>
+        <div id="exp-set">
+          <div class="exp-card" id="ni">
+            <img src="./resources/images/ni.png" alt="National Instruments" />
+            <h4>Software Engineering Intern</h4>
+            <h5>National Instruments</h5>
+            <ul>
+              <li>
+                Hello World
+              </li>
+            </ul>
+          </div>
+          <div class="exp-card" id="expero">
+            <img src="./resources/images/expero.png" alt="Expero" />
+            <h4>Junior Software Developer</h4>
+            <h5>Expero</h5>
+            <ul>
+              <li>
+                Hello World
+              </li>
+            </ul>
+          </div>
+          <div class="exp-card" id="bah">
+            <img src="./resources/images/bah.png" alt="Booz Allen Hamilton" />
+            <h4>Software Engineering Intern</h4>
+            <h5>Booz Allen Hamilton</h5>
+            <ul>
+              <li>
+                Hello World
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
