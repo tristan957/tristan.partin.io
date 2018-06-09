@@ -20,16 +20,17 @@ body {
     right: 0;
     padding: 10px 20px;
     flex-wrap: wrap;
+    height: 30px;
 }
 
 .topnav a {
-    padding: 7px !important;
     color: black;
     text-align: center;
-    padding: 14px 14px;
+    padding: 7px 14px;
     text-decoration: none;
     transition: all .35s ease;
     font-size: 17px;
+    /* border: solid black 2px; */
     border-bottom: solid transparent 2px;
 }
 
@@ -48,6 +49,7 @@ body {
 #section-container {
     position: absolute;
     overflow-y: scroll;
+    padding: 0px 40px;
     height: 100%;
 }
 
@@ -120,19 +122,25 @@ body {
 }
 
 #exp-set {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-gap: 30px;
+    /* grid-template-columns: repeat(auto-fit, 3); */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: space-between;
+    align-content: center;
 }
 
 .exp-card {
-    margin: 20px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .exp-card img {
     height: 100px;
-    display: block;
+    display: table;
     margin: auto;
 }
 
@@ -143,4 +151,50 @@ body {
 
 .exp-card ul {
     text-align: left;
+}
+
+.exp-card .actions {
+    list-style-type: square;
+    /* list-style-position: outside; */
+    list-style-position: inside;
+}
+
+.exp-card .actions li {
+    margin: 10px auto;
+    line-height: 1.25;
+}
+
+#projects {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.proj-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.proj-link {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 30px;
+    border-bottom: 0 none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    transition: all 0.35 ease;
+}
+
+.proj-link:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.proj-link img {
+    height: 250px;
+    width: auto;
+}
+
+.proj-link h4 {
+    margin-bottom: 0px;
 }
