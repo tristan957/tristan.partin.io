@@ -4,143 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" /> 
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="resources/css/styling.css" rel="stylesheet" type="text/css" />
   <title>Tristan Partin</title>
 </head>
 <body>
-  <div class="topnav">
-    <div id="name"><a href="#home">Tristan Partin</a></div>
+  <nav class="topnav">
+    <div id="homepage"><a href="#home">Tristan Partin</a></div>
     <div id="links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
+  </nav>
+
+  <div id="page-content">
+    <div id="summary" class="card">
+        <div id="left">
+          <img id="headshot" src="./resources/images/headshot.jpg" alt="Headshot" />
+          <a id="resume" href="./resources/docs/resume.pdf" target="_blank">Resume</a>
+        </div>
+        <div id="right">
+          <div id="header">
+            <div id="name-with-profiles">
+              <div id="name-container">
+                <h1 id="name">Tristan Partin</h1>
+              </div>
+              <div id="profiles">
+                <a href="https://github.com/tristan957"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://gitlab.com/tristan957"><i class="fab fa-gitlab fa-lg"></i></a>
+                <a href="https://linkedin.com/in/tristan-partin"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://dev.to/tristan957"><i class="fab fa-dev fa-lg"></i></a>
+              </div>
+            </div>
+            <h2 id="subtitle">Junior Software Engineer</h2>
+          </div>
+          <hr />
+          <p id="about">
+              I am a senior at Texas A&M University with a passion for software engineering.
+              I have experience in C/C++, Python, Java, and Go.
+              I am currently teaching myself Rust on the side.
+              My current professional areas of interest are working in open source communities, embedded systems, and backend web development.
+          </p>
+        </div>
+      </div>
   </div>
-  <div id="background">
-    <div id="section-container">
-      <div class="section" id="home">
-        <div class="home" id="intro">
-          <h1>Tristan Partin</h1>
-          <p>
-            Computer Engineer<br/>
-            Texas A&M University<br/>
-            Class of 2019
-          </p>
-        </div>
-        <img class="home" id="headshot" src="./resources/images/headshot.jpg" alt="Headshot" />
-      </div>
-      <div>
-      <div class="section" id="about">
-        <div class="header">
-          <h2>About</h2>
-          <hr />
-        </div>
-        <div id="paragraphs">
-          <p>
-            My name is Tristan Partin. I am a senior at Texas A&M University. This upcoming May, I will be graduating
-            with a Bachelor of Science in Computer Engineering, along with Cybersecurity and Math minors.
-          </p>
-          <img id="funny" src="./resources/images/family.jpg" alt="Family"/>
-          <p>
-            I am seeking a full time job opportunity starting the summer of 2019. My passions include systems 
-            programming, performant computing, and backend web development. In my free time, I like to teach 
-            myself new technologies and concepts related to my field. When I am not in front of a computer, I 
-            enjoy playing basketball and hanging out with my friends.
-          </p>
-          <p>
-            Free and open source software is at the center of my computing mindset. I believe it makes the world a 
-            much better place. As a contributor to many open source projects, the developers and communities that I have 
-            come across have helped me become the developer I am today. To those that contribute to a free and open 
-            source world, I raise a glass 🍺.
-          </p>
-        </div>
-      </div>
-      <div class="section" id="experience">
-        <div class="header">
-          <h2>Experience</h2>
-          <hr />
-        </div>
-        <div id="exp-set">
-          <div class="exp-card" id="ni">
-            <img src="./resources/images/ni.png" alt="National Instruments" />
-            <h5>National Instruments</h5>
-            <h4>Software Engineering Intern</h4>
-            <ul class="actions">
-              <li>
-                Synchronized internal times between NI's C-series modules and chassis in order to 
-                improve customer experience when receiving data and finding time correlation 
-                between modules.
-              </li>
-            </ul>
-          </div>
-          <div class="exp-card" id="expero">
-            <img src="./resources/images/expero.png" alt="Expero" />
-            <h5>Expero</h5>
-            <h4>Junior Software Developer</h4>
-            <ul class="actions">
-              <li>
-                Created a PDF microservice using Amazon Web Services S3, Java, and iText7.
-              </li>
-              <li>
-                Built a proof of concept ASP.NET Core application using Microsoft's CosmosDB Gremlin API.
-              </li>
-            </ul>
-          </div>
-          <div class="exp-card" id="bah">
-            <img src="./resources/images/bah.png" alt="Booz Allen Hamilton" />
-            <h5>Booz Allen Hamilton</h5>
-            <h4>Software Engineering Intern</h4>
-            <ul class="actions">
-              <li>
-                Worked under the NASA Mission and Program Integration contract for NASA. 
-                Translated a SharePoint table of all payloads/systems, hardware configurations, 
-                protrusions and overlaps aboard the International Space Station to a relational 
-                database using MariaDB.
-              </li>
-              <li>
-                Wrote a tool to create, read, update and delete (CRUD) items within the database.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="section" id="projects">
-        <div class="header">
-          <h2>Projects</h2>
-          <hr />
-        </div>
-        <div id="proj-set">
-          <div class="proj-link" id="jem">
-            <img src="./resources/images/jem.png" alt="Java Environment Manager" />
-            <h4>Java Environment Manager</h4>
-          </div>
-          <div class="proj-link" id="fwf">
-            <img src="./resources/images/fwf.png" alt="Flix with Friends" />
-            <h4>Flix with Friends</h4>
-          </div>
-          <div class="proj-link" id="tunes">
-            <img src="./resources/images/tunes.png" alt="Digit-al Tunes" />
-            <h4>Digit-al Tunes</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-  <script>
-    let background = document.getElementById("background");
-    let dimensions = background.getClientRects()[0];
-    let pattern = Trianglify({
-      width: dimensions.width,
-      height: dimensions.height,
-      x_colors: ["69D2E7", "A7DBD8", "E0E4CC", "F38630", "FA6900"],
-      variance: "1",
-      cell_size: 100
-    });
-    background.appendChild(pattern.svg())
-  </script>
 </body>
 </html>
