@@ -8,4 +8,4 @@ secrets:
 tasks:
   - deploy: |
       cd tristan.partin.io
-      scp -i ~/.ssh/personal-ec2.pem -r public/* $ec2_box:/var/www/tristan.partin.io
+      scp -o StrictHostKeyChecking=no -i ~/.ssh/personal-ec2.pem -r public/* $ec2_box:/var/www/tristan.partin.io
