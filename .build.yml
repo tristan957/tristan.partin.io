@@ -1,0 +1,11 @@
+image: archlinux
+sources:
+  - https://git.sr.ht/~tristan957/tristan.partin.io
+environment:
+  EC2_BOX: ubuntu@partin.io
+secrets:
+  - 7479e438-adaa-42f6-a774-def5194e2ae3
+tasks:
+  - deploy: |
+      cd tristan.partin.io
+      scp -i ~/.ssh/personal-ec2.pem -r public/* EC2_BOX:/var/www/tristan.partin.io
