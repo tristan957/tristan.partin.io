@@ -1,3 +1,4 @@
+# http://api.html-tidy.org/
 accessibility-check: 3
 clean: yes
 drop-empty-elements: yes
