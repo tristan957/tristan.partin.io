@@ -1,4 +1,7 @@
 image: archlinux
+packages:
+  - go
+  - tidy
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 environment:
@@ -6,6 +9,13 @@ environment:
 secrets:
   - 7479e438-adaa-42f6-a774-def5194e2ae3
 tasks:
+  - setup: |
+      cd tristan.partin.io
+      go build
+  - build: |
+      cd tristan.partin.io
+      ./tristan.partin.io
+      tidy -config tidyrc.yml -m public/index.html
   - deploy: |
       cd tristan.partin.io
-      scp -o StrictHostKeyChecking=no -i ~/.ssh/personal-ec2.pem -r public/* $ec2_box:/var/www/tristan.partin.io
+      # scp -o StrictHostKeyChecking=no -i ~/.ssh/personal-ec2.pem -r public/* $ec2_box:/var/www/tristan.partin.io
