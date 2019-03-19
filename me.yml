@@ -3,3 +3,5 @@ user:
   about: |
     My name is Tristan Partin.
     I love going to school.
+  resume-location: ./resources/docs/resume.pdf
+  picture-location: ./resources/images/headshot.png
