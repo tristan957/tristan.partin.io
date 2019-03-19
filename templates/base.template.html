@@ -1,6 +1,6 @@
 {{define "base"}}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
@@ -8,10 +8,14 @@
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel=
 		"stylesheet">
 		<link href="resources/css/styling.css" rel="stylesheet" type="text/css">
-		<title>{{.User.Name}}</title>
+		<title>
+			{{.User.Name}}
+		</title>
 	</head>
 	<body>
-		<p>{{.User.About}}</p>
+		<p>
+			{{.User.About}}
+		</p>
 	</body>
 </html>
 {{end}}
