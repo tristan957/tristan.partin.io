@@ -1,0 +1,17 @@
+{
+	"[html]": {
+    "editor.tabSize": 2,
+  },
+	"[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "on",
+  },
+	"[yaml]": {
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+	},
+	"files.associations": {
+		".tidyrc": "yaml"
+	},
+	"yaml.format.enable": true,
+}

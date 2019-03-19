@@ -15,7 +15,7 @@ tasks:
   - build: |
       cd tristan.partin.io
       ./tristan.partin.io
-      tidy -config tidyrc.yml -m public/index.html
+      tidy -config .tidyrc -qm public/index.html
   - deploy: |
       cd tristan.partin.io
       # scp -o StrictHostKeyChecking=no -i ~/.ssh/personal-ec2.pem -r public/* $ec2_box:/var/www/tristan.partin.io
