@@ -1,0 +1,13 @@
+baseURL = "https://tristan.partin.io"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Tristan Partin"
+static = ["static"]
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"

@@ -1,0 +1,60 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="{{ .Title }}">
+	<meta
+		name="description"
+		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
+	>
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ .Title }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:image" content="/images/profile.webp">
+	<meta
+		property="og:description"
+		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
+	>
+
+	{{ partial "head_includes.html" . }}
+	{{ range .AlternativeOutputFormats -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	<noscript>
+    <style>
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--color: white;
+					--main-bg-color: #2d2d2d;
+					--consistent-link-color: #378AD3;
+					--content-metadata-color: #d4d4d4;
+					--box-shadow-container-color: #222222;
+					--raised-backgroud-color: #393939;
+				}
+			}
+
+			.no-js {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+
+	<script type="text/javascript">
+		function isDarkModeEnabled() {
+			const siteThemeFromStorage = window.localStorage.getItem("site-theme");
+			return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && (siteThemeFromStorage !== "light")) || siteThemeFromStorage === "dark";
+		}
+	</script>
+
+	<style>
+		.hidden {
+			height: 0;
+		}
+	</style>
+
+	<base href="{{ .Site.BaseURL }}">
+	<title>{{ .Title }}</title>
+	<link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>

@@ -1,0 +1,14 @@
+{
+  "name": "tristan.partin.io",
+  "version": "1.0.0",
+  "description": "My personal website and blog.",
+  "repository": "https://git.sr.ht/~tristan957/tristan.partin.io",
+  "author": "Tristan Partin <tristan@partin.io>",
+  "private": true,
+  "scripts": {
+    "format": "prettier --config .prettierrc.yml --write content/**/**/*.md"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4"
+  }
+}

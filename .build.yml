@@ -1,0 +1,15 @@
+image: alpine/edge
+packages:
+  - hugo
+  - rsync
+sources:
+  - https://git.sr.ht/~tristan957/tristan.partin.io
+environment:
+  ec2_box: ubuntu@partin.io
+secrets:
+  - 7479e438-adaa-42f6-a774-def5194e2ae3
+tasks:
+  - deploy: |
+      cd tristan.partin.io
+      hugo
+      rsync --delete -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/personal-ec2.pem" public/ $ec2_box:/var/www/tristan.partin.io

@@ -1,0 +1,94 @@
+<div id="sidebar" class="box-shadow-container">
+	<picture>
+		{{ $profileWebp := resources.Get "images/profile.webp" | fingerprint }}
+		<source srcset="{{ $profileWebp.Permalink }}" type="image/webp" />
+		{{ $profilePng := resources.Get "images/profile.png" | fingerprint }}
+		<source srcset="{{ $profilePng.Permalink }}" type="image/png" />
+		<img id="profile-picture" src="{{ $profilePng.Permalink }}" loading="lazy" alt="Profile Picture" />
+	</picture>
+	<div id="resume" class="centered">
+		{{ $myResume := resources.Get "documents/My_Resume.pdf" | fingerprint }}
+		<a class="consistent-link" href="{{ $myResume.Permalink }}" target="_blank" rel="noopener noreferrer"><i class="icon far fa-file-pdf"></i>Resume</a>
+	</div>
+	<p>
+		I am a human. I do human things.
+	</p>
+	<ul id="social" class="undecorated-list contact-list">
+		<li>
+			<div>sourcehut</div>
+			<a class="consistent-link" href="https://git.sr.ht/~tristan957" target="_blank" rel="noopener noreferrer">~tristan957</a>
+		</li>
+		<li>
+			<div>github</div>
+			<a class="consistent-link" href="https://github.com/tristan957" target="_blank" rel="noopener noreferrer">tristan957</a>
+		</li>
+		<li>
+			<div>mastodon</div>
+			<a class="consistent-link" href="https://mastodon.social" target="_blank" rel="noopener noreferrer">@tristan957@mastodon.social</a>
+		</li>
+		<li>
+			<div>linkedin</div>
+			<a class="consistent-link" href="https://linkedin.com/in/tristan-partin" target="_blank" rel="noopener noreferrer">tristan-partin</a>
+		</li>
+		<li>
+			<div>email</div>
+			<a class="consistent-link" href="mailto:tristan@partin.io"><span class="email-component">tristan</span><span class="email-component">@</span><span class="email-component">partin</span><span class="email-component">.</span><span class="email-component">io</span></a>
+		</li>
+	</ul>
+	<script text="text/javascript">
+		let isDarkModePreferred = isDarkModeEnabled();
+
+		function switchTheme(theme) {
+			if (theme === "dark") {
+				document.documentElement.setAttribute("site-theme", "dark");
+				window.localStorage.setItem("site-theme", "dark");
+			} else {
+				document.documentElement.setAttribute("site-theme", "light");
+				window.localStorage.setItem("site-theme", "light");
+			}
+		}
+
+		function overrideTheme(button) {
+			if (!isDarkModePreferred) {
+				isDarkModePreferred = true;
+				this.innerHTML = "Light Theme";
+				switchTheme("dark");
+			} else {
+				isDarkModePreferred = false;
+				this.innerHTML = "Dark Theme";
+				switchTheme("light");
+			}
+		}
+
+		switchTheme(isDarkModePreferred ? "dark" : "light");
+
+		const themeButton = document.createElement("button");
+		themeButton.id = "theme-btn";
+		themeButton.classList.add("btn");
+		themeButton.innerHTML = isDarkModePreferred ? "Light Theme" : "Dark Theme";
+		themeButton.onclick = overrideTheme;
+		overrideTheme.bind(themeButton);
+
+		document.getElementById("social").insertAdjacentElement("afterend", themeButton);
+	</script>
+	<div class="sidebar-section">
+		<div class="sidebar-section-header">License</div>
+		<p class="sidebar-paragraph">
+			The content on this site is
+			<a class="consistent-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA-4.0</a>.
+			The code for this site is
+			<a class="consistent-link" href="https://opensource.org/licenses/GPL-3.0" target="_blank" rel="noopener noreferrer">GPL-3.0</a>.
+		</p>
+	</div>
+	<p class="smaller-text">
+		This code and content for this site can be found on
+		<a class="consistent-link" href="https://git.sr.ht/~tristan957/tristan.partin.io" target="_blank" rel="noopener noreferrer">SourceHut</a>.
+	</p>
+	<p class="smaller-text">
+		Please file issues/bugs on the SourceHut
+		<a class="consistent-link" href="https://todo.sr.ht/~tristan957/tristan.partin.io" target="_blank" rel="noopener noreferrer">todo tracker</a>,
+		the GitHub <a class="consistent-link" href="https://github.com/tristan957/tristan.partin.io/issues" target="_blank", rel="noopener noreferrer">
+		issue tracker</a>, or send an email to my <a class="consistent-link" href="mailto:~tristan957/public-inbox@lists.sr.ht?Subject=Re: {{ .Title }}">
+    public inbox</a>.
+	</p>
+</div>
