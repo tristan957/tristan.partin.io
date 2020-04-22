@@ -4,10 +4,11 @@
 <body lang="en">
 	{{ partial "nav.html" }}
 	<div id="page-container">
-		<div class="content-container">
+		<div id="content-container">
 			<main id="main">
 				{{ block "main" . }}
 				{{ end }}
+				{{ partial "webring-out.html" }}
 			</main>
 			{{ partial "sidebar.html" }}
 		</div>

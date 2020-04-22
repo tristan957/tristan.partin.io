@@ -1,4 +1,4 @@
-<div id="sidebar" class="box-shadow-container">
+<section id="sidebar" class="box-shadow-container">
 	<picture>
 		{{ $profileWebp := resources.Get "images/profile.webp" | fingerprint }}
 		<source srcset="{{ $profileWebp.Permalink }}" type="image/webp" />
@@ -91,4 +91,4 @@
 		issue tracker</a>, or send an email to my <a class="consistent-link" href="mailto:~tristan957/public-inbox@lists.sr.ht?Subject=Re: {{ .Title }}">
     public inbox</a>.
 	</p>
-</div>
+</section>
