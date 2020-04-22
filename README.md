@@ -22,7 +22,8 @@ It is inspired by [drewdevault.com](https://drewdevault.com).
 
 ## Dependencies
 
-- `hugo >= 0.65`
+- [`hugo`](https://gohugo.io) `>= 0.65`
+- [`openring`](https://git.sr.ht/~sircmpwn/openring)
 
 ## Licenses
 
