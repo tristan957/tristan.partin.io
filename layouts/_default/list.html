@@ -3,7 +3,7 @@
 		{{ $paginator := .Paginate (where .Pages "Type" "blog") }}
 		{{ partial "page_title.html" . }}
 		{{ if eq $paginator.PageNumber 1 }}
-			<h2 id="content-about">{{ .Content }}</h2>
+			<h2 id="content-about" class="font-weight-normal">{{ .Content }}</h2>
 		{{ end }}
 		<ul class="undecorated-list content-list">
 			{{ range $paginator.Pages }}
