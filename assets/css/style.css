@@ -100,7 +100,7 @@ code {
 	padding: 0.15rem 0.4rem;
 }
 
-#content-about > p {
+#content-about {
 	font-size: medium;
 	margin-top: 0;
 	margin-bottom: 1em;
@@ -109,7 +109,7 @@ code {
 #header {
 	display: flex;
 	list-style: none;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 #title-container {

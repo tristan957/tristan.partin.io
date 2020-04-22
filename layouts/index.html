@@ -6,19 +6,17 @@
 	<div id="page-container">
 		<div id="content-container">
 			<main id="main">
-				<div>
+				<section>
 					{{ partial "page_title.html" . }}
-					<div id="content-about">
-						<p class="font-weight-normal">
+					<h2 id="content-about">
 							Welcome to my site. Here are the things I have recently posted about.
-						</p>
-					</div>
+					</h2>
 					<ul class="undecorated-list content-list">
 						{{ range first 10 .Site.RegularPages }}
 							{{ partial "summary.html" . }}
 						{{ end }}
 					</ul>
-				</div>
+				</section>
 				{{ partial "webring-out.html" }}
 			</main>
 			{{ partial "sidebar.html" }}
