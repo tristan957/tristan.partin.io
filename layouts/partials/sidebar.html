@@ -7,8 +7,7 @@
 		<img id="profile-picture" src="{{ $profilePng.Permalink }}" loading="lazy" alt="Profile Picture" />
 	</picture>
 	<div id="resume" class="centered">
-		{{ $myResume := resources.Get "documents/My_Resume.pdf" | fingerprint }}
-		<a class="consistent-link" href="{{ $myResume.Permalink }}" target="_blank" rel="noopener noreferrer"><i class="icon far fa-file-pdf"></i>Resume</a>
+		<a class="consistent-link" href="/documents/My_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="icon far fa-file-pdf"></i>Resume</a>
 	</div>
 	<p>
 		I am a human. I do human things.
