@@ -27,6 +27,14 @@
 
 @font-face
 {
+	font-family: "UbuntuBold";
+	{{ $ubuntuRegular := resources.Get "/fonts/ubuntu/Ubuntu-Bold.woff" | fingerprint }}
+	src: url("{{ $ubuntuRegular.Permalink }}");
+	font-display: swap;
+}
+
+@font-face
+{
 	font-family: "UbuntuMono";
 	{{ $ubuntuMono := resources.Get "/fonts/ubuntu/UbuntuMono-R.woff" | fingerprint }}
 	src: url("{{ $ubuntuMono.Permalink }}");
@@ -93,7 +101,7 @@ code {
 }
 
 #content-about > p {
-	font-size: large;
+	font-size: medium;
 	margin-top: 0;
 }
 
@@ -120,8 +128,14 @@ code {
 	font-size: x-large;
 }
 
-.bold {
+.font-weight-bold {
+	font: "UbuntuBold";
 	font-weight: bold;
+}
+
+.font-weight-normal {
+	font: "Ubuntu";
+	font-weight: unset;
 }
 
 .summary-title {
@@ -347,25 +361,25 @@ nav > ul > li > a:hover {
 	margin-bottom: 0;
 }
 
-.webring .articles {
+.webring .webring-articles {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.webring .articles > * {
+.webring .webring-articles > * {
 	margin-right: 1rem;
 }
 
-.webring .articles > *:last-child {
+.webring .webring-articles > *:last-child {
 	margin-right: 0;
 }
 
-.webring .title {
+.webring .webring-title {
 	margin: 0;
 	font-size: smaller;
 }
 
-.webring .article {
+.webring .webring-article {
 	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
@@ -374,19 +388,19 @@ nav > ul > li > a:hover {
 	border-left: 3px solid var(--secondary-accent-color);
 }
 
-.webring .summary {
+.webring .webring-summary {
 	font-size: 0.8rem;
 	flex: 1 1 0;
 }
 
-.webring .attribution {
+.webring .webring-attribution {
 	text-align: right;
 	font-size: 0.8rem;
 	margin: 0;
 }
 
-.webring .header {
-	font-size: large;
+.webring .webring-header {
+	font-size: medium;
 	margin: 0;
 	margin-bottom: 1.5rem;
 }
@@ -421,18 +435,16 @@ nav > ul > li > a:hover {
 		width: auto;
 	}
 
-	.webring .articles > * {
+	.webring .webring-articles > * {
 		margin: unset;
 		margin-bottom: 1rem;
 	}
 
-	.webring .articles > *:last-child {
+	.webring .webring-articles > *:last-child {
 		margin-bottom: 0;
 	}
 
-	.webring .header {
-		font-size: large;
-		margin: 0;
+	.webring .webring-header {
 		margin-bottom: 1rem;
 	}
 }

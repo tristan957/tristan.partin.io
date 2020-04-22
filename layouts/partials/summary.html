@@ -1,7 +1,7 @@
 <li class="content-item box-shadow-container">
 	<h3 class="summary-title">
 		<span class="date">{{ .Date.Format "2006-01-02" }}</span>
-		<a class="bold consistent-link" href="{{ .Permalink }}">{{ .Title }}</a>
+		<a class="font-weight-bold consistent-link" href="{{ .Permalink }}">{{ .Title }}</a>
 	</h3>
 	{{ partial "all-taxonomies.html" . }}
 	<div class="summary">{{ .Summary }}</div>
