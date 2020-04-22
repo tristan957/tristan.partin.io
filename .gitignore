@@ -5,3 +5,4 @@ yarn.lock
 *.tfvars
 *.tfstate*
 .terraform
+layout/partials/webring-out.html

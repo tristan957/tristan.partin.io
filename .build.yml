@@ -26,7 +26,7 @@ tasks:
         -s https://blog.golang.org/feed.atom \
         -s https://blog.rust-lang.org/feed.xml \
         < include/webring-in.html \
-        > partial/webring-out.html
+        > layouts/partials/webring-out.html
       hugo
   - deploy: |
       cd tristan.partin.io
