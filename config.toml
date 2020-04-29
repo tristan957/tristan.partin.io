@@ -1,5 +1,5 @@
 baseURL = "https://tristan.partin.io"
-languageCode = "en-us"
+languageCode = "en-US"
 defaultContentLanguage = "en"
 title = "Tristan Partin"
 static = ["static"]
@@ -11,3 +11,15 @@ enableRobotsTXT = true
   category = "categories"
   series = "series"
   tag = "tags"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
