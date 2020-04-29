@@ -53,7 +53,29 @@ body {
 	background-color: var(--main-bg-color);
 }
 
+pre {
+	margin: 0;
+	overflow-x: auto;
+	padding: 0.5rem 0;
+}
+
+tr > td:first-child > pre {
+	padding-left: 0.5rem;
+}
+
+tr > td:last-child > pre {
+	padding-right: 0.5rem;
+}
+
 code {
+	word-wrap: break-word;
+}
+
+.highlight code {
+	color: white;
+}
+
+code, code > * {
 	font-family: UbuntuMono, 'Courier New', Courier, monospace;
 }
 
@@ -364,15 +386,15 @@ nav > ul > li > a:hover {
 
 .webring .webring-articles {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .webring .webring-articles > * {
-	margin-right: 1rem;
+	margin-bottom: 1rem;
 }
 
 .webring .webring-articles > *:last-child {
-	margin-right: 0;
+	margin-bottom: 0;
 }
 
 .webring .webring-title {
@@ -384,8 +406,7 @@ nav > ul > li > a:hover {
 	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
-	min-width: 10rem;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 	border-left: 3px solid var(--secondary-accent-color);
 }
 
@@ -434,18 +455,5 @@ nav > ul > li > a:hover {
 
 	#sidebar {
 		width: auto;
-	}
-
-	.webring .webring-articles > * {
-		margin: unset;
-		margin-bottom: 1rem;
-	}
-
-	.webring .webring-articles > *:last-child {
-		margin-bottom: 0;
-	}
-
-	.webring .webring-header {
-		margin-bottom: 1rem;
 	}
 }
