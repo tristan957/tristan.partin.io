@@ -23,3 +23,7 @@ enableRobotsTXT = true
     noClasses = true
     style = "monokai"
     tabWidth = 4
+
+[pages]
+  [pages.build]
+    list = true

@@ -1,6 +1,12 @@
 ---
 title: "Introduction"
 date: 2020-04-11T22:12:20-05:00
+tags:
+  - me
+categories:
+  - introduction
+series:
+  - me
 ---
 
 Welcome to my blog. This post is a pretty historic moment for me because I have

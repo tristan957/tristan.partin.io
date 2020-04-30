@@ -11,4 +11,10 @@
 			{{ partial "taxonomy.html" (.GetTerms "tags") }}
 		</div>
 	{{ end }}
+	{{ if gt (len (.GetTerms "series")) 0 }}
+		<div>
+			Series:
+			{{ partial "taxonomy.html" (.GetTerms "series") }}
+		</div>
+	{{ end }}
 </div>

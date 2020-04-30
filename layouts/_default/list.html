@@ -6,7 +6,7 @@
 			<h2 id="content-about" class="font-weight-normal">{{ .Content }}</h2>
 		{{ end }}
 		<ul class="undecorated-list content-list">
-			{{ range $paginator.Pages.ByPublishDate }}
+			{{ range $paginator.Pages }}
 				{{ partial "summary.html" . }}
 			{{ end }}
 		</ul>
