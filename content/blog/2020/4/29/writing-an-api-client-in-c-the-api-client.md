@@ -1,8 +1,6 @@
 ---
 title: "Writing an API Wrapper in C: The API Client"
 date: 2020-04-28T23:53:08-05:00
-_build:
-  list: never
 categories:
   - programming
 tags:
@@ -14,7 +12,7 @@ series:
 ---
 
 Welcome to the first blog in a series I will be calling _Writing an API Wrapper
-in C_.
+in C_. I'll be talking about **the API client** in the first article.
 
 <!--more-->
 
@@ -40,6 +38,8 @@ We will be taking a look at the
 {{< externalLink "https://www.getharvest.com/" "Harvest" >}} API. The docs can
 be found here:
 {{< externalLink "https://help.getharvest.com/api-v2/" "Harvest API Documentation" >}}.
+Harvest is a service for tracking time and expenses on projects. We use it at
+work often.
 
 Technologies I will be showcasing within the series include:
 
@@ -117,7 +117,7 @@ use our client. Benefits of the synchronous API include blocking calls, while
 the asynchronous API can benefit graphical interfaces or event loop style
 programs where you react to events. The implementations of the execution
 functions will be covered later when we talk about `HarvestRequest` and
-`HarvestResponse` because they go and in hand.
+`HarvestResponse` because they go hand in hand.
 
 Hopefully this blog post was enough to trigger your interest in the series as
 there is more content to come.
