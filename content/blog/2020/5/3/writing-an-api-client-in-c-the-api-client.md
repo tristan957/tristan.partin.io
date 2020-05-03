@@ -1,6 +1,6 @@
 ---
 title: "Writing an API Wrapper in C: The API Client"
-date: 2020-04-28T23:53:08-05:00
+date: 2020-05-03T17:00:03-05:00
 categories:
   - programming
 tags:
