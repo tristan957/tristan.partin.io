@@ -21,7 +21,7 @@
 {
 	font-family: "Ubuntu";
 	{{ $ubuntuRegular := resources.Get "/fonts/ubuntu/Ubuntu-Regular.woff" | fingerprint }}
-	src: url("{{ $ubuntuRegular.Permalink }}");
+	src: url("{{ $ubuntuRegular.RelPermalink }}");
 	font-display: swap;
 }
 
@@ -29,7 +29,7 @@
 {
 	font-family: "UbuntuBold";
 	{{ $ubuntuRegular := resources.Get "/fonts/ubuntu/Ubuntu-Bold.woff" | fingerprint }}
-	src: url("{{ $ubuntuRegular.Permalink }}");
+	src: url("{{ $ubuntuRegular.RelPermalink }}");
 	font-display: swap;
 }
 
@@ -37,7 +37,7 @@
 {
 	font-family: "UbuntuMono";
 	{{ $ubuntuMono := resources.Get "/fonts/ubuntu/UbuntuMono-R.woff" | fingerprint }}
-	src: url("{{ $ubuntuMono.Permalink }}");
+	src: url("{{ $ubuntuMono.RelPermalink }}");
 	font-display: swap;
 }
 

@@ -1,13 +1,13 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
-<link rel="stylesheet" type="text/css" href="{{ $styleCss.Permalink }}">
+<link rel="stylesheet" type="text/css" href="{{ $styleCss.RelPermalink }}">
 <noscript>
 	{{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
-	<link href="{{ $fa.Permalink }}" rel="stylesheet" type="text/css">
+	<link href="{{ $fa.RelPermalink }}" rel="stylesheet" type="text/css">
 </noscript>
 <script>
 	;(function() {
 		const fa = document.createElement("link");
-		fa.href = "{{ $fa.Permalink }}";
+		fa.href = "{{ $fa.RelPermalink }}";
 		fa.rel = "stylesheet";
 		fa.type = "text/css";
 		document.getElementsByTagName("head")[0].appendChild(fa);
