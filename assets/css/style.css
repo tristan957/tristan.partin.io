@@ -38,6 +38,11 @@
 	color: var(--color);
 }
 
+::selection {
+	background: #F48024;
+	color: black;
+}
+
 body {
 	margin: 0px;
 	width: 100vw;
