@@ -19,30 +19,22 @@
 
 @font-face
 {
-	font-family: "Ubuntu";
-	{{ $ubuntuRegular := resources.Get "/fonts/ubuntu/Ubuntu-Regular.woff" | fingerprint }}
-	src: url("{{ $ubuntuRegular.RelPermalink }}");
+	font-family: "IBM Plex Sans";
+	{{ $ibmPlexSans := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" | fingerprint }}
+	src: url("{{ $ibmPlexSans.RelPermalink }}");
 	font-display: swap;
 }
 
 @font-face
 {
-	font-family: "UbuntuBold";
-	{{ $ubuntuRegular := resources.Get "/fonts/ubuntu/Ubuntu-Bold.woff" | fingerprint }}
-	src: url("{{ $ubuntuRegular.RelPermalink }}");
-	font-display: swap;
-}
-
-@font-face
-{
-	font-family: "UbuntuMono";
-	{{ $ubuntuMono := resources.Get "/fonts/ubuntu/UbuntuMono-R.woff" | fingerprint }}
-	src: url("{{ $ubuntuMono.RelPermalink }}");
+	font-family: "Fira Code";
+	{{ $firaCode := resources.Get "/fonts/FiraCode-VariableFont_wght.ttf" | fingerprint }}
+	src: url("{{ $firaCode.RelPermalink }}");
 	font-display: swap;
 }
 
 * {
-	font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "IBM Plex Sans", Verdana, Geneva, Tahoma, sans-serif;
 	color: var(--color);
 }
 
@@ -76,7 +68,8 @@ code {
 }
 
 code, code > * {
-	font-family: UbuntuMono, 'Courier New', Courier, monospace;
+	font-family: "Fira Code", "Courier New", Courier, monospace;
+	font-size: 0.9rem;
 }
 
 .taxonomy-list {
@@ -152,12 +145,12 @@ code, code > * {
 }
 
 .font-weight-bold {
-	font: "UbuntuBold";
+	font: "IBM Plex Sans";
 	font-weight: bold;
 }
 
 .font-weight-normal {
-	font: "Ubuntu";
+	font: "IBM Plex Sans";
 	font-weight: unset;
 }
 
