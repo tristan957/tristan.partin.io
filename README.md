@@ -30,8 +30,8 @@ It is inspired by [drewdevault.com](https://drewdevault.com).
 - Clone the repo
 - Run `git submodule update --init`
 - Run the `bootstrap.sh` script from the project root
-- Run the `openring/build.sh` script from the project root
-- Run `hugo -D server` to get live reloading in a developement environment.
+- Run the `openring/build.sh` script from thie project root
+- Run `hugo -D server` to get live reloading in a developement environment
 
 ## Miscellaneous
 
