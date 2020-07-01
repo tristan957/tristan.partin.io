@@ -6,9 +6,9 @@
   "author": "Tristan Partin <tristan@partin.io>",
   "private": true,
   "scripts": {
-    "format": "prettier --config .prettierrc.yml --write content/**/**/*.md"
+    "format": "prettier --config .prettierrc.yml --write 'content/**/**/*.md'"
   },
   "devDependencies": {
-    "prettier": "^2.0.4"
+    "prettier": "^2.0.5"
   }
 }
