@@ -25,6 +25,14 @@ It is inspired by [drewdevault.com](https://drewdevault.com).
 - [`hugo`](https://gohugo.io) `>= 0.65`
 - [`openring`](https://git.sr.ht/~sircmpwn/openring)
 
+## Contributing
+
+- Clone the repo
+- Run `git submodule update --init`
+- Run the `bootstrap.sh` script from the project root
+- Run the `openring/build.sh` script from the project root
+- Run `hugo -D server` to get live reloading in a developement environment.
+
 ## Miscellaneous
 
 ### Marking a blog as unlisted
