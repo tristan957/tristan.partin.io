@@ -1,0 +1,26 @@
+pre {
+	margin: 0;
+	overflow-x: auto;
+	padding: 0.5rem 0;
+}
+
+tr > td:first-child > pre {
+	padding-left: 0.5rem;
+}
+
+tr > td:last-child > pre {
+	padding-right: 0.5rem;
+}
+
+code {
+	word-wrap: break-word;
+}
+
+.highlight code {
+	color: white;
+}
+
+code, code > * {
+	font-family: "Fira Code", "Courier New", Courier, monospace;
+	font-size: 0.9rem;
+}

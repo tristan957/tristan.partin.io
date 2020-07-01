@@ -1,3 +1,8 @@
+{{ $fontsCss := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . | minify | fingerprint }}
+@import url("{{ $fontsCss.RelPermalink }}");
+{{ $codeCss := resources.Get "css/code.css" | resources.ExecuteAsTemplate "css/code.css" . | minify | fingerprint }}
+@import url("{{ $codeCss.RelPermalink }}");
+
 :root {
 	--color: black;
 	--main-bg-color: #FFFAF0;
@@ -5,7 +10,9 @@
 	--content-metadata-color: #484848;
 	--box-shadow-container-color: #CCCCCC;
 	--raised-backgroud-color: white;
+	--primary-accent-color: #F48024;
 	--secondary-accent-color: #77216F;
+	--secondary-accent-color-hover: #833A72;
 }
 
 [site-theme="dark"] {
@@ -17,29 +24,13 @@
 	--raised-backgroud-color: #393939;
 }
 
-@font-face
-{
-	font-family: "IBM Plex Sans";
-	font-display: swap;
-	{{ $ibmPlexSans := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" | fingerprint }}
-	src: url("{{ $ibmPlexSans.RelPermalink }}");
-}
-
-@font-face
-{
-	font-family: "Fira Code";
-	font-display: swap;
-	{{ $firaCode := resources.Get "/fonts/FiraCode-VariableFont_wght.ttf" | fingerprint }}
-	src: url("{{ $firaCode.RelPermalink }}");
-}
-
 * {
 	font-family: "IBM Plex Sans", Verdana, Geneva, Tahoma, sans-serif;
 	color: var(--color);
 }
 
 ::selection {
-	background: #F48024;
+	background: var(--primary-accent-color);
 	color: black;
 }
 
@@ -48,33 +39,6 @@ body {
 	width: 100vw;
 	overflow-x: hidden;
 	background-color: var(--main-bg-color);
-}
-
-pre {
-	margin: 0;
-	overflow-x: auto;
-	padding: 0.5rem 0;
-}
-
-tr > td:first-child > pre {
-	padding-left: 0.5rem;
-}
-
-tr > td:last-child > pre {
-	padding-right: 0.5rem;
-}
-
-code {
-	word-wrap: break-word;
-}
-
-.highlight code {
-	color: white;
-}
-
-code, code > * {
-	font-family: "Fira Code", "Courier New", Courier, monospace;
-	font-size: 0.9rem;
 }
 
 .taxonomy-list {
@@ -92,6 +56,11 @@ code, code > * {
 	padding: 0.5rem;
 	border-radius: 3px;
 	border: 2px solid var(--box-shadow-container-color);
+}
+
+.btn:hover {
+	background-color: var(--secondary-accent-color-hover);
+	transition: background-color ease-in 0.15s;
 }
 
 #comments-btn {
@@ -218,7 +187,7 @@ nav {
 	justify-content: center;
 	background-color: #393939;
 	width: 100%;
-	border-top: 3px solid #F48024;
+	border-top: 3px solid var(--primary-accent-color);
 	box-shadow: 0 10px 10px -1px rgba(0, 0, 0, 0.25);
 }
 
@@ -334,7 +303,7 @@ nav > ul > li > a:hover {
 	box-shadow: 4px 4px 4px 2px var(--box-shadow-container-color);
 	border-radius: 3px;
 	background-color: var(--raised-backgroud-color);
-	border-top: 3px #F48024 solid;
+	border-top: 3px var(--primary-accent-color) solid;
 }
 
 #resume {
