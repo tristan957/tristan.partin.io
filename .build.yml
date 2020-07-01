@@ -5,7 +5,6 @@ packages:
   - rsync
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
-  - https://git.sr.ht/~sircmpwn/openring
 environment:
   ec2_box: ubuntu@partin.io
   # linode_instance: root@
@@ -14,20 +13,12 @@ secrets:
   - 823512b1-af97-446c-bff3-4f52ea414014
 tasks:
   - openring: |
-      cd openring
-      go build
+      cd tristan.partin.io
+      ./scripts/build-openring.sh
   - build: |
       cd tristan.partin.io
-      ../openring/openring \
-        -s https://drewdevault.com/feed.xml \
-        -s https://emersion.fr/blog/rss.xml \
-        -s https://blog.golang.org/feed.atom \
-        -s https://blog.rust-lang.org/feed.xml \
-        -s https://blog.mozilla.org/feed/ \
-        < include/webring-in.html \
-        > layouts/partials/webring-out.html
+      ./scripts/generate-openring.sh
       hugo
   - deploy: |
       cd tristan.partin.io
       rsync --delete -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/personal-ec2.pem" public/ $ec2_box:/var/www/tristan.partin.io
-      # rsync --delete -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" public/ $ec2_box:/var/www/tristan.partin.io
