@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 ./openring/openring \
 	-s https://drewdevault.com/feed.xml \
