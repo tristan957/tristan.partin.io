@@ -1,5 +1,5 @@
 User-Agent: *
-Sitemap: https://tristan.partin.io/sitemap.xml
+Sitemap: {{ .Site.BaseURL }}/sitemap.xml
 Disallow: /css
 Disallow: /fonts
 Disallow: /documents
