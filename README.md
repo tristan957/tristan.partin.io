@@ -25,6 +25,17 @@ It is inspired by [drewdevault.com](https://drewdevault.com).
 - [`hugo`](https://gohugo.io) `>= 0.65`
 - [`openring`](https://git.sr.ht/~sircmpwn/openring)
 
+## Miscellaneous
+
+### Marking a blog as unlisted
+
+Add the following to the front-matter
+
+```yaml
+_build:
+  list: never
+```
+
 ## Licenses
 
 The code is licensed under the GPL-3.0.
