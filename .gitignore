@@ -1,9 +1,7 @@
 public
 node_modules
-yarn.lock
 .vscode
 *.tfvars
 *.tfstate*
 .terraform
-layout/partials/webring-out.html
-openring
+layouts/partials/webring-out.html
