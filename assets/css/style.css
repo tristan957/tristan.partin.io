@@ -58,9 +58,10 @@ body {
 	border: 2px solid var(--box-shadow-container-color);
 }
 
-.btn:hover {
+.btn:hover, .btn:focus, .btn:active  {
 	background-color: var(--secondary-accent-color-hover);
 	transition: background-color ease-in 0.15s;
+	cursor: pointer;
 }
 
 #comments-btn {
@@ -206,7 +207,7 @@ nav > ul > li > a {
 	padding: 1rem;
 }
 
-nav > ul > li > a:hover {
+nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	transition: all 0.15s ease-in;
 	background-color: #595959;
 }
