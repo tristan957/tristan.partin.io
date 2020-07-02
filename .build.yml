@@ -14,10 +14,10 @@ secrets:
 tasks:
   - openring: |
       cd tristan.partin.io
-      ./scripts/build-openring.sh
+      ./scripts/openring/build.sh
   - build: |
       cd tristan.partin.io
-      ./scripts/generate-openring.sh
+      ./scripts/openring/generate.sh
       hugo
   - deploy: |
       cd tristan.partin.io
