@@ -2,12 +2,8 @@ image: alpine/edge
 packages:
   - go
   - hugo
-  - rsync
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
-environment:
-  ec2_box: ubuntu@partin.io
-  # linode_instance: root@
 secrets:
   - 7479e438-adaa-42f6-a774-def5194e2ae3
   - 823512b1-af97-446c-bff3-4f52ea414014
@@ -19,6 +15,3 @@ tasks:
       cd tristan.partin.io
       ./scripts/openring/generate.sh
       hugo
-  - deploy: |
-      cd tristan.partin.io
-      rsync --delete -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/personal-ec2.pem" public/ $ec2_box:/var/www/tristan.partin.io
