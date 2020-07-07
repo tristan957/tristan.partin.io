@@ -13,4 +13,6 @@
 		document.getElementsByTagName("head")[0].appendChild(fa);
 	})();
 </script>
-<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
+{{ if hugo.IsProduction }}
+	<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
+{{ end }}
