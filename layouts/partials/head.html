@@ -1,14 +1,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="title" content="{{ .Title }}">
+	<meta name="title" content="{{ .Title }} - Tristan Partin">
 	<meta
 		name="description"
 		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
 	>
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ .Title }}">
+	<meta property="og:title" content="{{ .Title }} - Tristan Partin">
 	<meta property="og:url" content="{{ .Permalink }}">
 	{{ $siteImage := resources.Get "images/site-image.jpg" | fingerprint }}
 	<meta property="og:image" content="{{ $siteImage.Permalink }}">
@@ -59,7 +59,7 @@
 	</style>
 
 	<base href="{{ .Site.BaseURL }}">
-	<title>{{ .Title }}</title>
+	<title>{{ .Title }} - Tristan Partin</title>
 	<link rel="canonical" href="{{ .Permalink }}" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>

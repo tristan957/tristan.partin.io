@@ -1,5 +1,5 @@
 ---
-title: Tristan Partin's Blog
+title: Blog
 ---
 
 This is where I do the blogging thing, and some times it is interesting.
