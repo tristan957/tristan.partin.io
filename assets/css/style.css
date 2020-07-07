@@ -285,9 +285,19 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	margin-bottom: 0;
 }
 
+.footnote {
+	font-size: 0.85rem;
+	margin: 0.5rem auto;
+}
+
+.footnote:last-child {
+	margin-bottom: 0;
+}
 
 #content-title {
 	margin-top: 0;
+	font-size: x-large;
+	margin-bottom: 1rem;
 }
 
 .content-metadata, .content-metadata > * {
