@@ -2,6 +2,7 @@
 title: "Personal Site Architecture V2"
 date: 2020-07-07T00:45:08-05:00
 categories:
+  - meta
   - devops
 tags:
   - webdev
