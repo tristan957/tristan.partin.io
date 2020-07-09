@@ -64,6 +64,11 @@ body {
 	cursor: pointer;
 }
 
+.btn:active {
+	background-color: #290033;
+	transition: background-color ease-in 0.10s;
+}
+
 #comments-btn {
 	margin: auto;
 	margin-bottom: 1rem;
