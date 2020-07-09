@@ -3,5 +3,13 @@
 # Don't run the script twice...
 if [ "$2" == "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
 	./scripts/openring/generate.sh
-	git add layouts/partials/webring-out.html
+	git diff-index --quiet HEAD | grep --queit layouts/partials/webring-out.html
+	if [ !$ == 0 ]; then
+		exit 1
+	fi
+elif [ "$2" == "git@github.com:tristan957/tristan.partin.io.git" ]; then
+	git diff-index --quiet HEAD | grep --queit layouts/partials/webring-out.html
+	if [ !$ == 0 ]; then
+		exit 1
+	fi
 fi
