@@ -289,12 +289,15 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	margin-bottom: 0;
 }
 
-.footnote {
-	font-size: 0.85rem;
-	margin: 0.5rem auto;
+.footnotes > ol {
+	margin: 0;
 }
 
-.footnote:last-child {
+.footnotes p {
+	margin: 1rem;
+}
+
+.footnotes > ol > li:last-child > p {
 	margin-bottom: 0;
 }
 

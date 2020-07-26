@@ -18,15 +18,15 @@ Recently I changed up the architectural backing of this site.
 
 In the olden days of college, I met a young fellow named
 {{< externalLink "https://www.linkedin.com/in/joseph-martinsen/" "Joseph Martinsen" >}}.
-He _had_ {{< superscript 1 >}} this awesome personal website that I really
-liked. From then on, I knew that I also wanted a personal website. Joseph's site
-was essentially a web version of his resume laid out all nicely with a bit of
-expansion on certain points. I had many iterations of designs, starting one day,
-and moving onto other endeavors the next day, but used the content on his site
-to guide my own. Rinse and repeat. Eventually I became an old man during junior
-and senior years, and there were much more pressing issues like what bar I was
-going to procrastinate at when my Advanced Operating Systems homework was due at
-midnight the next night.
+He had[^1] this awesome personal website that I really liked. From then on, I
+knew that I also wanted a personal website. Joseph's site was essentially a web
+version of his resume laid out all nicely with a bit of expansion on certain
+points. I had many iterations of designs, starting one day, and moving onto
+other endeavors the next day, but used the content on his site to guide my own.
+Rinse and repeat. Eventually I became an old man during junior and senior years,
+and there were much more pressing issues like what bar I was going to
+procrastinate at when my Advanced Operating Systems homework was due at midnight
+the next night.
 
 At some point however, I did finally get what one would call an extreme alpha
 level site. It had a design with content that I was going to expand on, but
@@ -48,15 +48,15 @@ like this for 2 years.
 Earlier this year, I finally got my butt in gear since COVID put us all in a
 state of monotony. I finally realized that the content I wanted on my site was
 not a rehash of my resume in a prettier format, but instead a site for content
-like blogs and random thoughts{{< superscript 2 >}}. From there I set out to
-find a good technology to build the site in. I knew I wanted to have nothing to
-do with JavaScript since JavaScript is all the rage. I had to be **counter
-culture**. With that in mind, I searched for various static site generators, and
-wound up picking Hugo. I knew it was fairly popular, so why not try to use it.
+like blogs and random thoughts[^2]. From there I set out to find a good
+technology to build the site in. I knew I wanted to have nothing to do with
+JavaScript since JavaScript is all the rage. I had to be **counter culture**.
+With that in mind, I searched for various static site generators, and wound up
+picking Hugo. I knew it was fairly popular, so why not try to use it.
 
 With the technology picked out, I finally got a real site going and hosted on my
 server over the course of a weekend. Set my mind to it, and got it done 2.5
-years later{{< superscript 3 >}}. This is how my site sat for the last 3 months.
+years later[^3]. This is how my site sat for the last 3 months.
 
 A Hugo powered site sitting behind an NGINX server, on a `t2.micro` which
 `tristan.partin.io` pointed to.
@@ -112,18 +112,14 @@ In the past few days, I moved my same Hugo site to Vercel using their CDN with
 my domain and added in an open source analytics engine called Plausible
 Analytics.
 
-**Total monthly costs**: ~\$12 to ~\$4{{< superscript 4 >}}. I no longer pay for
-an EC2, and my domain no longer has monthly charges through Route 53. Plausible
-is really my only monthly charge at this point assuming I like it after my trial
-is over. Note that Route 53 charged \$39 for my domain renewal, and Vercel will
-be charging me \$50, plus the \$50 dollar charge to transfer the domain. Overall
-a little bit of cost savings without the stress of managing my own web server.
+**Total monthly costs**: ~\$12 to ~\$4[^4]. I no longer pay for an EC2, and my
+domain no longer has monthly charges through Route 53. Plausible is really my
+only monthly charge at this point assuming I like it after my trial is over.
+Note that Route 53 charged \$39 for my domain renewal, and Vercel will be
+charging me \$50, plus the \$50 dollar charge to transfer the domain. Overall a
+little bit of cost savings without the stress of managing my own web server.
 
-{{< footnote 1 "He is already on his way to making a new and improved site :)." >}}
-
-<!-- prettier-ignore -->
-{{< footnote 2 "That is why the home page of site and blog section are the exact same. I just haven't gotten to any other sections." >}}
-
-{{< footnote 3 "Procrastination is my strong suit." >}}
-
-{{< footnote 4 "Your mileage may vary." >}}
+[^1]: He is already on his way to making a new and improved site :).
+[^2]: I haven't gotten to any other sections yet.
+[^3]: Procrastination is my strong suit.
+[^4]: Your mileage may vary.
