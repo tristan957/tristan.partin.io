@@ -8,9 +8,9 @@
 			<main id="main">
 				<section>
 					{{ partial "page_title.html" . }}
-					<h2 id="content-about" class="font-weight-normal">
+					<p id="content-about" class="font-weight-normal">
 							Welcome to my site. Here are the things I have recently posted about.
-					</h2>
+					</p>
 					<ul class="undecorated-list content-list">
 						{{ range first 10 .Site.RegularPages }}
 							{{ partial "summary.html" . }}
