@@ -4,12 +4,12 @@
 if [ "$2" == "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
 	./scripts/openring/generate.sh
 	git diff-index --quiet HEAD | grep --quiet layouts/partials/webring-out.html
-	if [ !$ == 0 ]; then
+	if ! git diff-index --quiet HEAD | grep --quiet layouts/partials/webring-out.html; then
 		exit 1
 	fi
 elif [ "$2" == "git@github.com:tristan957/tristan.partin.io.git" ]; then
 	git diff-index --quiet HEAD | grep --quiet layouts/partials/webring-out.html
-	if [ !$ == 0 ]; then
+	if ! git diff-index --quiet HEAD | grep --quiet layouts/partials/webring-out.html; then
 		exit 1
 	fi
 fi
