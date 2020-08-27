@@ -2,13 +2,13 @@
 <link rel="stylesheet" type="text/css" href="{{ $styleCss.RelPermalink }}">
 <noscript>
 	{{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
-	<link href="{{ $fa.RelPermalink }}" rel="stylesheet" type="text/css">
+	<link href="{{ $fa.RelPermalink }}" rel="stylesheet preload" type="text/css">
 </noscript>
 <script>
 	;(function() {
 		const fa = document.createElement("link");
 		fa.href = "{{ $fa.RelPermalink }}";
-		fa.rel = "stylesheet";
+		fa.rel = "stylesheet preload";
 		fa.type = "text/css";
 		document.getElementsByTagName("head")[0].appendChild(fa);
 	})();
