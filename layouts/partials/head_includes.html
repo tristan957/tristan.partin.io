@@ -1,7 +1,7 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 <link rel="stylesheet" type="text/css" href="{{ $styleCss.RelPermalink }}">
 <noscript>
-	{{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
+	{{ $fa := resources.Get "fonts/fontawesome/css/all.css" | minify | fingerprint }}
 	<link href="{{ $fa.RelPermalink }}" rel="stylesheet" type="text/css">
 </noscript>
 <script>
