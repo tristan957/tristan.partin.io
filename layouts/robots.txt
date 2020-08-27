@@ -1,6 +1,5 @@
 User-Agent: *
 Sitemap: {{ .Site.BaseURL }}/sitemap.xml
-Disallow: /css
 Disallow: /fonts
 Disallow: /documents
 Disallow: /google45891dc5078bc165.html
