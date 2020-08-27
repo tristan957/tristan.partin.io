@@ -3,9 +3,9 @@
   <section class="webring-articles box-shadow-container">
     {{ range .Articles }}
 			<div class="webring-article">
-				<h3 class="webring-title">
+				<h5 class="webring-title">
 					<a class="consistent-link font-weight-bold" href="{{ .Link }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a>
-				</h3>
+				</h5>
 				<p class="webring-summary">{{ .Summary }}</p>
 				<small class="webring-source">
 					via <a class="consistent-link font-weight-bold" href="{{ .SourceLink }}" target="_blank" rel="noreferrer noopener">{{ .SourceTitle }}</a>
