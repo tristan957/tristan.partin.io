@@ -4,9 +4,6 @@ packages:
   - hugo
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
-secrets:
-  - 7479e438-adaa-42f6-a774-def5194e2ae3
-  - 823512b1-af97-446c-bff3-4f52ea414014
 tasks:
   - openring: |
       cd tristan.partin.io
