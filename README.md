@@ -18,11 +18,12 @@ preferences. Alternatively, there is a toggle if you prefer one theme over the
 other. The option is stored in local storage as `site-theme`. Note the toggle
 requires JavaScript to be enabled.
 
-It is inspired by [drewdevault.com](https://drewdevault.com).
+It is inspired by an older iteration of
+[drewdevault.com](https://drewdevault.com).
 
 ## Dependencies
 
-- [`hugo`](https://gohugo.io) `>= 0.65`
+- [`hugo`](https://gohugo.io)
 - [`openring`](https://git.sr.ht/~sircmpwn/openring)
 
 ## Contributing
