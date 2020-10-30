@@ -50,6 +50,28 @@
 			const siteThemeFromStorage = window.localStorage.getItem("site-theme");
 			return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && (siteThemeFromStorage !== "light")) || siteThemeFromStorage === "dark";
 		}
+
+		function switchTheme(theme) {
+			if (theme === "dark") {
+				document.documentElement.setAttribute("site-theme", "dark");
+				window.localStorage.setItem("site-theme", "dark");
+			} else {
+				document.documentElement.setAttribute("site-theme", "light");
+				window.localStorage.setItem("site-theme", "light");
+			}
+		}
+
+		function overrideTheme(button) {
+			if (!isDarkModePreferred) {
+				isDarkModePreferred = true;
+				this.innerHTML = "Light Theme";
+				switchTheme("dark");
+			} else {
+				isDarkModePreferred = false;
+				this.innerHTML = "Dark Theme";
+				switchTheme("light");
+			}
+		}
 	</script>
 
 	<style>
