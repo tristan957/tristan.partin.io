@@ -4,7 +4,7 @@
 	{{ $fa := resources.Get "fonts/fontawesome/css/all.css" | minify | fingerprint }}
 	<link href="{{ $fa.RelPermalink }}" rel="stylesheet" type="text/css">
 </noscript>
-<script>
+<script type="text/javascript">
 	;(function() {
 		const fa = document.createElement("link");
 		fa.href = "{{ $fa.RelPermalink }}";
