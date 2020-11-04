@@ -21,7 +21,7 @@
 		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
 	>
 
-	{{ partial "head_includes.html" . }}
+	{{ partial "head-includes.html" . }}
 	{{ range .AlternativeOutputFormats -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{ end -}}
