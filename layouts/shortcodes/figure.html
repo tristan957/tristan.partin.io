@@ -1,0 +1,9 @@
+{{ $altText := .Get 1 }}
+{{ with .Page.Resources.Match (.Get 0) }}
+	{{ range . }}
+		<div class="figure">
+			<img alt="{{ $altText }}" src="{{ .RelPermalink }}" width="75%" />
+			<p><i>{{ $altText }}</i></p>
+		</div>
+	{{ end }}
+{{ end }}

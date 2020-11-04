@@ -107,6 +107,14 @@ body {
 	transition: background-color ease-in 0.10s;
 }
 
+.figure {
+	text-align: center;
+}
+
+.figure > img {
+	border: 2px solid var(--box-shadow-container-color);
+}
+
 #comments-btn {
 	margin: auto;
 	margin-bottom: 1rem;
