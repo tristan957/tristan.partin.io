@@ -1,13 +1,10 @@
 ---
 title: "October 2020 Update"
 date: 2020-10-28T23:10:55-05:00
-draft: true
-categories:
-  - update
-tag:
-  - life
-_build:
-  list: never
+tags:
+  - me
+series:
+  - monthly-update
 ---
 
 It has definitely been a while since the last time I blogged...
@@ -25,31 +22,50 @@ For those who don't know, my birthday was on October 26th. My friends from
 college came into town, and we went to some wineries/tasting rooms in the
 Driftwood/Dripping Springs area. Great times were had. Took my friends to try
 the taco truck I always rave about, and they all really enjoyed it which means I
-must have really good taste buds. We also hit up Mozart's on Lake Austin Blvd. I
-am not a coffee person typically, so hot chocolate was my drink of choice.
+must have really good taste buds. We also hit up
+{{< link "https://mozartscoffee.com/" "Mozart's" >}} on Lake Austin Blvd. I am
+not a coffee person typically, so hot chocolate was my drink of choice.
 
-TODO: INSERT IMAGE; I will have to figure that out lol
+{{< figure "friends.webp" "Best of Friends" >}}
 
 ## Purchases...or Presents
 
-For my birthday, I try to buy myself a present for it, _usually_. When I turned
-21, I bought myself a calculator watch that actually just broke :(. For my 24th
+For my birthday, I try to buy myself a present, _usually_. When I turned 21, I
+bought myself a calculator watch[^1] that actually just broke :(. For my 24th
 birthday, I kind of combined my gift with my Halloween costume. The costume was
 a motorcycle gang member, and the gang's name is the SoCo MoFos (South Congress
-Mother F\*\*\*ers). I bought myself a leather jacket[^1] from FLAVOR Leather.
-The material is pig skin, and it feels really good. The stiching seems high
-quality, and I am definitely warm when I wear it.
+Mother F\*\*\*ers). I bought myself a leather jacket[^2] from FLAVOR Leather.
+The material is pig skin, and it feels really nice. The stiching seems high
+quality, and I am definitely warm when I wear it. I have taken it for a
+motorcycle ride in ~50 degree weather, and the ride was quite enjoyable.
 
-TODO: INSERT IMAGE
+{{< figure "leather-jacket.webp" "Flavor Leather Jacket" >}}
 
 Then I found a link to this non-profit called
-{{< externalLink https://theoceancleanup.com/ TheOceanCleanup >}} which aims to
-take plastics drifting in the ocean, and turn them into products. In turn, the
+{{< link "https://theoceancleanup.com/" "TheOceanCleanup" >}} which aims to take
+plastics drifting in the ocean, and turn them into products. In turn, the
 revenue from the products will fund more excursions to collect plastic and R&D
 for other products. This sounded like a good business model to me, so I dropped
 some money to buy their first product, which are sunglasses. I needed
 sunglasses, so the timing couldn't have been better. I am hoping they will ship
 soon, so that I can make good use of them, but I am also not in a rush.
+
+## Food and Drinks
+
+### Beer
+
+The beer this month was plentiful and yummy. I explored more of the Blue Owl
+Brewing Company selection through my local liquor store, The Austin Shaker. I
+tried a plum marmalade sour which was really nice. I also noticed that another
+brewery re-opened called the Central District Brewing Company. I stopped in to
+to try one beer on a whim and my interest was piqued. I ended up taking a
+growler of their kettle sour home with me to take to the Halloween party :).
+
+## Halloween
+
+Had an opportunity to go to a Halloween party hosted by one of my friends. Was a
+really good time with friends I don't see too often. I don't regret going even
+in the current COVID climate.
 
 ## Projects
 
@@ -66,4 +82,7 @@ by me. Hopefully it will gain some traction within the HSE community.
 <!--Patrick or Joseph...-->
 
 While my friends were in town, "someone" broke my glovebox, so I will be working
-to fix that next month hopefully. Gonna be awkward if the I get pulled over...
+to fix that next month hopefully. Gonna be awkward if I get pulled over...
+
+[^1]: Casio DBC32-1A
+[^2]: Image is definitely not me
