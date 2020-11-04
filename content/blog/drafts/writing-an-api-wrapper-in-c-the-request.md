@@ -23,7 +23,7 @@ our request object and how the API client acts upon it.
 
 `HarvestRequest` is essentially a composition of all the necessary data to
 compose a
-{{< externalLink "https://developer.gnome.org/libsoup/stable/SoupMessage.html" "SoupMessage" >}}
+{{< link "https://developer.gnome.org/libsoup/stable/SoupMessage.html" "SoupMessage" >}}
 along with information stored in the`HarvestApiClient`.
 
 ```c

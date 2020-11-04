@@ -2,8 +2,6 @@
 title: "Introduction"
 date: 2020-04-11T22:12:20-05:00
 tags:
-  - me
-categories:
   - introduction
 series:
   - me
@@ -21,9 +19,9 @@ graduated with a B.S. in Computer Engineering from Texas A&M University.
 
 After graduation, I headed to Austin where I began working as a software
 developer for a company called
-{{< externalLink "https://www.experoinc.com" Expero >}}. I worked for them in
-College Station during my time in college, so it was a fairly easy transition to
-become a full-time salaried employee.
+{{< link "https://www.experoinc.com" "Expero" >}}. I worked for them in College
+Station during my time in college, so it was a fairly easy transition to become
+a full-time salaried employee.
 
 As far as hobbies go, I enjoy things like playing basketball or sports in
 general, hanging with friends, programming on various hobby or open-source
