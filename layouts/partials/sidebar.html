@@ -1,11 +1,6 @@
 <section id="sidebar" class="box-shadow-container">
-	<picture>
-		{{ $profileWebp := resources.Get "images/profile.webp" | fingerprint }}
-		<source srcset="{{ $profileWebp.RelPermalink }} 200w" type="image/webp" />
-		{{ $profilePng := resources.Get "images/profile.png" | fingerprint }}
-		<source srcset="{{ $profilePng.RelPermalink }} 200w" type="image/png" />
-		<img id="profile-picture" src="{{ $profilePng.RelPermalink }}" loading="lazy" alt="Profile Picture" width="200" >
-	</picture>
+	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
+	<img id="profile-picture" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile Picture" width="200" >
 	<div id="resume" class="centered">
 		<a class="consistent-link" href="/documents/My_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="icon far fa-file-pdf"></i>Resume</a>
 	</div>
