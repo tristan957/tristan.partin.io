@@ -47,6 +47,6 @@ _build:
 
 ## Licenses
 
-The code is licensed under the GPL-3.0.
+The code is licensed under the AGPL-3.0.
 
 The content on the site is licensed under the CC-BY-SA-4.0.
