@@ -112,6 +112,7 @@ body {
 }
 
 .figure > img {
+	max-width: 75%;
 	border: 2px solid var(--box-shadow-container-color);
 }
 

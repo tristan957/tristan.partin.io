@@ -3,7 +3,7 @@
 	{{ range . }}
 		{{ $figure := . | fingerprint }}
 		<div class="figure">
-			<img loading="lazy" alt="{{ $altText }}" src="{{ $figure.RelPermalink }}" width="75%" />
+			<img loading="lazy" alt="{{ $altText }}" src="{{ $figure.RelPermalink }}" />
 			<p><i>{{ $altText }}</i></p>
 		</div>
 	{{ end }}
