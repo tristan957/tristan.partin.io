@@ -1,10 +1,4 @@
 <div class="content-metadata taxonomy-metadata">
-	{{ if gt (len (.GetTerms "categories")) 0 }}
-		<div>
-			Categories:
-			{{ partial "taxonomy.html" (.GetTerms "categories") }}
-		</div>
-	{{ end }}
 	{{ if gt (len (.GetTerms "tags")) 0 }}
 		<div>
 			Tags:
