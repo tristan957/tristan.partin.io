@@ -7,8 +7,14 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 
+[minify]
+  minifyOutput = true
+  disableXML = true
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:slug/"
+
 [taxonomies]
-  category = "categories"
   series = "series"
   tag = "tags"
 
