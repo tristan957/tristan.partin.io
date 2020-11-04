@@ -1,6 +1,6 @@
 ---
 title: "October 2020 Update"
-date: 2020-10-28T23:10:55-05:00
+date: 2020-11-04T00:20:51-06:00
 tags:
   - me
 series:
