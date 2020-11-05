@@ -79,7 +79,7 @@ by me. Hopefully it will gain some traction within the HSE community.
 
 ### Glovebox
 
-<!--Patrick or Joseph...-->
+<!--Patrick...-->
 
 While my friends were in town, "someone" broke my glovebox, so I will be working
 to fix that next month hopefully. Gonna be awkward if I get pulled over...
