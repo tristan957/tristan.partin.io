@@ -33,14 +33,14 @@
 
 @font-face
 {
-	font-family: "Fira Code";
+	font-family: "Cascadia Mono";
 	font-display: swap;
 	{{ $monospace := resources.Get "/fonts/CascadiaMono.woff2" | fingerprint }}
 	src: url("{{ $monospace.RelPermalink }}");
 }
 
 * {
-	font-family: "IBM Plex Sans", Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
 	color: var(--color);
 }
 
@@ -71,7 +71,7 @@ code {
 }
 
 code, code > * {
-	font-family: "Fira Code", "Courier New", Courier, monospace;
+	font-family: "Cascadia Mono", "Courier New", Courier, monospace;
 	font-size: 0.9rem;
 }
 
