@@ -53,7 +53,7 @@ languages have so this feels like a waste of time." And to that I say time is
 only wasted if you don't see value. Let's call this an exercise of the mind and
 dive right into the first topic in the series: Creating an API Client.
 
-## `HarvestApiClient`
+## HarvestApiClient
 
 An API client is the object that will execute requests, and format responses
 into language constructs like objects and errors. Generally APIs will require

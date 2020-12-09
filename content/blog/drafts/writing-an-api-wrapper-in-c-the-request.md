@@ -19,7 +19,7 @@ Previously we left off the API client. We saw an API for executing requests in
 both a synchronous and asynchronous fashion. We will look at the definition of
 our request object and how the API client acts upon it.
 
-## `HarvestRequest`
+## HarvestRequest
 
 `HarvestRequest` is essentially a composition of all the necessary data to
 compose a
