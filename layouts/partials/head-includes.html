@@ -1,22 +1,39 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 {{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
-<link href="{{ $styleCss.RelPermalink }}" rel="preload" as="style">
+<link href="{{ $styleCss.RelPermalink }}" rel="preload" type="text/css" as="style">
 <noscript>
-	<link href="{{ $fa.RelPermalink }}" rel="preload" as="style">
+	<link rel="preload" href="/fonts/fontawesome/webfonts/fa-regular-400.woff2" type="font/woff2" as="font" crossorigin>
+	<link rel="preload" href="/fonts/fontawesome/webfonts/fa-solid-900.woff2" type="font/woff2" as="font" crossorigin>
+	<link href="{{ $fa.RelPermalink }}" rel="preload" type="text/css" as="style">
 </noscript>
 <script type="text/javascript">
 	;(function() {
+		const faRegular400 = document.createElement("link");
+		faRegular400.href = "/fonts/fontawesome/webfonts/fa-regular-400.woff2";
+		faRegular400.rel = "preload";
+		faRegular400.type = "font/woff2"
+		faRegular400.as = "font";
+		faRegular400.crossOrigin = ""
+		document.getElementsByTagName("head")[0].appendChild(faRegular400);
+
+		const faSolid900 = document.createElement("link");
+		faSolid900.href = "/fonts/fontawesome/webfonts/fa-solid-900.woff2";
+		faSolid900.rel = "preload";
+		faSolid900.type = "font/woff2"
+		faSolid900.as = "font";
+		faSolid900.crossOrigin = ""
+		document.getElementsByTagName("head")[0].appendChild(faSolid900);
+
 		const fa = document.createElement("link");
 		fa.href = "{{ $fa.RelPermalink }}";
 		fa.rel = "preload";
+		fa.type = "text/css"
 		fa.as = "style";
 		document.getElementsByTagName("head")[0].appendChild(fa);
 	})();
 </script>
 <link rel="stylesheet" href="{{ $styleCss.RelPermalink }}">
 <link rel="stylesheet" href="{{ $fa.RelPermalink }}">
-<link rel="preload" href="/fonts/fontawesome/webfonts/fa-regular-400.woff2" as="font">
-<link rel="preload" href="/fonts/fontawesome/webfonts/fa-solid-900.woff2" as="font">
 {{ if hugo.IsProduction }}
 	<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}
