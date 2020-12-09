@@ -1,17 +1,11 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 {{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
+<link href="{{ $styleCss.RelPermalink }}" rel="preload" as="style">
 <noscript>
-	<link href="{{ $styleCss.RelPermalink }}" rel="preload" as="style">
 	<link href="{{ $fa.RelPermalink }}" rel="preload" as="style">
 </noscript>
 <script type="text/javascript">
 	;(function() {
-		const style = document.createElement("link");
-		fa.href = "{{ $styleCss.RelPermalink }}";
-		fa.rel = "preload";
-		fa.as = "style";
-		document.getElementsByTagName("head")[0].appendChild(style);
-
 		const fa = document.createElement("link");
 		fa.href = "{{ $fa.RelPermalink }}";
 		fa.rel = "preload";
