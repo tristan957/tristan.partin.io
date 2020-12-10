@@ -48,7 +48,8 @@
 	<script type="text/javascript">
 		function isDarkModeEnabled() {
 			const siteThemeFromStorage = window.localStorage.getItem("site-theme");
-			return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && (siteThemeFromStorage !== "light")) || siteThemeFromStorage === "dark";
+			return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+				&& siteThemeFromStorage !== "light") || siteThemeFromStorage === "dark";
 		}
 
 		function switchTheme(theme) {
