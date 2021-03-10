@@ -16,7 +16,7 @@ comments can be emailed to my
 The site also includes dark mode support which will be handled by your system
 preferences, specifically `prefers-color-scheme`. Alternatively, there is a
 toggle if you prefer one theme over the other. The option is stored in local
-storage as `site-theme`. Note the toggle requires JavaScript to be enabled.
+storage as `site-theme`. Note: the toggle requires JavaScript to be enabled.
 
 It is inspired by an older iteration of
 [drewdevault.com](https://drewdevault.com).
@@ -25,6 +25,7 @@ It is inspired by an older iteration of
 
 - [`hugo`](https://gohugo.io)
 - [`openring`](https://git.sr.ht/~sircmpwn/openring)
+- [`prettier`](https://prettier.io/)
 
 ## Contributing
 
