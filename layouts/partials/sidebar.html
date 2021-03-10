@@ -2,7 +2,7 @@
 	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
 	<img id="profile-picture" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile Picture" width="200" >
 	<div id="resume" class="centered">
-		<a class="consistent-link" href="/documents/My_Resume.pdf" target="_blank" rel="noopener noreferrer nofollow"><i class="icon far fa-file-pdf"></i>Resume</a>
+		<a class="consistent-link" href="/documents/My_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="icon far fa-file-pdf"></i>Resume</a>
 	</div>
 	<p>
 		I am a human. I do human things.
