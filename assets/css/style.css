@@ -360,6 +360,10 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
  * Footnotes
  */
 
+.footnotes {
+	word-break: break-word;
+}
+
 .footnotes > ol {
 	margin: 0;
 }
