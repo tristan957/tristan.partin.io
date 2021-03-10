@@ -1,19 +1,16 @@
 ---
-title: "The Church of FAANG"
+title: "The Church of Big Tech"
 date: 2021-03-10T00:05:40-06:00
 tags:
-  - faang
   - ethics
 ---
 
 Sunday may be the day of the Lord, but the other six days of the week belong to
-FAANG.
+Big Tech.
 
 <!--more-->
 
-FAANG is ancronym for various big tech companies, but more generically can be
-used as a noun meaning big tech companies in general. When I say big tech
-companies, I am talking Google, Apple, Amazon, Facebook, Twitter, etc.
+When I say Big Tech, I am talking Google, Apple, Amazon, Facebook, Twitter, etc.
 
 The other day, I was mindlessly scrolling LinkedIn, and came across a post by a
 young first generation college student. The post was a story of continuous
@@ -151,7 +148,7 @@ one thing in particular.
 
 I don't necessarily want this blog to go on forever, but at this point the
 purpose should be clear. Time and time against people say that working at X or
-specifically FAANG is their dream. Every time I hear someone say that, I just
+specifically Big Tech is their dream. Every time I hear someone say that, I just
 have to sit back and think:
 
 - Is your dream to faciliate anti-competitive behaviors?
