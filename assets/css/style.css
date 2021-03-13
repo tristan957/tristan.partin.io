@@ -314,8 +314,6 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	border-radius: 3%;
 	display: block;
 	margin: auto;
-	width: 70%;
-	max-width: 200px;
 	border: 2px solid var(--box-shadow-container-color);
 }
 
