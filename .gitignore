@@ -1,7 +1,5 @@
-public
-node_modules
-.vscode
-*.tfvars
-*.tfstate*
-.terraform
+/public
+node_modules/
+/.vscode/
+*.report.html
 # layouts/partials/webring-out.html
