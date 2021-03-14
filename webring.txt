@@ -4,3 +4,5 @@ https://blog.golang.org/feed.atom
 https://blog.rust-lang.org/feed.xml
 https://blog.mozilla.org/feed/
 https://belmoussaoui.com/feed
+https://os.phil-opp.com/rss.xml
+https://sourcehut.org/blog/index.xml
