@@ -29,16 +29,16 @@
 {
 	font-family: "IBM Plex Sans";
 	font-display: swap;
-	{{ $defaultFont := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" }}
-	src: url("{{ $defaultFont.RelPermalink }}");
+	{{ $default := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" | fingerprint }}
+	src: url("{{ $default.RelPermalink }}");
 }
 
 @font-face
 {
 	font-family: "Cascadia Mono";
 	font-display: swap;
-	{{ $monospaceFont := resources.Get "/fonts/CascadiaMono.woff2" }}
-	src: url("{{ $monospaceFont.RelPermalink }}");
+	{{ $monospace := resources.Get "/fonts/CascadiaMono.woff2" | fingerprint }}
+	src: url("{{ $monospace.RelPermalink }}");
 }
 
 * {
