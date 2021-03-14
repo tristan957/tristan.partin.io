@@ -2,6 +2,7 @@
 {{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
 <link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css">
+<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
 {{ if hugo.IsProduction }}
 	<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}
