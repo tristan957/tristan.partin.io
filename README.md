@@ -1,12 +1,8 @@
 [![builds.sr.ht status](https://builds.sr.ht/~tristan957/tristan.partin.io.svg)](https://builds.sr.ht/~tristan957/tristan.partin.io?)
-![Lighthouse Accessibility](./lighthouse/lighthouse_accessibility.svg)
-![Lighthouse Best Practices](./lighthouse/lighthouse_best-practices.svg)
-![Lighthouse Performance](./lighthouse/lighthouse_performance.svg)
-![Lighthouse SEO](./lighthouse/lighthouse_seo.svg)
 
 # tristan.partin.io
 
-This is code used to create the [tristan.partin.io](https://tristan.partin.io).
+This is code used to create [tristan.partin.io](https://tristan.partin.io).
 
 ## Comments
 
