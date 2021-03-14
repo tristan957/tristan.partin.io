@@ -53,6 +53,10 @@ https://fontello.com/, and make any necessary changes. Download the new font.
 Extract the archive into `assets/fonts/` and rename to `fontello`. Move the
 `fonts/` directory into `static/fonts/fontello/`.
 
+Make sure the `@font-face` in
+[`fontello.css`](./assets/fonts/fontello/css/fontello.css) has
+`font-display: swap`.
+
 ## Licenses
 
 The code is licensed under the AGPL-3.0.
