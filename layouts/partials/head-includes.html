@@ -1,36 +1,7 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
-{{ $fa := resources.Get "fonts/fontawesome/css/all.min.css" | fingerprint }}
+{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
-<noscript>
-	<link rel="preload" href="/fonts/fontawesome/webfonts/fa-regular-400.woff2" type="font/woff2" as="font" crossorigin>
-	<link rel="preload" href="/fonts/fontawesome/webfonts/fa-solid-900.woff2" type="font/woff2" as="font" crossorigin>
-	<link rel="stylesheet" href="{{ $fa.RelPermalink }}" type="text/css">
-</noscript>
-<script type="text/javascript">
-	;(function() {
-		const faRegular400 = document.createElement("link");
-		faRegular400.rel = "preload";
-		faRegular400.href = "/fonts/fontawesome/webfonts/fa-regular-400.woff2";
-		faRegular400.type = "font/woff2"
-		faRegular400.as = "font";
-		faRegular400.crossOrigin = "";
-		document.getElementsByTagName("head")[0].appendChild(faRegular400);
-
-		const faSolid900 = document.createElement("link");
-		faSolid900.rel = "preload";
-		faSolid900.href = "/fonts/fontawesome/webfonts/fa-solid-900.woff2";
-		faSolid900.type = "font/woff2"
-		faSolid900.as = "font";
-		faSolid900.crossOrigin = "";
-		document.getElementsByTagName("head")[0].appendChild(faSolid900);
-
-		const fa = document.createElement("link");
-		fa.rel = "stylesheet";
-		fa.href = "{{ $fa.RelPermalink }}";
-		fa.type = "text/css";
-		document.getElementsByTagName("head")[0].appendChild(fa);
-	})();
-</script>
+<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
 {{ if hugo.IsProduction }}
 	<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}

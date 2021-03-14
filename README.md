@@ -46,8 +46,18 @@ _build:
   list: never
 ```
 
+### Using Fontello
+
+Take the [`config.json`](./assets/fonts/fontello/config.json) to
+https://fontello.com/, and make any necessary changes. Download the new font.
+Extract the archive into `assets/fonts/` and rename to `fontello`. Move the
+`fonts/` directory into `static/fonts/fontello/`.
+
 ## Licenses
 
 The code is licensed under the AGPL-3.0.
 
 The content on the site is licensed under the CC-BY-SA-4.0.
+
+See [`fontello`](https://fontello.com/)
+[license](./assets/fonts/fontello/LICENSE.txt).
