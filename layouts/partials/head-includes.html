@@ -1,8 +1,11 @@
 {{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 {{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
+{{ $defaultFont := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" }}
+{{ $monospaceFont := resources.Get "/fonts/CascadiaMono.woff2" }}
 <link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
-<link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">
-<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
+<link rel="stylesheet preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">
+<link rel="preload" href="{{ $defaultFont.RelPermalink }}" type="font/woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="{{ $monospaceFont.RelPermalink }}" type="font/woff2" as="font" crossorigin="anonymous">
 {{ if hugo.IsProduction }}
 	<script async defer data-domain="tristan.partin.io" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}
