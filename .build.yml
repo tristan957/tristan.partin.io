@@ -18,4 +18,4 @@ tasks:
       tar -C public -cvz . > site.tar.gz
   - upload: |
       cd tristan.partin.io
-      acurl -f https://pages.sr.ht/publish/tristan957.srht.site -Fcontent@site.tar.gz
+      acurl -f https://pages.sr.ht/publish/tristan957.srht.site -Fcontent=@site.tar.gz
