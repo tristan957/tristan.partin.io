@@ -3,7 +3,8 @@
 # Don't run the script twice...
 if [ "$2" == "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
 	./scripts/openring/generate.sh
-	if ! git diff-files | grep --quiet layouts/partials/webring-out.html; then
+	git diff-files | grep --quiet layouts/partials/webring-out.html
+	if [ $? -ne 0 ]; then
 		exit 1
 	fi
 fi
