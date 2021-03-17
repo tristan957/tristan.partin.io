@@ -7,12 +7,9 @@
   "private": true,
   "scripts": {
     "format": "prettier --config .prettierrc.yml --write '**/*.md'",
-    "format:ci": "prettier --config .prettierrc.yml --check '**/*.md'",
-    "lighthouse-desktop": "lighthouse https://tristan.partin.io --preset=desktop --only-categories accessibility,best-practices,performance,seo --view",
-    "lighthouse-mobile": "lighthouse https://tristan.partin.io --form-factor=mobile --only-categories accessibility,best-practices,performance,seo --view"
+    "format:ci": "prettier --config .prettierrc.yml --check '**/*.md'"
   },
   "devDependencies": {
-    "lighthouse": "^7.2.0",
     "prettier": "^2.2.1"
   }
 }
