@@ -7,3 +7,4 @@ https://belmoussaoui.com/feed
 https://os.phil-opp.com/rss.xml
 https://sourcehut.org/blog/index.xml
 https://popey.com/blog/index.xml
+https://recursiveascent.blogspot.com/feeds/posts/default?alt=rss
