@@ -4,7 +4,7 @@
 if [ "$2" == "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
 	./scripts/openring/generate.sh
 	git diff-files | grep --quiet layouts/partials/webring-out.html
-	if [ $? -ne 0 ]; then
+	if [ $? -eq 0 ]; then
 		exit 1
 	fi
 fi
