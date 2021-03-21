@@ -1,5 +1,4 @@
 /public/
 node_modules/
-/.vscode/
 *.report.html
 # layouts/partials/webring-out.html
