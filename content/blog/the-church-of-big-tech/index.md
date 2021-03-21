@@ -38,7 +38,7 @@ or even legal violations, feel free to comment below or email me.
 ### International Business Machines (IBM)
 
 - In 1933, Nazi Germany announced plans to conduct a census. This census was
-  important in indentifying future victims of the Holocaust. The company that
+  important in identifying future victims of the Holocaust. The company that
   supplied the machines for tabulating the census was none other than our big
   blue friend, IBM.[^1]
 
@@ -52,7 +52,7 @@ about some of their other issues.
   embroiled in this battle for having the right to repair things that we own.
   Apple is one of the most hostile vendors when it comes to the right to
   repair.[^2] Finding replacement parts for various modules on a iPhone is
-  almost if not nearly impossible. In some cases, you can only go throught Apple
+  almost if not nearly impossible. In some cases, you can only go through Apple
   to repair your devices which is an extremely monopolistic practice.
 
 ### Google
@@ -87,7 +87,7 @@ space to do some really unfortunate things.
   when not using Chromium-based browsers.
 
 - Much of Google's yearly revenue comes from their ad-tech of which they are the
-  number 1 player. Google most recently inroduced a push to ban third-party
+  number 1 player. Google most recently introduced a push to ban third-party
   cookies entirely from the web, which is good but many other ad-tech companies
   rely on third-party cookies. Google has started pushing for the Federated
   Learning of Cohorts (FLoC).[^3] In essence, Google wants users to be
@@ -112,10 +112,10 @@ Facebook has been in the news quite a bit recently.
 - Apple has been pushing for privacy protections for the users of its App Store.
   This means Apple has begun showing more detailed information about what sorts
   of data and permissions apps need access to. Facebook has been one of the
-  primary targets because their app has just an exhorbitant amount of data and
+  primary targets because their app has just an exorbitant amount of data and
   permissions that it wants to collect. While many of us knew this, the fact
   that the information is finally getting into the hands of consumers is a
-  breath of fresh air. Due to finally being exposed, Facebook has chosed to sue
+  breath of fresh air. Due to finally being exposed, Facebook has chosen to sue
   Apple.
 
 - Facebook also acquired WhatsApp which has proven to be the most popular
@@ -139,7 +139,7 @@ one thing in particular.
   Oracle didn't like this as the owners of the Java copyright. Hence Oracle sued
   Google.[^5] Oracle v. Google is up to the Supreme Court where it will finally
   be decided once and for all. Essentially this lawsuit can boils down to the
-  simple question of "Can you copyright an API?". My position is whole-heartedly
+  simple question of "Can you copyright an API?". My position is wholeheartedly
   no. Imaging if an author of a book could copyright the names and orders of a
   chapter in a book. That would be completely ridiculous, and people would laugh
   you out of the room just for thinking that. This case is very important for
@@ -151,7 +151,7 @@ purpose should be clear. Time and time against people say that working at X or
 specifically Big Tech is their dream. Every time I hear someone say that, I just
 have to sit back and think:
 
-- Is your dream to faciliate anti-competitive behaviors?
+- Is your dream to facilitate anti-competitive behaviors?
 - Is your dream to work for a company trying to single-handedly ruin computing?
 - etc...
 

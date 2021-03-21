@@ -35,7 +35,7 @@ bought myself a calculator watch[^1] that actually just broke :(. For my 24th
 birthday, I kind of combined my gift with my Halloween costume. The costume was
 a motorcycle gang member, and the gang's name is the SoCo MoFos (South Congress
 Mother F\*\*\*ers). I bought myself a leather jacket[^2] from FLAVOR Leather.
-The material is pig skin, and it feels really nice. The stiching seems high
+The material is pig skin, and it feels really nice. The stitching seems high
 quality, and I am definitely warm when I wear it. I have taken it for a
 motorcycle ride in ~50 degree weather, and the ride was quite enjoyable.
 

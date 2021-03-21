@@ -25,7 +25,7 @@ a full-time salaried employee.
 
 As far as hobbies go, I enjoy things like playing basketball or sports in
 general, hanging with friends, programming on various hobby or open-source
-projects, and doing an array of outdoor activites. Recently, I bought an
+projects, and doing an array of outdoor activities. Recently, I bought an
 inflatable kayak because I crunched the numbers and figured if I wanted to go
 kayaking as often as I intend to, I should make an investment now to save money
 for the future. Perfect timing too, since Spring has just arrived. With the

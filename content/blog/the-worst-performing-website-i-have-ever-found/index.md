@@ -10,7 +10,7 @@ its performance.
 
 <!--more-->
 
-About a year and a half ago at this point, I was contacted by a recuiter on
+About a year and a half ago at this point, I was contacted by a recruiter on
 LinkedIn for becoming a C++ engineer at this company[^1]. I went to their
 website to read more about the company, and boy was I in for a surprise.
 
@@ -33,7 +33,7 @@ We live in a time where website performance is extremely important to the
 success of a website. User engagement studies say that many users will skip
 going to your site if it takes longer than 3 seconds to load. Site performance
 is also a key characteristic in helping your websites reach the top of search
-engine resutls.
+engine results.
 
 I urge everyone reading this to brush up on their profiling skills and find
 tools which can help diagnose issues on your site. For me, that tool is Google's
