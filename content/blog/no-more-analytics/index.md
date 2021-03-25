@@ -7,7 +7,7 @@ tags:
   - analytics
 ---
 
-This page used to Plausible Analytics, but that is no more.
+This page used to use Plausible Analytics, but that is no more.
 
 <!--more-->
 
