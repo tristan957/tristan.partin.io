@@ -1,10 +1,12 @@
 <div id="title-container">
 	<h1 id="title">{{ .Title }}</h1>
 	<span>
-		{{ with .GetPage "archive" }}
-			<a aria-label="Archive" class="undecorated-link" href="{{ .RelPermalink }}">
-				<i class="icon icon-file-archive"></i>
-			</a>
+		{{ if ne .Type "archive" }}
+			{{ with .GetPage "archive" }}
+				<a aria-label="Archive" class="undecorated-link" href="{{ .RelPermalink }}">
+					<i class="icon icon-file-archive"></i>
+				</a>
+			{{ end }}
 		{{ end }}
 		{{ with .OutputFormats.Get "RSS" }}
 			<a aria-label="RSS" class="undecorated-link" href="{{ .RelPermalink }}">
