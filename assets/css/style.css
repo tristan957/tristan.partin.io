@@ -432,10 +432,6 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	color: white;
 }
 
-.icon {
-	margin-right: 0.5rem;
-}
-
 /*
  * Utterances
  */
