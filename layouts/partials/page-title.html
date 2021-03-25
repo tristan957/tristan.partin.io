@@ -1,7 +1,15 @@
 <div id="title-container">
 	<h1 id="title">{{ .Title }}</h1>
-	{{ $rssFile := printf "%s%s" .RelPermalink "index.xml" }}
-	<a class="undecorated-link" href="{{ $rssFile }}">
-		<i class="icon icon-rss"></i> RSS
-	</a>
+	<span>
+		{{ with .GetPage "archive" }}
+			<a aria-label="Archive" class="undecorated-link" href="{{ .RelPermalink }}">
+				<i class="icon icon-file-archive"></i>
+			</a>
+		{{ end }}
+		{{ with .OutputFormats.Get "RSS" }}
+			<a aria-label="RSS" class="undecorated-link" href="{{ .RelPermalink }}">
+				<i class="icon icon-rss"></i>
+			</a>
+		{{ end }}
+	</span>
 </div>

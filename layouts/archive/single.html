@@ -1,0 +1,23 @@
+{{ define "main" }}
+	<section>
+		{{ partial "page-title.html" . }}
+		<h2 id="content-about" class="font-weight-normal">{{ .Content }}</h2>
+		<ol class="undecorated-list content-list">
+			{{ range (where (.Site.Pages) "Type" "blog").GroupByDate "2006" }}
+				<li class="content-item">
+					<h2 class="summary-title">
+						<a id="{{ .Key }}" class="font-weight-bold consistent-link" href="#{{ .Key }}">{{ .Key }}</a>
+					</h2>
+					<ol class="undecorated-list">
+						{{ range .ByPublishDate.Reverse }}
+							<li>
+								<span>{{ .PublishDate.Format "2006-01-02" }}</span>
+								<a class="consistent-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+							</li>
+						{{ end }}
+					</ol>
+				</li>
+			{{ end }}
+		</ol>
+	</section>
+{{ end }}
