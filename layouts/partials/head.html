@@ -22,7 +22,12 @@
 		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
 	>
 
-	{{ partial "head-includes.html" . }}
+	{{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
+	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
+	<link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">
+	<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
+
 	{{ range .AlternativeOutputFormats -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{ end -}}
