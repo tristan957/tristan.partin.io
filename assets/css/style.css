@@ -416,8 +416,8 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	border-top: 3px var(--primary-accent-color) solid;
 }
 
-#resume {
-	margin-top: 1rem;
+#resume .icon {
+	margin-right: 0.25rem;
 }
 
 .centered {
@@ -430,6 +430,14 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 
 .nav-icon {
 	color: white;
+}
+
+#page-links > * {
+	margin-right: 0.75rem;
+}
+
+#page-links > *:last-child {
+	margin-right: 0rem;
 }
 
 /*

@@ -1,6 +1,6 @@
 <div id="title-container">
 	<h1 id="title">{{ .Title }}</h1>
-	<span>
+	<span id="page-links">
 		{{ if ne .Type "archive" }}
 			{{ with .GetPage "archive" }}
 				<a aria-label="Archive" class="undecorated-link" href="{{ .RelPermalink }}">
