@@ -2,3 +2,6 @@ User-Agent: *
 Sitemap: {{ .Site.BaseURL }}/sitemap.xml
 Disallow: /series/
 Disallow: /tags/
+Disallow: /fonts/
+Disallow: /css/
+Disallow: /images/
