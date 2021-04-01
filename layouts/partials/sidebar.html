@@ -31,19 +31,14 @@
 			</li>
 		</ul>
 	</address>
+	<button id="theme-btn" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)" onkeydown="overrideTheme(this)"></button>
 	<script text="text/javascript">
 		let isDarkModePreferred = isDarkModeEnabled();
 
 		switchTheme(isDarkModePreferred ? "dark" : "light");
 
-		const themeButton = document.createElement("button");
-		themeButton.id = "theme-btn";
-		themeButton.classList.add("btn");
+		const themeButton = document.getElementById("theme-btn");
 		themeButton.innerHTML = isDarkModePreferred ? "Light Theme" : "Dark Theme";
-		themeButton.onclick = overrideTheme;
-		overrideTheme.bind(themeButton);
-
-		document.getElementsByTagName("address")[0].insertAdjacentElement("afterend", themeButton);
 	</script>
 	<div class="sidebar-section">
 		<div class="sidebar-section-header">License</div>
@@ -54,6 +49,7 @@
 			<a class="consistent-link" href="https://opensource.org/licenses/AGPL-3.0" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>.
 		</p>
 	</div>
+	<hr />
 	<p class="smaller-text">
 		This code and content for this site can be found on
 		<a class="consistent-link" href="https://git.sr.ht/~tristan957/tristan.partin.io" target="_blank" rel="noopener noreferrer">SourceHut</a>.
