@@ -8,7 +8,7 @@
 		I am a human. I do human things.
 	</p>
 	<address>
-		<ul id="social" class="undecorated-list contact-list">
+		<ul class="undecorated-list contact-list">
 			<li>
 				<div>sourcehut</div>
 				<a class="consistent-link" href="https://git.sr.ht/~tristan957" target="_blank" rel="noopener noreferrer">~tristan957</a>
@@ -43,7 +43,7 @@
 		themeButton.onclick = overrideTheme;
 		overrideTheme.bind(themeButton);
 
-		document.getElementById("social").insertAdjacentElement("afterend", themeButton);
+		document.getElementsByTagName("address")[0].insertAdjacentElement("afterend", themeButton);
 	</script>
 	<div class="sidebar-section">
 		<div class="sidebar-section-header">License</div>
