@@ -1,6 +1,8 @@
 <li class="content-item box-shadow-container">
 	<h2 class="summary-title">
-		<span class="date">{{ .Date.Format "2006-01-02" }}</span>
+		{{ with .Date.Format "2006-01-02" }}
+			<time class="date" datetime="{{ . }}">{{ . }}</time>
+		{{ end }}
 		<a class="font-weight-bold consistent-link" href="{{ .Permalink }}">{{ .Title }}</a>
 	</h2>
 	{{ partial "all-taxonomies.html" . }}
