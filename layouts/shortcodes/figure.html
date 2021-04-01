@@ -2,9 +2,9 @@
 {{ with .Page.Resources.Match (.Get 0) }}
 	{{ range . }}
 		{{ $figure := . | fingerprint }}
-		<div class="figure">
+		<figure class="figure">
 			<img loading="lazy" alt="{{ $altText }}" src="{{ $figure.RelPermalink }}" />
-			<p><i>{{ $altText }}</i></p>
-		</div>
+			<figcaption><i>{{ $altText }}</i></figcaption>
+		</figure>
 	{{ end }}
 {{ end }}
