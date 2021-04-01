@@ -102,6 +102,10 @@ blockquote > p {
 	padding: 0.75rem;
 }
 
+address {
+	font-style: unset;
+}
+
 .btn {
 	color: white;
 	background-color: var(--secondary-accent-color);
