@@ -12,7 +12,7 @@
 							Welcome to my site. Here are the things I have recently posted about.
 					</p>
 					<ul class="undecorated-list content-list">
-						{{ range first 10 .Site.RegularPages }}
+						{{ range first 10 (where .Site.RegularPages "Type" "!=" "archive") }}
 							{{ partial "summary.html" . }}
 						{{ end }}
 					</ul>
