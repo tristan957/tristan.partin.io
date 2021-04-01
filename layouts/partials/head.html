@@ -78,11 +78,11 @@
 		function overrideTheme(button) {
 			if (!isDarkModePreferred) {
 				isDarkModePreferred = true;
-				this.innerHTML = "Light Theme";
+				button.innerHTML = "Light Theme";
 				switchTheme("dark");
 			} else {
 				isDarkModePreferred = false;
-				this.innerHTML = "Dark Theme";
+				button.innerHTML = "Dark Theme";
 				switchTheme("light");
 			}
 		}
