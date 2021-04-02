@@ -69,6 +69,10 @@ code {
 	word-wrap: break-word;
 }
 
+a > code {
+	color: inherit;
+}
+
 .highlight code {
 	color: white;
 }
