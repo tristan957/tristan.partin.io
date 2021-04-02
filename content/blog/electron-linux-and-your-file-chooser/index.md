@@ -66,7 +66,7 @@ based on Chromium, and Chromium uses GTK on Linux, so naturally Electron does as
 well. In GTK there are two classes to make note of:
 
 - {{< link "https://docs.gtk.org/gtk4/class.FileChooserDialog.html" GtkFileChooserDialog code >}}
-- {{< link "https://docs.gtk.org/gtk4/class.FileChooserNative.html" GtkFileChooserNative code >}}
+- {{< link "https://docs.gtk.org/gtk4/class.FileChooserNative.html" GtkFileChooserNative code >}}[^1]
 
 The native variant will show the Windows or Mac file choosers on those
 platforms, but on Linux, the native variant actually speaks to the XDG Desktop
