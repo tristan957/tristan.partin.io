@@ -13,27 +13,31 @@
 			{{ end }}
 		</ul>
 		{{ if or $paginator.HasPrev $paginator.HasNext }}
-			<div>
-				{{ if $paginator.HasPrev }}
-					<a class="btn btn-primary" style="float: left;" href="{{ $paginator.Prev.URL }}">
-						<span>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-								<path d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path>
-							</svg>
-						</span>
-						Page {{ $paginator.Prev.PageNumber }}
-					</a>
-				{{ end }}
-				{{ if $paginator.HasNext }}
-					<a class="btn btn-primary" style="float: right;" href="{{ $paginator.Prev.URL }}">
-						Page {{ $paginator.Next.PageNumber }}
-						<span>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-								<path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
-							</svg>
-						</span>
-					</a>
-				{{ end }}
+			<div id="page-controls">
+				<span id="page-controls-prev">
+					{{ if $paginator.HasPrev }}
+						{{ if and (ne $paginator.First.PageNumber $paginator.PageNumber) (ne $paginator.First.PageNumber $paginator.Prev.PageNumber) }}
+							<a aria-label="Go to first page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.First.URL }}">
+								First
+							</a>
+						{{ end }}
+						<a aria-label="Go to page {{ $paginator.Prev.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Prev.URL }}">
+							{{ $paginator.Prev.PageNumber }}
+						</a>
+					{{ end }}
+				</span>
+				<span id="page-controls-next">
+					{{ if $paginator.HasNext }}
+						<a aria-label="Go to page {{ $paginator.Next.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Next.URL }}">
+							{{ $paginator.Next.PageNumber }}
+						</a>
+						{{ if and (ne $paginator.Last.PageNumber $paginator.PageNumber) (ne $paginator.Last.PageNumber $paginator.Next.PageNumber) }}
+							<a aria-label="Go to last page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Last.URL }}">
+								Last
+							</a>
+						{{ end }}
+					{{ end }}
+				</span>
 			</div>
 		{{ end }}
 	</section>
