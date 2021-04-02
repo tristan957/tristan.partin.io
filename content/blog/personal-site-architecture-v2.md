@@ -17,16 +17,15 @@ Recently I changed up the architectural backing of this site.
 ## Site Background
 
 In the olden days of college, I met a young fellow named
-{{< link "https://www.linkedin.com/in/joseph-martinsen/" "Joseph Martinsen" >}}.
-He had[^1] this awesome personal website that I really liked. From then on, I
-knew that I also wanted a personal website. Joseph's site was essentially a web
-version of his resume laid out all nicely with a bit of expansion on certain
-points. I had many iterations of designs, starting one day, and moving onto
-other endeavors the next day, but used the content on his site to guide my own.
-Rinse and repeat. Eventually I became an old man during junior and senior years,
-and there were much more pressing issues like what bar I was going to
-procrastinate at when my Advanced Operating Systems homework was due at midnight
-the next night.
+[Joseph Martinsen](https://www.linkedin.com/in/joseph-martinsen/). He had[^1]
+this awesome personal website that I really liked. From then on, I knew that I
+also wanted a personal website. Joseph's site was essentially a web version of
+his resume laid out all nicely with a bit of expansion on certain points. I had
+many iterations of designs, starting one day, and moving onto other endeavors
+the next day, but used the content on his site to guide my own. Rinse and
+repeat. Eventually I became an old man during junior and senior years, and there
+were much more pressing issues like what bar I was going to procrastinate at
+when my Advanced Operating Systems homework was due at midnight the next night.
 
 At some point however, I did finally get what one would call an extreme alpha
 level site. It had a design with content that I was going to expand on, but
@@ -64,11 +63,11 @@ A Hugo powered site sitting behind an NGINX server, on a `t2.micro` which
 ## New Architecture
 
 Same Joseph as before has recently been looking into this company called
-{{< link "https://vercel.com/home" "Vercel" >}}. They excel in static and JAM
-stack deployments, CDNs, and serverless functions. For the past 3 months while
-Joseph was building his wedding site, he has been continually telling me about
-the ease of Vercel for deploying his site, and the deployment was free since he
-had a "hobby" account. I still wonder how much they pay him to advertise.
+[Vercel](https://vercel.com/home). They excel in static and JAM stack
+deployments, CDNs, and serverless functions. For the past 3 months while Joseph
+was building his wedding site, he has been continually telling me about the ease
+of Vercel for deploying his site, and the deployment was free since he had a
+"hobby" account. I still wonder how much they pay him to advertise.
 
 I had tried Vercel about a month ago, but was displeased with their Hugo
 support. I needed Hugo features they simply didn't support at the time. I even
@@ -84,24 +83,24 @@ With the domain finally in Vercel, the new architecture was complete. My entire
 site and its domain were being managed by Vercel.
 
 Recently in open source circles, I had heard been hearing about this service
-called {{< link "https://plausible.io" "Plausible Analytics" >}}. I have a deep
-disdain for being tracked on the internet by the likes of internet giants, so I
-never had Google Analytics on my site or frankly any analytics. I figured with
-the money I was saving no longer paying for an EC2 and Route 53, I would
-evaluate Plausible's free trial and see what I thought of it. With that goal in
-mind, I setup my trial account to today for free, and am going to see what types
-of things I can learn about my miniscule amount of readers, and see if it is
-worth the couple dollars a month for the hosted variant. The service itself is
-open source, and the code is hosted on GitHub which immediately caught my
-attention. Plausible also isn't an advertising company, so the small amount of
-data they collect stays with them. For people browsing my site, Plausible will
-collect data like the number of concurrent users, recently visited pages,
-countries of origin, and number of visits a month. Plausible also has a feature
-where you can open up your analytics page for the world to see. I didn't see a
-way to do this in the free trial, but rest assured, I will be opening my
-analytics page up for the public to see, so that way you all can see the exact
-same data that I see. You'll hopefully see that it isn't much, and that the data
-is extremely anonymous compared to competitors.
+called [Plausible Analytics](https://plausible.io). I have a deep disdain for
+being tracked on the internet by the likes of internet giants, so I never had
+Google Analytics on my site or frankly any analytics. I figured with the money I
+was saving no longer paying for an EC2 and Route 53, I would evaluate
+Plausible's free trial and see what I thought of it. With that goal in mind, I
+setup my trial account to today for free, and am going to see what types of
+things I can learn about my miniscule amount of readers, and see if it is worth
+the couple dollars a month for the hosted variant. The service itself is open
+source, and the code is hosted on GitHub which immediately caught my attention.
+Plausible also isn't an advertising company, so the small amount of data they
+collect stays with them. For people browsing my site, Plausible will collect
+data like the number of concurrent users, recently visited pages, countries of
+origin, and number of visits a month. Plausible also has a feature where you can
+open up your analytics page for the world to see. I didn't see a way to do this
+in the free trial, but rest assured, I will be opening my analytics page up for
+the public to see, so that way you all can see the exact same data that I see.
+You'll hopefully see that it isn't much, and that the data is extremely
+anonymous compared to competitors.
 
 ## Conclusion
 

@@ -1,7 +1,0 @@
-{{ if .Get 2 }}
-	{{ if eq (.Get 2) "code"}}
-		<a class="consistent-link" href="{{ .Get 0 }}" target="_blank" rel="noreferrer noopener"><code>{{ .Get 1 }}</code></a>
-	{{ end }}
-{{ else }}
-	<a class="consistent-link" href="{{ .Get 0 }}" target="_blank" rel="noreferrer noopener">{{ .Get 1 }}</a>
-{{ end }}

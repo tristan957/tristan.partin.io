@@ -23,10 +23,10 @@ college came into town, and we went to some wineries/tasting rooms in the
 Driftwood/Dripping Springs area. Great times were had. Took my friends to try
 the taco truck I always rave about, and they all really enjoyed it which means I
 must have really good taste buds. We also hit up
-{{< link "https://mozartscoffee.com/" "Mozart's" >}} on Lake Austin Blvd. I am
-not a coffee person typically, so hot chocolate was my drink of choice.
+[Mozart's](https://mozartscoffee.com/) on Lake Austin Blvd. I am not a coffee
+person typically, so hot chocolate was my drink of choice.
 
-{{< figure "friends.webp" "Best of Friends" >}}
+![Best of Friends](friends.webp "Best of Friends")
 
 ## Purchases...or Presents
 
@@ -39,16 +39,16 @@ The material is pig skin, and it feels really nice. The stitching seems high
 quality, and I am definitely warm when I wear it. I have taken it for a
 motorcycle ride in ~50 degree weather, and the ride was quite enjoyable.
 
-{{< figure "leather-jacket.webp" "Flavor Leather Jacket" >}}
+![Flavor Leather Jacket](leather-jacket.webp "Flavor Leather Jacket")
 
 Then I found a link to this non-profit called
-{{< link "https://theoceancleanup.com/" "TheOceanCleanup" >}} which aims to take
-plastics drifting in the ocean, and turn them into products. In turn, the
-revenue from the products will fund more excursions to collect plastic and R&D
-for other products. This sounded like a good business model to me, so I dropped
-some money to buy their first product, which are sunglasses. I needed
-sunglasses, so the timing couldn't have been better. I am hoping they will ship
-soon, so that I can make good use of them, but I am also not in a rush.
+[TheOceanCleanup](https://theoceancleanup.com/) which aims to take plastics
+drifting in the ocean, and turn them into products. In turn, the revenue from
+the products will fund more excursions to collect plastic and R&D for other
+products. This sounded like a good business model to me, so I dropped some money
+to buy their first product, which are sunglasses. I needed sunglasses, so the
+timing couldn't have been better. I am hoping they will ship soon, so that I can
+make good use of them, but I am also not in a rush.
 
 ## Food and Drinks
 

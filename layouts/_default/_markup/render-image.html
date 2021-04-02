@@ -1,0 +1,5 @@
+{{ $resource := .Page.Resources.GetMatch .Destination }}
+<figure>
+	<img loading="lazy" src="{{ $resource.RelPermalink | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+	{{ if .Title }}<figcaption {{ if eq .Title .Text }}aria-hidden="true"{{ end }}><i>{{ .Title }}</i></figcaption>{{ end }}
+</figure>

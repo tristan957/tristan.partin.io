@@ -18,7 +18,7 @@ defeat that ended in success like many popular LinkedIn posts do. I will save
 you the details, but this person had landed a Software Engineering Internship at
 Apple, the _company of his dreams_. That last part really struck me because it
 was juxtaposed by
-{{< link "https://www.businessinsider.in/apple-knew-a-supplier-was-using-child-labor-but-took-3-years-to-fully-cut-ties-despite-the-companys-promises-to-hold-itself-to-the-highest-standards-report-says/tech/news/apple-knew-a-supplier-was-using-child-labor-but-took-3-years-to-fully-cut-ties-despite-the-companys-promises-to-hold-itself-to-the-highest-standards-report-says/articleshow/80054782.cms" news >}}
+[news](https://www.businessinsider.in/apple-knew-a-supplier-was-using-child-labor-but-took-3-years-to-fully-cut-ties-despite-the-companys-promises-to-hold-itself-to-the-highest-standards-report-says/tech/news/apple-knew-a-supplier-was-using-child-labor-but-took-3-years-to-fully-cut-ties-despite-the-companys-promises-to-hold-itself-to-the-highest-standards-report-says/articleshow/80054782.cms)
 that came out earlier that week about Apple taking 3 years to sever ties with a
 Chinese supplier named Suyin Electronics because they employed underage workers,
 some as young as 14 years old. This is a violation of Apple's ethics policies.

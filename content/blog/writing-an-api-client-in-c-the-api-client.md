@@ -29,13 +29,11 @@ choice using an abstraction over a web interface.
 API wrappers typically come in much higher-level languages like Go, Python,
 JavaScript, Java, and C#, but in this blog I will show you how to make an API
 wrapper in C. For the purpose of the series, I will be borrowing code from my
-project {{< link "https://git.sr.ht/~tristan957/harvest-glib" "harvest-glib" >}}
-which I make use of in my other project
-{{< link "https://git.sr.ht/~tristan957/harvest-almanac" "Harvest Almanac" >}}.
-We will be taking a look at the
-{{< link "https://www.getharvest.com/" "Harvest" >}} API. The docs can be found
-here:
-{{< link "https://help.getharvest.com/api-v2/" "Harvest API Documentation" >}}.
+project [harvest-glib](https://git.sr.ht/~tristan957/harvest-glib) which I make
+use of in my other project
+[Harvest Almanac](https://git.sr.ht/~tristan957/harvest-almanac). We will be
+taking a look at the [Harvest](https://www.getharvest.com/) API. The docs can be
+found here: [Harvest API Documentation](https://help.getharvest.com/api-v2/).
 Harvest is a service for tracking time and expenses on projects. We use it at
 work often.
 

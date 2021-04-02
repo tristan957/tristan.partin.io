@@ -53,7 +53,7 @@ There are currently three portal implementations.
 
 One of these has to be installed on your system. It should be fairly obvious
 which one you need, and if your distribution isn't installing one of these for
-you on the base image, file an issues. Once you have one of these installed, you
+you on the base image, file an issue. Once you have one of these installed, you
 will want to export an environment variable called `GTK_USE_PORTAL` and set it
 to `1`. Now GTK applications should be able to open the Qt file chooser for
 instance. I am not entirely sure if there is an equivalent environment variable
@@ -65,20 +65,20 @@ Now you are probably asking yourself how this applies to Electron. Electron is
 based on Chromium, and Chromium uses GTK on Linux, so naturally Electron does as
 well. In GTK there are two classes to make note of:
 
-- {{< link "https://docs.gtk.org/gtk4/class.FileChooserDialog.html" GtkFileChooserDialog code >}}
-- {{< link "https://docs.gtk.org/gtk4/class.FileChooserNative.html" GtkFileChooserNative code >}}[^1]
+- [`GtkFileChooserDialog`](https://docs.gtk.org/gtk4/class.FileChooserDialog.html)
+- [`GtkFileChooserNative`](https://docs.gtk.org/gtk4/class.FileChooserNative.html)[^1]
 
 The native variant will show the Windows or Mac file choosers on those
 platforms, but on Linux, the native variant actually speaks to the XDG Desktop
 Portal.
 
-`GtkFileChooserNative` first appeared in the 3.20 series of GTK and Electron has
-to support Ubuntu 16.04 because that is what Chromium supports. Ubuntu 16.04
+`GtkFileChooserNative` first appeared in the 3.20 series of GTK, and Electron
+has to support Ubuntu 16.04 because that is what Chromium supports. Ubuntu 16.04
 only ships GTK 3.18, so all the GTK-related code has to use the 3.18 APIs, which
 meant Electron used `GtkFileChooserDialog`.
 
 Many platforms include ways to open a shared object at runtime, and pull
-functions or other information out. On Linux, this set of APIs are provided by
+functions or other information out. On Linux, this set of APIs is provided by
 `libdl`[^2]. So I realized something. Electron only has to **compile** against
 GTK 3.18. That doesn't mean we can't do some fancy stuff at runtime.
 
@@ -102,9 +102,9 @@ seeing the Qt file chooser like I had expected. I opened up a D-Bus inspector,
 and rightfully so, I wasn't seeing the appropriate D-Bus calls across the wire.
 Then I realized I wasn't exporting `GTK_USE_PORTAL=1`. At that point, my
 solution actually worked, and I was able to post a picture on my
-{{< link "https://github.com/electron/electron/pull/19159" PR >}} with the proof
-that my work paid off. From there, various improvements were made until finally
-on April 1st, 2021 the PR was merged into Electron's master branch.
+[PR](https://github.com/electron/electron/pull/19159) with the proof that my
+work paid off. From there, various improvements were made until finally on April
+1st, 2021 the PR was merged into Electron's master branch.
 
 ## Technical Solution
 
@@ -118,7 +118,7 @@ running against a GTK3 version of >=3.20. I cache a boolean that says GTK
 supports `GtkFileChooserNative`. What this check at runtime allows me to do is
 to support Ubuntu 16.04 in a backwards compatible manner. With the boolean I
 stashed away, any place Electron interacted with the GTK file chooser, I
-branched checking "if `GtkFileChooserNative` supported, do this, otherwise
+branched, checking "if `GtkFileChooserNative` supported, do this, otherwise
 fallback to that". The functions pretty much match 1:1 with
 `GtkFileChooserDialog` and `GtkFileChooserNative`, so I didn't have to do a
 whole lot. I did have to remove the preview widget when running against
@@ -127,7 +127,7 @@ ways file filters are added because `GtkFileChooserNative` doesn't support
 adding custom filters.
 
 At the end of it all, I had my first
-{{< link "https://github.com/electron/electron/commit/fa65faa4b0221dfd6e5d64abcff01321640a19ad" commit >}}
+[commit](https://github.com/electron/electron/commit/fa65faa4b0221dfd6e5d64abcff01321640a19ad)
 to Electron.
 
 ## Retrospective on the Electron PR Process
@@ -143,11 +143,11 @@ Like I said, I started this PR on {{< time 2019-07-08 >}}, and it got merged on
 conflicts were resolved and fixing any feedback when it was provided.
 
 Feedback was sparse and took months before conversation would continue. In
-total, I had 7 people review my PR, but I think maybe only 4 or 5 are associated
-with the project. At least one person seemed to be a Canonical employee, but he
-never followed up after I addressed his feedback. I figured if ever there was a
-stakeholder to want to get this merged, it would be Canonical because of Snap,
-but sadly I was mistaken.
+total, I had 7 people review my PR, but I think maybe only 4 or 5 were
+associated with the project. At least one person seemed to be a Canonical
+employee, but he never followed up after I addressed his feedback. I figured if
+ever there was a stakeholder to want to get this merged, it would be Canonical
+because of Snap, but sadly I was mistaken.
 
 The first year of the PR went by, and there were quite a few months of silence.
 Around November of {{< time 2020 >}}, I finally heard from someone involved in
@@ -155,19 +155,19 @@ Electron that inspired confidence that finally this would get over the hump.
 Unfortunately that didn't happen.
 
 Another month or two passed with silence, and I heard from one of the
-maintainers that my PR would be slated for 12.0 release of Electron. I was
+maintainers that my PR would be slated for the 12.0 release of Electron. I was
 excited once again. 12.0 released, and my PR was still not merged. I ended up
 tagging the maintainer, but he never responded.
 
 In March of this year, I finally got a response from a maintainer by the name of
-{{< link "https://github.com/zcbenz" "Cheng Zhao" >}}, who appears to be an
-employee of Microsoft and is a top contributor to Electron. He seemed to even be
-the author of the initial Linux support for Electron. He and another user named
-{{< link "https://github.com/refi64" "Ryan Gonzalez" >}} provided the last bit
-of feedback I needed to get my PR into a good state. Once all the feedback was
-responded to Cheng merged my PR and the rest is history. The PR is slated for a
-minor Electron release. I am not sure if it will be backported, but surely the
-next 12.X release will have my work in it. Eventually it'll land downstream in
+[Cheng Zhao](https://github.com/zcbenz), who appears to be an employee of
+Microsoft and is a top contributor to Electron. He seemed to even be the author
+of the initial Linux support for Electron. He and another user named
+[Ryan Gonzalez](https://github.com/refi64) provided the last bit of feedback I
+needed to get my PR into a good state. Once all the feedback was responded to,
+Cheng merged my PR and the rest was history. The PR is slated for a minor
+Electron release. I am not sure if it will be backported, but surely the next
+12.X release will have my work in it. Eventually it'll land downstream in
 projects like VSCode when they upgrade their Electron version.
 
 My biggest complaints about the process were definitely the time scale that it

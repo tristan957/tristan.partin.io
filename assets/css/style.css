@@ -136,11 +136,11 @@ time {
 	transition: background-color ease-in 0.10s;
 }
 
-.figure {
+figure {
 	text-align: center;
 }
 
-.figure > img {
+figure > img {
 	max-width: 75%;
 	border: 2px solid var(--box-shadow-container-color);
 }

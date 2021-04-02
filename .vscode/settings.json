@@ -8,7 +8,7 @@
 		"editor.formatOnSave": true,
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false,
-		"files.insertFinalNewline": false
+		"files.insertFinalNewline": false,
 	},
 	"[css]": {
 		"editor.formatOnSave": false,
