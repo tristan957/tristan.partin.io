@@ -445,6 +445,10 @@ a.footnote-backref, a.footnote-ref {
 	color: var(--consistent-link-color);
 }
 
+a.footnote-ref {
+	margin-inline: 2px;
+}
+
 /*
  * Content
  */
