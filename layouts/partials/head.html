@@ -35,11 +35,6 @@
 	>
 	<meta property="og:locale" content="en_US">
 
-	<!--Twitter-Specific Meta Tags-->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="{{ $siteImage.Permalink }}">
-	<meta name="twitter:image:alt" content="Astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon">
-
 	{{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
