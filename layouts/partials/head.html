@@ -21,7 +21,7 @@
 	{{ end }}
 	<meta property="og:title" content="{{ .Title }} - Tristan Partin">
 	<meta property="og:url" content="{{ .Permalink }}">
-	{{ $siteImage := resources.Get "images/site-image.jpg" | fingerprint }}
+	{{ $siteImage := resources.Get "images/site-image.jpg" }}
 	<meta property="og:image" content="{{ $siteImage.Permalink }}">
 	<meta property="og:image:secure_url" content="{{ $siteImage.Permalink }}">
 	<meta property="og:image:type" content="image/jpeg">
