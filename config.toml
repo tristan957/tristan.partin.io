@@ -16,7 +16,7 @@ enableRobotsTXT = true
 
 [taxonomies]
   series = "series"
-  tag = "tags"
+  tags = "tags"
 
 [markup]
   [markup.highlight]
