@@ -441,6 +441,10 @@ nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ul > li > a:active {
 	margin-bottom: 0;
 }
 
+a.footnote-backref, a.footnote-ref {
+	color: var(--consistent-link-color);
+}
+
 /*
  * Content
  */
