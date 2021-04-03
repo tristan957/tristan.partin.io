@@ -26,8 +26,8 @@
 	<meta property="og:image" content="{{ $siteImage.Permalink }}">
 	<meta property="og:image:secure_url" content="{{ $siteImage.Permalink }}">
 	<meta property="og:image:type" content="image/jpeg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="628">
+	<meta property="og:image:width" content="{{ $siteImage.Width }}">
+	<meta property="og:image:height" content="{{ $siteImage.Height }}">
 	<meta property="og:image:alt" content="Astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon">
 	<meta
 		property="og:description"
@@ -37,6 +37,8 @@
 
 	<!--Twitter-Specific Meta Tags-->
 	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="{{ $siteImage.Permalink }}">
+	<meta name="twitter:image:alt" content="Astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon">
 
 	{{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
 	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
