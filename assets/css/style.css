@@ -147,10 +147,16 @@ figure > img {
 
 .icon {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .icon-left, .icon-right {
 	font-size: smaller;
+}
+
+.icon-link {
+	font-size: small;
+	color: var(--consistent-link-color);
 }
 
 #comments-section > button {

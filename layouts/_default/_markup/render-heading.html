@@ -1,0 +1,6 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+	{{ .Text | safeHTML }}
+	<a class="consistent-link" href="#{{ .Anchor | safeURL }}">
+		<i class="icon icon-link"></i>
+	</a>
+</h{{ .Level }}>
