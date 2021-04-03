@@ -1,5 +1,4 @@
 <head>
-	<meta charset="UTF-8">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="title" content="{{ .Title }} - Tristan Partin">
@@ -7,16 +6,28 @@
 		name="description"
 		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
 	>
+	<meta name="author" content="Tristan Partin">
 
-	<meta property="og:type" content="website">
+	{{ if eq .Type "blog" }}
+		<meta property="og:type" content="article">
+		<meta property="og:article:author" content="Tristan Partin">
+		<meta property="og:article:published_time" content="{{ .Date }}">
+		<meta property="og:article:modified_time" content="{{ .Lastmod }}">
+		{{ range .GetTerms "tags" }}
+			<meta property="og:article:tag" content="{{ .LinkTitle | strings.ToLower }}">
+		{{ end }}
+	{{ else }}
+		<meta property="og:type" content="website">
+	{{ end }}
 	<meta property="og:title" content="{{ .Title }} - Tristan Partin">
 	<meta property="og:url" content="{{ .Permalink }}">
 	{{ $siteImage := resources.Get "images/site-image.jpg" | fingerprint }}
 	<meta property="og:image" content="{{ $siteImage.Permalink }}">
+	<meta property="og:image:secure_url" content="{{ $siteImage.Permalink }}">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="628">
-	<meta property="og:image:alt" content="Astronaut with beer sitting in lawn chair looking at the Earth from the Moon">
+	<meta property="og:image:alt" content="Astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon">
 	<meta
 		property="og:description"
 		content="{{ if .Summary }}{{ .Summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Tristan Partin's personal website and blog.{{ end }}"
