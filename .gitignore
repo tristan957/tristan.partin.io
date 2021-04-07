@@ -1,4 +1,4 @@
 /public/
 node_modules/
-*.report.html
+/hint-report/
 # layouts/partials/webring-out.html
