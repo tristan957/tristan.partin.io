@@ -29,7 +29,7 @@ disableHugoGeneratorInject = false
     lineNumbersInTable = true
     noClasses = true
     style = "monokai"
-    tabWidth = 4
+    tabWidth = 2
 
 [pages]
   [pages.build]
