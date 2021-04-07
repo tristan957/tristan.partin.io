@@ -35,7 +35,7 @@
 	>
 	<meta property="og:locale" content="en_US">
 
-	{{ $styleCss := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint }}
+	{{ $styleCss := resources.Get "css/style.css" | minify | fingerprint }}
 	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
 	<link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">

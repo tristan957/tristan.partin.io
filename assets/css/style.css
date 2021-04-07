@@ -22,28 +22,8 @@
 	--blockquote-background-color: #1B1B1B;
 }
 
-/*
- * Fonts
- */
-
-@font-face
-{
-	font-family: "IBM Plex Sans";
-	font-display: swap;
-	{{ $default := resources.Get "/fonts/IBMPlexSansVar-Roman.woff2" | fingerprint }}
-	src: url("{{ $default.RelPermalink }}");
-}
-
-@font-face
-{
-	font-family: "Cascadia Mono";
-	font-display: swap;
-	{{ $monospace := resources.Get "/fonts/CascadiaMono.woff2" | fingerprint }}
-	src: url("{{ $monospace.RelPermalink }}");
-}
-
 * {
-	font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+	font-family: sans-serif, Arial, Helvetica;
 	color: var(--color);
 }
 
@@ -78,7 +58,7 @@ a > code {
 }
 
 code, code > * {
-	font-family: "Cascadia Mono", "Courier New", Courier, monospace;
+	font-family: "Courier New", Courier, monospace;
 	font-size: 0.9rem;
 }
 
@@ -226,12 +206,10 @@ figure > img {
 }
 
 .font-weight-bold {
-	font: "IBM Plex Sans";
 	font-weight: bold;
 }
 
 .font-weight-normal {
-	font: "IBM Plex Sans";
 	font-weight: unset;
 }
 
