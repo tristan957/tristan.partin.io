@@ -5,7 +5,7 @@
 		"editor.insertSpaces": true,
 	},
 	"[html]": {
-		"editor.formatOnSave": true,
+		"editor.formatOnSave": false,
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false,
 		"files.insertFinalNewline": false,
@@ -21,5 +21,5 @@
 		"Librem",
 		"Vercel",
 		"glovebox"
-	]
+	],
 }
