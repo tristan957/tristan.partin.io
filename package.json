@@ -6,6 +6,7 @@
   "author": "Tristan Partin <tristan@partin.io>",
   "private": true,
   "scripts": {
+    "clean": "rm -rf hint-report node_modules",
     "format": "prettier --config .prettierrc.yml --write '**/*.{md,css}'",
     "format:ci": "prettier --config .prettierrc.yml --check '**/*.{md,css}'",
     "webhint:dev": "hint --config .hintrc http://localhost:1313",
