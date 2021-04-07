@@ -11,7 +11,7 @@
 		"files.insertFinalNewline": false,
 	},
 	"[css]": {
-		"editor.formatOnSave": false,
+		"editor.formatOnSave": true,
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false
 	},

@@ -1,7 +1,36 @@
-
-.icon-home { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
-.icon-pencil { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
-.icon-link { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
-.icon-rss { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09e;&nbsp;'); }
-.icon-file-pdf { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1c1;&nbsp;'); }
-.icon-file-archive { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1c6;&nbsp;'); }
+.icon-home {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xe800;&nbsp;"
+  );
+}
+.icon-pencil {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xe801;&nbsp;"
+  );
+}
+.icon-link {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xe804;&nbsp;"
+  );
+}
+.icon-rss {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xf09e;&nbsp;"
+  );
+}
+.icon-file-pdf {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xf1c1;&nbsp;"
+  );
+}
+.icon-file-archive {
+  *zoom: expression(
+    this.runtimeStyle[ "zoom" ] = "1",
+    this.innerHTML = "&#xf1c6;&nbsp;"
+  );
+}

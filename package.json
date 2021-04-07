@@ -6,8 +6,8 @@
   "author": "Tristan Partin <tristan@partin.io>",
   "private": true,
   "scripts": {
-    "format": "prettier --config .prettierrc.yml --write '**/*.md'",
-    "format:ci": "prettier --config .prettierrc.yml --check '**/*.md'"
+    "format": "prettier --config .prettierrc.yml --write '**/*.{md,css}'",
+    "format:ci": "prettier --config .prettierrc.yml --check '**/*.{md,css}'"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
