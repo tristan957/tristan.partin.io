@@ -17,9 +17,11 @@
 						{{ end }}
 					</ul>
 				</section>
-				{{ partial "webring-out.html" }}
+				{{ if .Site.Params.webring }}
+					{{ partial "webring-out.html" }}
+				{{ end }}
 			</main>
-			{{ partial "sidebar.html" }}
+			{{ partial "sidebar.html" . }}
 		</div>
 	</div>
 </body>

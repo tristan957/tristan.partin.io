@@ -1,34 +1,46 @@
 <section id="sidebar" class="box-shadow-container">
 	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
 	<img id="profile-picture" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile Picture" title="Profile Picture" width="200px" height="200px" />
-	<div id="resume" class="centered">
-		<a class="consistent-link" href="/documents/My_Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="icon icon-file-pdf"></i>Resume</a>
-	</div>
+	{{ with .Site.Params.resume }}
+		<div id="resume" class="centered">
+			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer"><i class="icon icon-file-pdf"></i>Resume</a>
+		</div>
+	{{ end }}
 	<p>
 		I am a human. I do human things.
 	</p>
 	<address>
 		<ul class="undecorated-list contact-list">
-			<li>
-				<div>sourcehut</div>
-				<a class="consistent-link" href="https://git.sr.ht/~tristan957" target="_blank" rel="noopener noreferrer">~tristan957</a>
-			</li>
-			<li>
-				<div>github</div>
-				<a class="consistent-link" href="https://github.com/tristan957" target="_blank" rel="noopener noreferrer">tristan957</a>
-			</li>
-			<li>
-				<div>mastodon</div>
-				<a class="consistent-link" href="https://mastodon.social/@tristan957" target="_blank" rel="me noopener noreferrer">@tristan957@mastodon.social</a>
-			</li>
-			<li>
-				<div>linkedin</div>
-				<a class="consistent-link" href="https://linkedin.com/in/tristan-partin" target="_blank" rel="noopener noreferrer">tristan-partin</a>
-			</li>
-			<li>
-				<div>email</div>
-				<a class="consistent-link" href="mailto:tristan@partin.io"><span class="email-component">tristan</span><span class="email-component">@</span><span class="email-component">partin</span><span class="email-component">.</span><span class="email-component">io</span></a>
-			</li>
+			{{ with .Site.Params.socials.sourceHut }}
+				<li>
+					<div>sourcehut</div>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+				</li>
+			{{ end }}
+			{{ with .Site.Params.socials.gitHub }}
+				<li>
+					<div>github</div>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+				</li>
+			{{ end }}
+			{{ with .Site.Params.socials.mastodon }}
+				<li>
+					<div>mastodon</div>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="me noopener noreferrer">{{ .username }}</a>
+				</li>
+			{{ end }}
+			{{ with .Site.Params.socials.linkedIn }}
+				<li>
+					<div>linkedin</div>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+				</li>
+			{{ end }}
+			{{ with .Site.Params.email }}
+				<li>
+					<div>email</div>
+					<a class="consistent-link" href="mailto:{{ .beforeAt }}@{{ .afterAtBeforeDot }}.{{ .tld }}"><span class="email-component">{{ .beforeAt }}</span><span class="email-component">@</span><span class="email-component">{{ .afterAtBeforeDot }}</span><span class="email-component">.</span><span class="email-component">{{ .tld }}</span></a>
+				</li>
+			{{ end }}
 		</ul>
 	</address>
 	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)"></button>
@@ -41,33 +53,30 @@
 		themeButton.innerHTML = isDarkModePreferred ? "Light Theme" : "Dark Theme";
 	</script>
 	<div class="sidebar-section">
-		<div class="sidebar-section-header">License</div>
-		<p class="sidebar-paragraph">
-			The content on this site is
-			<a class="consistent-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA-4.0</a>.
-			The code for this site is
-			<a class="consistent-link" href="https://opensource.org/licenses/AGPL-3.0" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>.
-		</p>
+		{{ with .Site.Params.licenses }}
+			<div class="sidebar-section-header">License</div>
+			<p class="sidebar-paragraph">
+				The content on this site is
+				<a class="consistent-link" href="{{ .content.url }}" target="_blank" rel="noopener noreferrer">{{ .content.license }}</a>.
+				The code for this site is
+				<a class="consistent-link" href="{{ .code.url }}" target="_blank" rel="noopener noreferrer">{{ .code.license }}</a>.
+			</p>
+		{{ end }}
 	</div>
 	<hr />
-	<p class="smaller-text">
-		This code and content for this site can be found on
-		<a class="consistent-link" href="https://git.sr.ht/~tristan957/tristan.partin.io" target="_blank" rel="noopener noreferrer">SourceHut</a>.
-	</p>
-	<p class="smaller-text">
-		Please file issues/bugs on the SourceHut
-		<a class="consistent-link" href="https://todo.sr.ht/~tristan957/tristan.partin.io" target="_blank" rel="noopener noreferrer">todo tracker</a>,
-		the GitHub <a class="consistent-link" href="https://github.com/tristan957/tristan.partin.io/issues" target="_blank", rel="noopener noreferrer">
-		issue tracker</a>, or send an email to my <a class="consistent-link" href="mailto:~tristan957/public-inbox@lists.sr.ht?Subject=Re: {{ .Title }}">
-    public inbox</a>.
-	</p>
+	{{ with .Site.Params.repository }}
+		<p class="smaller-text">
+			This code and content for this site can be found on
+			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .forge }}</a>.
+		</p>
+	{{ end }}
 	<p class="smaller-text">
 		This site uses absolutely no analytics or tracking mechanisms.
 	</p>
 	{{ with .GitInfo }}
 		<hr />
 <pre class="monospace smaller-text" aria-label="Git Info">
-Commit:	<a class="consistent-link" href="https://git.sr.ht/~tristan957/tristan.partin.io/commit/{{ .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
+Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
 </section>

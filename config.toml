@@ -34,3 +34,51 @@ disableHugoGeneratorInject = false
 [pages]
   [pages.build]
     list = true
+
+[author]
+  name = "Tristan Partin"
+
+[params]
+  defaultDescription = "Tristan Partin's personal website and blog."
+  webring = true
+[params.licenses]
+  [params.licenses.content]
+    license = "CC-BY-SA-4.0"
+    url = "https://creativecommons.org/licenses/by-sa/4.0/"
+  [params.licenses.code]
+    license = "AGPL-3.0"
+    url = "https://opensource.org/licenses/AGPL-3.0"
+[params.siteImage]
+  resourcePath = "images/astronaut-on-the-moon-with-a-beer-looking-at-earth.jpg"
+  alt = "An astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon"
+[params.repository]
+  forge = "SourceHut"
+  url = "https://sr.ht/~tristan957/tristan.partin.io"
+  commitURLPattern = "https://git.sr.ht/~tristan957/tristan.partin.io/commit/%s"
+[params.email]
+  beforeAt = "tristan"
+  afterAtBeforeDot = "partin"
+  tld = "io"
+[params.socials]
+  [params.socials.sourceHut]
+    username = "~tristan957"
+    url = "https://git.sr.ht/~tristan957"
+  [params.socials.gitHub]
+    username = "tristan957"
+    url = "https://github.com/tristan957"
+  [params.socials.mastodon]
+    username = "@tristan957@mastodon.social"
+    url = "https://mastodon.social/@tristan957"
+  [params.socials.linkedIn]
+    username = "tristan-partin"
+    url = "https://linkedin.com/in/tristan-partin"
+[params.resume]
+  url = "/documents/My_Resume.pdf"
+[params.utterances]
+  enabled = true
+  repo = "tristan957/tristan.partin.io"
+  issueTerm = "pathname"
+  label = "comments"
+[params.mailingList]
+  address = "~tristan957/public-inbox@lists.sr.ht"
+  archiveURL = "https://lists.sr.ht/~tristan957/public-inbox"

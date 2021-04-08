@@ -7,7 +7,14 @@
           {{ with .Date.Format "2006-01-02" }}
             Published <time datetime="{{ . }}">{{ . }}</time> on
           {{ end }}
-          <a class="content-metadata" href="/blog">Tristan Partin's blog</a>
+          <a class="content-metadata" href="{{ (.GetPage "blog").RelPermalink }}">
+            {{ if strings.HasSuffix .Site.Author.name "s" }}
+              {{ .Site.Author.name }}'
+            {{ else }}
+              {{ .Site.Author.name }}'s
+            {{ end }}
+            blog
+          </a>
           —
           <a class="content-metadata" href="{{ .Permalink }}">Permalink</a>
           <br />
@@ -20,70 +27,80 @@
       </div>
     </article>
     <section class="box-shadow-container">
-      Have a comment or question on one of my posts? Start a discussion in my
-      <a class="consistent-link" href="https://lists.sr.ht/~tristan957/public-inbox" target="_blank" rel="noreferrer noopener">
-      public inbox</a>
-      by sending an email to <a class="consistent-link" href="mailto:~tristan957/public-inbox@lists.sr.ht?Subject=Re: {{ .Title }}">
-      ~tristan957/public-inbox@lists.sr.ht</a>. If you are unfamiliar with mailing lists, start with
-      <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" target="_blank" rel="noreferrer noopener">mailing list etiquette</a>.
-      Otherwise just shoot me an email to my address which is linked in the sidebar. If you have a
-      GitHub account and JavaScript enabled, then this site also has support for comments through
-      <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noreferrer noopener">utteranc.es</a>.
+      {{ with .Site.Params }}
+        Have a comment or question on one of my posts?
+        {{ with .mailingList }}
+          Start a discussion in my
+          <a class="consistent-link" href="{{ .archiveURL }}" target="_blank" rel="noreferrer noopener">
+          public inbox</a>
+          by sending an email to <a class="consistent-link" href="mailto:{{ .address }}?Subject=Re: {{ $.Title }}">
+          {{ .address }}</a>. If you are unfamiliar with mailing lists, start with
+          <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" target="_blank" rel="noreferrer noopener">mailing list etiquette</a>.
+          Otherwise just shoot me an email to my address which is linked in the sidebar.
+        {{ end }}
+        {{ if .utterances.enabled }}
+          If you have a
+          GitHub account and JavaScript enabled, then this site has support for comments through
+          <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noreferrer noopener">utteranc.es</a>.
+        {{ end }}
+      {{ end }}
     </section>
     <!--Keep development quick and stop spamming GitHub API-->
-    {{ if hugo.IsProduction }}
-      <section id="comments-section" class="no-js box-shadow-container">
-        <script type="text/javascript">
-          let toggled = false;
-          function toggleCommentsState(button) {
-            toggled = !toggled;
-            const utterancesFrame = document.getElementsByClassName("utterances-frame").item(0);
-            const utterances = document.getElementsByClassName("utterances").item(0);
-            if (toggled) {
-              const height = utterancesFrame.clientHeight;
-              utterancesFrame.classList.add("hidden");
-              utterances.style.marginBottom = `-${height}px`;
-              button.innerHTML = "Show Comments";
-            } else {
-              button.innerHTML = "Hide Comments";
-              utterancesFrame.classList.remove("hidden");
-              utterances.style.marginBottom = `0`;
-            }
-          }
-        </script>
-        <button class="btn" type="button" onclick="toggleCommentsState(this)">Hide Comments</button>
-        <script type="text/javascript">
-          function loadUtterances() {
-            const utterancesScript = document.createElement("script");
-            utterancesScript.setAttribute("id", "utterances-script");
-            utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
-            utterancesScript.setAttribute("repo", "tristan957/tristan.partin.io");
-            utterancesScript.setAttribute("issue-term", "pathname");
-            utterancesScript.setAttribute("label", "comments");
-            utterancesScript.setAttribute("theme", isDarkModeEnabled() ? "github-dark" : "github-light");
-            utterancesScript.setAttribute("crossorigin", "anonymous");
-            utterancesScript.setAttribute("async", "true");
-
-            const commentsSection = document.getElementById("comments-section");
-            commentsSection.appendChild(utterancesScript);
-          }
-
-          loadUtterances();
-
-          new MutationObserver(function(mutations) {
-            const commentsSection = document.getElementById("comments-section");
-            mutations.forEach(function(mutation) {
-              if (mutation.type == "attributes") {
-                const utterances = document.getElementsByClassName("utterances").item(0);
-                if (utterances !== null) {
-                  utterances.remove();
-                  loadUtterances();
-                }
+    {{ with .Site.Params.utterances }}
+      {{ if and hugo.IsProduction .enabled }}
+        <section id="comments-section" class="no-js box-shadow-container">
+          <script type="text/javascript">
+            let toggled = false;
+            function toggleCommentsState(button) {
+              toggled = !toggled;
+              const utterancesFrame = document.getElementsByClassName("utterances-frame").item(0);
+              const utterances = document.getElementsByClassName("utterances").item(0);
+              if (toggled) {
+                const height = utterancesFrame.clientHeight;
+                utterancesFrame.classList.add("hidden");
+                utterances.style.marginBottom = `-${height}px`;
+                button.innerHTML = "Show Comments";
+              } else {
+                button.innerHTML = "Hide Comments";
+                utterancesFrame.classList.remove("hidden");
+                utterances.style.marginBottom = `0`;
               }
-            })
-          }).observe(document.getElementsByTagName("html").item(0), { attributes: true });
-        </script>
-      </section>
+            }
+          </script>
+          <button class="btn" type="button" onclick="toggleCommentsState(this)">Hide Comments</button>
+          <script type="text/javascript">
+            function loadUtterances() {
+              const utterancesScript = document.createElement("script");
+              utterancesScript.setAttribute("id", "utterances-script");
+              utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
+              utterancesScript.setAttribute("repo", "{{ .repo }}");
+              utterancesScript.setAttribute("issue-term", "{{ .issueTerm }}");
+              utterancesScript.setAttribute("label", "{{ .label }}");
+              utterancesScript.setAttribute("theme", isDarkModeEnabled() ? "github-dark" : "github-light");
+              utterancesScript.setAttribute("crossorigin", "anonymous");
+              utterancesScript.setAttribute("async", "true");
+
+              const commentsSection = document.getElementById("comments-section");
+              commentsSection.appendChild(utterancesScript);
+            }
+
+            loadUtterances();
+
+            new MutationObserver(function(mutations) {
+              const commentsSection = document.getElementById("comments-section");
+              mutations.forEach(function(mutation) {
+                if (mutation.type == "attributes") {
+                  const utterances = document.getElementsByClassName("utterances").item(0);
+                  if (utterances !== null) {
+                    utterances.remove();
+                    loadUtterances();
+                  }
+                }
+              })
+            }).observe(document.getElementsByTagName("html").item(0), { attributes: true });
+          </script>
+        </section>
+      {{ end }}
     {{ end }}
   </section>
 {{ end }}

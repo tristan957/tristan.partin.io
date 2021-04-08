@@ -8,7 +8,9 @@
 			<main id="main">
 				{{ block "main" . }}
 				{{ end }}
-				{{ partial "webring-out.html" }}
+				{{ if .Site.Params.webring }}
+					{{ partial "webring-out.html" }}
+				{{ end }}
 			</main>
 			{{ partial "sidebar.html" . }}
 		</div>
