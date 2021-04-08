@@ -9,3 +9,4 @@ https://sourcehut.org/blog/index.xml
 https://popey.com/blog/index.xml
 https://recursiveascent.blogspot.com/feeds/posts/default?alt=rss
 http://tonsky.me/blog/atom.xml
+https://devosmium.xyz/blog/index.xml
