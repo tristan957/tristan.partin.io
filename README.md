@@ -57,6 +57,9 @@ Make sure the `@font-face` in
 [`fontello.css`](./assets/fonts/fontello/css/fontello.css) has
 `font-display: swap`.
 
+Replace preload URL in [`head.html`](./layouts/partials/head.html) with new URL
+in [`fontello.css`](./assets/fonts/fontello/css/fontello.css).
+
 ## Licenses
 
 The code is licensed under the AGPL-3.0.

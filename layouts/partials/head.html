@@ -42,6 +42,7 @@
 	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 	<link rel="preload" href="{{ $styleCss.RelPermalink }}" type="text/css" as="style">
 	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
+	<link rel="stylesheet" href="/fonts/fontello/font/fontello.woff2?39819490" type="font/woff2" as="font">
 	<link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">
 	<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
 
