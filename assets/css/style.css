@@ -9,6 +9,7 @@
   --secondary-accent-color: #77216f;
   --secondary-accent-color-hover: #833a72;
   --blockquote-background-color: #e5e5e5;
+  --border-radius: 3px;
 }
 
 /* Keep up to date with prefers-color-scheme dark media query in head.html */
@@ -31,18 +32,21 @@
  * Code
  */
 
+.highlight pre {
+  padding: 0.25rem 0;
+}
+
 pre {
   margin: 0;
   overflow-x: auto;
-  padding: 0.5rem 0;
 }
 
 tr > td:first-child > pre {
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
 }
 
 tr > td:last-child > pre {
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
 }
 
 code {
@@ -53,8 +57,18 @@ a > code {
   color: inherit;
 }
 
+.highlight {
+  border: 2px solid var(--box-shadow-container-color);
+  border-radius: var(--border-radius);
+}
+
 .highlight code {
   color: white;
+}
+
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
 }
 
 code,
@@ -79,7 +93,7 @@ blockquote {
   /* margin: 1rem; */
   margin-left: 2rem;
   border-left: 4px solid var(--secondary-accent-color);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background-color: var(--blockquote-background-color);
 }
 
@@ -101,7 +115,7 @@ time {
   background-color: var(--secondary-accent-color);
   border: none;
   padding: 0.5rem;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   border: 2px solid var(--box-shadow-container-color);
   line-height: 100%;
 }
@@ -359,7 +373,7 @@ nav > ul > li > a:active {
  */
 
 #profile-picture {
-  border-radius: 3%;
+  border-radius: var(--border-radius);
   display: block;
   margin: auto;
   border: 2px solid var(--box-shadow-container-color);
@@ -470,7 +484,7 @@ a.footnote-ref {
   padding: 1rem;
   border: 1px solid var(--box-shadow-container-color);
   box-shadow: 4px 4px 4px 2px var(--box-shadow-container-color);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background-color: var(--raised-backgroud-color);
   border-top: 3px var(--primary-accent-color) solid;
 }

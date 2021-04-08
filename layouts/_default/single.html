@@ -30,57 +30,60 @@
       GitHub account and JavaScript enabled, then this site also has support for comments through
       <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noreferrer noopener">utteranc.es</a>.
     </section>
-    <section id="comments-section" class="no-js box-shadow-container">
-      <script type="text/javascript">
-        let toggled = false;
-        function toggleCommentsState(button) {
-          toggled = !toggled;
-          const utterancesFrame = document.getElementsByClassName("utterances-frame").item(0);
-          const utterances = document.getElementsByClassName("utterances").item(0);
-          if (toggled) {
-            const height = utterancesFrame.clientHeight;
-            utterancesFrame.classList.add("hidden");
-            utterances.style.marginBottom = `-${height}px`;
-            button.innerHTML = "Show Comments";
-          } else {
-            button.innerHTML = "Hide Comments";
-            utterancesFrame.classList.remove("hidden");
-            utterances.style.marginBottom = `0`;
-          }
-        }
-      </script>
-      <button class="btn" type="button" onclick="toggleCommentsState(this)" onkeydown="toggleCommentsState(this)">Hide Comments</button>
-      <script type="text/javascript">
-        function loadUtterances() {
-          const utterancesScript = document.createElement("script");
-          utterancesScript.setAttribute("id", "utterances-script");
-          utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
-          utterancesScript.setAttribute("repo", "tristan957/tristan.partin.io");
-          utterancesScript.setAttribute("issue-term", "pathname");
-          utterancesScript.setAttribute("label", "comments");
-          utterancesScript.setAttribute("theme", isDarkModeEnabled() ? "github-dark" : "github-light");
-          utterancesScript.setAttribute("crossorigin", "anonymous");
-          utterancesScript.setAttribute("async", "true");
-
-          const commentsSection = document.getElementById("comments-section");
-          commentsSection.appendChild(utterancesScript);
-        }
-
-        loadUtterances();
-
-        new MutationObserver(function(mutations) {
-          const commentsSection = document.getElementById("comments-section");
-          mutations.forEach(function(mutation) {
-            if (mutation.type == "attributes") {
-              const utterances = document.getElementsByClassName("utterances").item(0);
-              if (utterances !== null) {
-                utterances.remove();
-                loadUtterances();
-              }
+    <!--Keep development quick and stop spamming GitHub API-->
+    {{ if hugo.IsProduction }}
+      <section id="comments-section" class="no-js box-shadow-container">
+        <script type="text/javascript">
+          let toggled = false;
+          function toggleCommentsState(button) {
+            toggled = !toggled;
+            const utterancesFrame = document.getElementsByClassName("utterances-frame").item(0);
+            const utterances = document.getElementsByClassName("utterances").item(0);
+            if (toggled) {
+              const height = utterancesFrame.clientHeight;
+              utterancesFrame.classList.add("hidden");
+              utterances.style.marginBottom = `-${height}px`;
+              button.innerHTML = "Show Comments";
+            } else {
+              button.innerHTML = "Hide Comments";
+              utterancesFrame.classList.remove("hidden");
+              utterances.style.marginBottom = `0`;
             }
-          })
-        }).observe(document.getElementsByTagName("html").item(0), { attributes: true });
-      </script>
-    </section>
+          }
+        </script>
+        <button class="btn" type="button" onclick="toggleCommentsState(this)">Hide Comments</button>
+        <script type="text/javascript">
+          function loadUtterances() {
+            const utterancesScript = document.createElement("script");
+            utterancesScript.setAttribute("id", "utterances-script");
+            utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
+            utterancesScript.setAttribute("repo", "tristan957/tristan.partin.io");
+            utterancesScript.setAttribute("issue-term", "pathname");
+            utterancesScript.setAttribute("label", "comments");
+            utterancesScript.setAttribute("theme", isDarkModeEnabled() ? "github-dark" : "github-light");
+            utterancesScript.setAttribute("crossorigin", "anonymous");
+            utterancesScript.setAttribute("async", "true");
+
+            const commentsSection = document.getElementById("comments-section");
+            commentsSection.appendChild(utterancesScript);
+          }
+
+          loadUtterances();
+
+          new MutationObserver(function(mutations) {
+            const commentsSection = document.getElementById("comments-section");
+            mutations.forEach(function(mutation) {
+              if (mutation.type == "attributes") {
+                const utterances = document.getElementsByClassName("utterances").item(0);
+                if (utterances !== null) {
+                  utterances.remove();
+                  loadUtterances();
+                }
+              }
+            })
+          }).observe(document.getElementsByTagName("html").item(0), { attributes: true });
+        </script>
+      </section>
+    {{ end }}
   </section>
 {{ end }}

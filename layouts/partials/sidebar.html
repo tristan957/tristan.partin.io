@@ -31,7 +31,7 @@
 			</li>
 		</ul>
 	</address>
-	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)" onkeydown="overrideTheme(this)"></button>
+	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)"></button>
 	<script text="text/javascript">
 		let isDarkModePreferred = isDarkModeEnabled();
 
@@ -64,4 +64,10 @@
 	<p class="smaller-text">
 		This site uses absolutely no analytics or tracking mechanisms.
 	</p>
+	{{ with .GitInfo }}
+		<hr />
+<pre class="monospace smaller-text" aria-label="Git Info">
+Commit:	<a class="consistent-link" href="https://git.sr.ht/~tristan957/tristan.partin.io/commit/{{ .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
+</pre>
+	{{ end }}
 </section>
