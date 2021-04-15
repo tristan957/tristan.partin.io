@@ -1,5 +1,8 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<!--https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-->
+	<!--Use "default-src 'self'" here in order to facilitate Hugo's live reload when in a non-prod env-->
+	<meta http-equiv="content-security-policy" content="default-src '{{ if hugo.IsProduction }}none{{ else }}self{{ end }}'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' https://utteranc.es; img-src 'self' https:; media-src 'self' https:">
 	<!--Google is the absolute worst.-->
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
