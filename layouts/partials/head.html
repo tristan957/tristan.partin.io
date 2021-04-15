@@ -38,6 +38,9 @@
 		<meta property="og:image:height" content="{{ $siteImage.Height }}">
 	{{ end }}
 
+	<!--Show large image on Twitter-->
+	<meta name="twitter:card" content="summary_large_image">
+
 	<!--Filter out taxonomy pages-->
 	{{ if .Data.Singular }}
 		<meta name="robots" content="noindex">
