@@ -58,6 +58,9 @@ disableHugoGeneratorInject = false
   beforeAt = "tristan"
   afterAtBeforeDot = "partin"
   tld = "io"
+[params.gpg]
+  fingerprint = "CC00 0B6D 725F AEB6 E8CE  E5FD 5AD0 4761 01F9 899D"
+  path = "/gpg.txt"
 [params.socials]
   [params.socials.sourceHut]
     username = "~tristan957"

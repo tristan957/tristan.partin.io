@@ -41,6 +41,12 @@
 					<a class="consistent-link" href="mailto:{{ .beforeAt }}@{{ .afterAtBeforeDot }}.{{ .tld }}"><span class="email-component">{{ .beforeAt }}</span><span class="email-component">@</span><span class="email-component">{{ .afterAtBeforeDot }}</span><span class="email-component">.</span><span class="email-component">{{ .tld }}</span></a>
 				</li>
 			{{ end }}
+			{{ with .Site.Params.gpg }}
+				<li>
+					<div>gpg</div>
+					<a class="consistent-link monospace" href="{{ .path }}">{{ .fingerprint }}</a>
+				</li>
+			{{ end }}
 		</ul>
 	</address>
 	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)"></button>
