@@ -1,4 +1,2 @@
 User-Agent: *
 Sitemap: {{ .Site.BaseURL }}/sitemap.xml
-Disallow: /fonts/
-Disallow: /css/
