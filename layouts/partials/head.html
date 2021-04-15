@@ -2,7 +2,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<!--https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-->
 	<!--Use "default-src 'self'" here in order to facilitate Hugo's live reload when in a non-prod env-->
-	<meta http-equiv="content-security-policy" content="default-src '{{ if hugo.IsProduction }}none{{ else }}self{{ end }}'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' https://utteranc.es; img-src 'self' https:; media-src 'self' https:">
+	<meta http-equiv="content-security-policy" content="default-src '{{ if hugo.IsProduction }}none{{ else }}self{{ end }}'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' https://utteranc.es; img-src 'self' https:; media-src 'self' https:; connect-src 'self'">
 	<!--Google is the absolute worst.-->
 	<!--https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy-->
 	<!-- <meta http-equiv="permissions-policy" content="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; publickey-credentials-get 'none'; usb 'none'; wake-lock 'none'; xr-spatial-tracking 'none'; interest-cohort=()"> -->
