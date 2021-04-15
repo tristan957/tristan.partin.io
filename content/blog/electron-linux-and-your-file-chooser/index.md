@@ -66,16 +66,16 @@ based on Chromium, and Chromium uses GTK on Linux, so naturally Electron does as
 well. In GTK there are two classes to make note of:
 
 - [`GtkFileChooserDialog`](https://docs.gtk.org/gtk4/class.FileChooserDialog.html)
-- [`GtkFileChooserNative`](https://docs.gtk.org/gtk4/class.FileChooserNative.html)[^1]
+- [`GtkFileChooserNative`](https://docs.gtk.org/gtk4/class.FileChooserNative.html)
 
 The native variant will show the Windows or Mac file choosers on those
 platforms, but on Linux, the native variant actually speaks to the XDG Desktop
 Portal.
 
-`GtkFileChooserNative` first appeared in the 3.20 series of GTK, and Electron
-has to support Ubuntu 16.04 because that is what Chromium supports. Ubuntu 16.04
-only ships GTK 3.18, so all the GTK-related code has to use the 3.18 APIs, which
-meant Electron used `GtkFileChooserDialog`.
+`GtkFileChooserNative`[^1] first appeared in the 3.20 series of GTK, and
+Electron has to support Ubuntu 16.04 because that is what Chromium supports.
+Ubuntu 16.04 only ships GTK 3.18, so all the GTK-related code has to use the
+3.18 APIs, which meant Electron used `GtkFileChooserDialog`.
 
 Many platforms include ways to open a shared object at runtime, and pull
 functions or other information out. On Linux, this set of APIs is provided by
