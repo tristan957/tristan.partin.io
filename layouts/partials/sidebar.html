@@ -11,6 +11,18 @@
 	</p>
 	<address>
 		<ul class="undecorated-list contact-list">
+			{{ with .Site.Params.email }}
+				<li>
+					<div>email</div>
+					<a class="consistent-link" href="mailto:{{ .beforeAt }}@{{ .afterAtBeforeDot }}.{{ .tld }}"><span class="email-component">{{ .beforeAt }}</span><span class="email-component">@</span><span class="email-component">{{ .afterAtBeforeDot }}</span><span class="email-component">.</span><span class="email-component">{{ .tld }}</span></a>
+				</li>
+			{{ end }}
+			{{ with .Site.Params.gpg }}
+				<li>
+					<div>gpg</div>
+					<a class="consistent-link monospace" href="{{ .path }}">{{ .fingerprint }}</a>
+				</li>
+			{{ end }}
 			{{ with .Site.Params.socials.sourceHut }}
 				<li>
 					<div>sourcehut</div>
@@ -33,18 +45,6 @@
 				<li>
 					<div>linkedin</div>
 					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
-				</li>
-			{{ end }}
-			{{ with .Site.Params.email }}
-				<li>
-					<div>email</div>
-					<a class="consistent-link" href="mailto:{{ .beforeAt }}@{{ .afterAtBeforeDot }}.{{ .tld }}"><span class="email-component">{{ .beforeAt }}</span><span class="email-component">@</span><span class="email-component">{{ .afterAtBeforeDot }}</span><span class="email-component">.</span><span class="email-component">{{ .tld }}</span></a>
-				</li>
-			{{ end }}
-			{{ with .Site.Params.gpg }}
-				<li>
-					<div>gpg</div>
-					<a class="consistent-link monospace" href="{{ .path }}">{{ .fingerprint }}</a>
 				</li>
 			{{ end }}
 		</ul>
