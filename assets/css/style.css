@@ -200,6 +200,10 @@ figure > img {
   margin-top: 0;
 }
 
+.content-heading > a {
+  margin-right: 0.2rem;
+}
+
 #header {
   display: flex;
   list-style: none;

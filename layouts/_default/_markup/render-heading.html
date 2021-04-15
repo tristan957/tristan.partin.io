@@ -1,6 +1,6 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">
-	{{ .Text | safeHTML }}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="content-heading">
 	<a aria-label="Link for current header" class="consistent-link" href="#{{ .Anchor | safeURL }}">
 		<i class="icon icon-link"></i>
 	</a>
+	{{ .Text | safeHTML }}
 </h{{ .Level }}>
