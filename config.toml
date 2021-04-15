@@ -42,10 +42,10 @@ disableHugoGeneratorInject = false
   webring = true
 [params.licenses]
   [params.licenses.content]
-    license = "CC-BY-SA-4.0"
+    spdx = "CC-BY-SA-4.0"
     url = "https://creativecommons.org/licenses/by-sa/4.0/"
   [params.licenses.code]
-    license = "AGPL-3.0"
+    spdx = "AGPL-3.0"
     url = "https://opensource.org/licenses/AGPL-3.0"
 [params.siteImage]
   resourcePath = "images/astronaut-on-the-moon-with-a-beer-looking-at-earth.jpg"
