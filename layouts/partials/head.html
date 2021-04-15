@@ -38,6 +38,11 @@
 		<meta property="og:image:height" content="{{ $siteImage.Height }}">
 	{{ end }}
 
+	<!--Filter out taxonomy pages-->
+	{{ if .Data.Singlular }}
+		<meta name="robots" content="noindex">
+	{{ end }}
+
 	{{ $styleCss := resources.Get "css/style.css" | minify | fingerprint }}
 	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 	<link rel="preload" href="{{ $styleCss.RelPermalink }}" type="text/css" as="style">

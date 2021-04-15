@@ -3,9 +3,15 @@
 		{{ $paginator := .Paginate (where .Pages "Type" "blog") }}
 		{{ partial "page-title.html" . }}
 		{{ if eq $paginator.PageNumber 1 }}
-			{{ with .Content }}
-				<p id="content-about" class="font-weight-normal">{{ . }}<p/>
-			{{ end }}
+			<p id="content-about" class="font-weight-normal">
+				{{ if .Data.Singular }}
+					Content related to {{ .LinkTitle }}
+				{{ else }}
+					{{ with .Content }}
+						{{ . }}
+					{{ end }}
+				{{ end }}
+			</p>
 		{{ end }}
 		<ul class="undecorated-list content-list">
 			{{ range $paginator.Pages }}

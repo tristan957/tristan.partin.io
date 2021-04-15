@@ -10,7 +10,6 @@ disableHugoGeneratorInject = false
 
 [minify]
   minifyOutput = true
-  disableXML = true
 
 [permalinks]
   blog = "/blog/:year/:month/:day/:slug/"
