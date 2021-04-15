@@ -38,7 +38,7 @@ disableHugoGeneratorInject = false
   name = "Tristan Partin"
 
 [params]
-  defaultDescription = "Tristan Partin's personal website and blog."
+  defaultDescription = "Tristan Partin's personal website. This is a peek into my life including things that I blog about or links to my various profiles around the web."
   webring = true
 [params.licenses]
   [params.licenses.content]
