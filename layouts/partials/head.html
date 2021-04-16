@@ -3,7 +3,7 @@
 	<!--https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-->
 	<!--Use "script-src 'self'" here in order to facilitate Hugo's live reload in built-in server-->
 	<meta http-equiv="content-security-policy" content="default-src 'none'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src {{ if .Site.IsServer }}'self' {{ end }}'unsafe-inline' https://utteranc.es; img-src 'self' https:; media-src 'self' https:; connect-src 'self'; frame-src https://utteranc.es">
-	<meta name="referrer" content="noreferrer">
+	<meta name="referrer" content="no-referrer">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{{ hugo.Generator }}
 	<meta name="title" content="{{ .Title }} - {{ .Site.Author.name }}">
