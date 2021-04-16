@@ -1,25 +1,24 @@
 {
-	"[markdown]": {
-		"editor.formatOnSave": true,
-		"editor.tabSize": 2,
-		"editor.insertSpaces": true,
-	},
-	"[html]": {
-		"editor.formatOnSave": false,
-		"editor.tabSize": 2,
-		"editor.insertSpaces": false,
-		"files.insertFinalNewline": false,
-	},
-	"[css]": {
-		"editor.formatOnSave": true,
-		"editor.tabSize": 2,
-		"editor.insertSpaces": false
-	},
-	"cSpell.words": [
-		"Georgie",
-		"Googler",
-		"Librem",
-		"Vercel",
-		"glovebox"
-	],
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[html]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "files.insertFinalNewline": false
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["Georgie", "Googler", "Librem", "Vercel", "glovebox"]
 }
