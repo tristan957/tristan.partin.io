@@ -34,6 +34,9 @@ disableHugoGeneratorInject = false
   [pages.build]
     list = true
 
+[outputs]
+  home = ["HTML"]
+
 [author]
   name = "Tristan Partin"
 
