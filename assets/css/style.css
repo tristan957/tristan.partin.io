@@ -111,18 +111,21 @@ time {
 
 /* Extremely helpful for large enough tap targets for mobile testing in lighthouse */
 ul:not(.undecorated-list) > li:first-child,
-ol:not(.undecorated-list) > li:first-child {
+ol:not(.undecorated-list) > li:first-child,
+.archive-list > li:first-child {
   margin-top: 0;
 }
 
 ul:not(.undecorated-list) > li,
-ol:not(.undecorated-list) > li {
+ol:not(.undecorated-list) > li,
+ol.archive-list > li {
   margin-top: 0.6575rem;
   margin-bottom: 0.6575rem;
 }
 
 ul:not(.undecorated-list) > li:last-child,
-ol:not(.undecorated-list) > li:first-child {
+ol:not(.undecorated-list) > li:last-child,
+ol.archive-list > li:last-child {
   margin-bottom: 0;
 }
 

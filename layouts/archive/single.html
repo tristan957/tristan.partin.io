@@ -8,7 +8,7 @@
 					<h2 class="summary-title">
 						<a id="{{ .Key }}" class="font-weight-bold consistent-link" href="#{{ .Key }}"><time datetime="{{ .Key }}">{{ .Key }}</time></a>
 					</h2>
-					<ol class="undecorated-list">
+					<ol class="undecorated-list archive-list">
 						{{ range .ByPublishDate.Reverse }}
 							<li>
 								{{ with .PublishDate.Format "2006-01-02" }}
