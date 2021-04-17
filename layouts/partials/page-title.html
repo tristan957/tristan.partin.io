@@ -3,15 +3,11 @@
 	<span id="page-links">
 		{{ if ne .Type "archive" }}
 			{{ with .GetPage "archive" }}
-				<a aria-label="Archive" class="undecorated-link" href="{{ .RelPermalink }}">
-					<i class="icon icon-file-archive"></i>
-				</a>
+				<a aria-label="Archive" class="consistent-link" href="{{ .RelPermalink }}">archive</a>
 			{{ end }}
 		{{ end }}
 		{{ with .OutputFormats.Get "RSS" }}
-			<a aria-label="RSS" class="undecorated-link" href="{{ .RelPermalink }}">
-				<i class="icon icon-rss"></i>
-			</a>
+			<a aria-label="RSS" class="consistent-link" href="{{ .RelPermalink }}">rss</a>
 		{{ end }}
 	</span>
 </div>

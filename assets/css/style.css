@@ -142,26 +142,6 @@ figure > img {
   border: 2px solid var(--box-shadow-container-color);
 }
 
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.icon-left,
-.icon-right {
-  font-size: smaller;
-}
-
-.icon-link {
-  font-size: small;
-  color: var(--consistent-link-color);
-}
-
-#comments-section > button {
-  margin: auto;
-  margin-bottom: 1rem;
-}
-
 /*
  * Taxonomy
  */
@@ -201,7 +181,7 @@ figure > img {
 }
 
 .content-heading > a {
-  margin-right: 0.2rem;
+  vertical-align: middle;
 }
 
 #header {
@@ -493,10 +473,6 @@ a.footnote-ref {
   border-top: 3px var(--primary-accent-color) solid;
 }
 
-#resume .icon {
-  margin-right: 0.25rem;
-}
-
 .centered {
   text-align: center;
 }
@@ -526,6 +502,11 @@ a.footnote-ref {
   flex-direction: column;
   justify-items: center;
   padding-bottom: unset;
+}
+
+#comments-section > button {
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .utterances {
@@ -592,6 +573,10 @@ a.footnote-ref {
   margin: 0;
   margin-bottom: 1rem;
 }
+
+/*
+ * Mobile
+ */
 
 @media only screen and (max-width: 600px) {
   #content-container {

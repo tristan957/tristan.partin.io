@@ -51,12 +51,8 @@
 	{{ end }}
 
 	{{ $styleCss := resources.Get "css/style.css" | minify | fingerprint }}
-	{{ $fontello := resources.Get "fonts/fontello/css/fontello.css" | minify | fingerprint }}
 	<link rel="preload" href="{{ $styleCss.RelPermalink }}" type="text/css" as="style">
 	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
-	<link rel="preload" href="/fonts/fontello/font/fontello.woff2?39819490" type="font/woff2" as="font" crossorigin>
-	<link rel="preload" href="{{ $fontello.RelPermalink }}" type="text/css" as="style">
-	<link rel="stylesheet" href="{{ $fontello.RelPermalink }}" type="text/css">
 
 	{{ range .AlternativeOutputFormats -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
