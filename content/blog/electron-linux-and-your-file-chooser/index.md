@@ -114,7 +114,7 @@ On the first time an Electron process tries to open a file chooser on Linux, I
 open a handle to `libgtk-3.so` that stays open until the process ends. While
 still on the first time, I use `GModule` to ask the shared object for functions
 relating to `GtkFileChooserNative`. If all the functions are found, I know I am
-running against a GTK3 version of >=3.20. I cache a boolean that says GTK
+running against a GTK3 version of `>=`3.20. I cache a boolean that says GTK
 supports `GtkFileChooserNative`. What this check at runtime allows me to do is
 to support Ubuntu 16.04 in a backwards compatible manner. With the boolean I
 stashed away, any place Electron interacted with the GTK file chooser, I
