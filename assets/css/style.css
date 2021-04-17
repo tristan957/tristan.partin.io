@@ -110,6 +110,23 @@ time {
   color: inherit;
 }
 
+/* Extremely helpful for large enough tap targets for mobile testing in lighthouse */
+ul:not(.undecorated-list) > li:first-child,
+ol:not(.undecorated-list) > li:first-child {
+  margin-top: 0;
+}
+
+ul:not(.undecorated-list) > li,
+ol:not(.undecorated-list) > li {
+  margin-top: 0.6575rem;
+  margin-bottom: 0.6575rem;
+}
+
+ul:not(.undecorated-list) > li:last-child,
+ol:not(.undecorated-list) > li:first-child {
+  margin-bottom: 0;
+}
+
 .btn {
   color: white;
   background-color: var(--secondary-accent-color);
@@ -149,9 +166,6 @@ figure > img {
 .taxonomy-list {
   display: inline-flex;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .taxonomy-metadata > *:first-child {
@@ -234,8 +248,8 @@ figure > img {
 
 .undecorated-list {
   list-style: none;
-  padding-left: 0px;
-  margin: 0px;
+  padding-left: 0;
+  margin: 0;
 }
 
 /*
