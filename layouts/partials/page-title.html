@@ -3,11 +3,11 @@
 	<span id="page-links">
 		{{ if ne .Type "archive" }}
 			{{ with .GetPage "archive" }}
-				<a aria-label="Archive" class="consistent-link" href="{{ .RelPermalink }}">archive</a>
+				<a class="consistent-link monospace" href="{{ .RelPermalink }}">archive</a>
 			{{ end }}
 		{{ end }}
 		{{ with .OutputFormats.Get "RSS" }}
-			<a aria-label="RSS" class="consistent-link" href="{{ .RelPermalink }}">rss</a>
+			<a class="consistent-link monospace" href="{{ .RelPermalink }}">rss</a>
 		{{ end }}
 	</span>
 </div>
