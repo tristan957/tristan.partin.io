@@ -364,7 +364,7 @@ nav > ul > li > a:active {
   margin-bottom: 0rem;
 }
 
-.smaller-text {
+.small-text {
   font-size: small;
 }
 
@@ -574,13 +574,13 @@ a.footnote-ref {
 }
 
 .webring .webring-summary {
-  font-size: 0.8rem;
+  font-size: small;
   flex: 1;
 }
 
 .webring .webring-attribution {
   text-align: right;
-  font-size: 0.8rem;
+  font-size: small;
   margin: 0;
 }
 

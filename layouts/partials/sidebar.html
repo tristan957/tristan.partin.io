@@ -72,17 +72,17 @@
 	</div>
 	<hr />
 	{{ with .Site.Params.repository }}
-		<p class="smaller-text">
+		<p class="small-text">
 			This code and content for this site can be found on
 			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .forge }}</a>.
 		</p>
 	{{ end }}
-	<p class="smaller-text">
+	<p class="small-text">
 		This site uses absolutely no analytics or tracking mechanisms.
 	</p>
 	{{ with .GitInfo }}
 		<hr />
-<pre class="monospace smaller-text" aria-label="Git Info">
+<pre class="monospace small-text" aria-label="Git Info">
 Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
