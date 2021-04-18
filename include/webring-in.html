@@ -10,7 +10,9 @@
 				<small class="webring-source">
 					via <a class="consistent-link font-weight-bold" href="{{ .SourceLink }}" target="_blank" rel="noreferrer noopener">{{ .SourceTitle }}</a>
 				</small>
-				<small class="webring-date">{{ .Date | date }}</small>
+				{{ with .Date | date }}
+					<small class="webring-date"><time datetime="{{ . }}">{{ . }}</time></small>
+				{{ end }}
 			</div>
     {{ end }}
   </section>
