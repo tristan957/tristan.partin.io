@@ -145,6 +145,10 @@ figure > img {
   flex-wrap: wrap;
 }
 
+.taxonomy-metadata {
+  line-height: 1.375rem;
+}
+
 .taxonomy-metadata > *:first-child {
   margin-top: 1rem;
 }
