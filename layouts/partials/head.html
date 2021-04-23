@@ -58,21 +58,46 @@
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
+	<style>
+		:root {
+			--color: black;
+			--main-background-color: #fffaf0;
+			--consistent-link-color: blue;
+			--content-metadata-color: #484848;
+			--box-shadow-container-color: #cccccc;
+			--raised-backgroud-color: white;
+			--primary-accent-color: #f48024;
+			--secondary-accent-color: #77216f;
+			--secondary-accent-color-hover: #833a72;
+			--blockquote-background-color: #e5e5e5;
+			--border-radius: 3px;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--color: white;
+				--main-background-color: #2d2d2d;
+				--consistent-link-color: #7DB3E3;
+				--content-metadata-color: #d4d4d4;
+				--box-shadow-container-color: #222222;
+				--raised-backgroud-color: #393939;
+				--blockquote-background-color: #1B1B1B;
+			}
+		}
+
+		[site-theme="dark"]:root {
+			--color: white;
+			--main-background-color: #2d2d2d;
+			--consistent-link-color: #7db3e3;
+			--content-metadata-color: #d4d4d4;
+			--box-shadow-container-color: #222222;
+			--raised-backgroud-color: #393939;
+			--blockquote-background-color: #1b1b1b;
+		}
+	</style>
+
 	<noscript>
 		<style>
-			@media (prefers-color-scheme: dark) {
-				/* Keep up to date with style.css */
-				:root {
-					--color: white;
-					--main-background-color: #2d2d2d;
-					--consistent-link-color: #7DB3E3;
-					--content-metadata-color: #d4d4d4;
-					--box-shadow-container-color: #222222;
-					--raised-backgroud-color: #393939;
-					--blockquote-background-color: #1B1B1B;
-				}
-			}
-
 			/* Remove double margin when #comments-section is not displayed */
 			#single-container > *:nth-last-child(2) {
 				margin-bottom: 0 !important;
