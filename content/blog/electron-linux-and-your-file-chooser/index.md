@@ -7,8 +7,8 @@ tags:
 ---
 
 Electron has done a lot of good for desktop Linux. Without it, the desktop app
-selection would probably be much poorer, and we would miss out on great
-applications like Visual Studio Code.
+selection would probably be much poorer, but many users have complained about
+the file chooser.
 
 <!--more-->
 
