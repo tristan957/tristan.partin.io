@@ -51,12 +51,12 @@
 	</address>
 	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)"></button>
 	<script text="text/javascript">
-		let isDarkModePreferred = isDarkModeEnabled();
+		let darkModePreferred = isDarkModeEnabled();
 
-		switchTheme(isDarkModePreferred ? "dark" : "light");
+		switchTheme(darkModePreferred ? "dark" : "light");
 
 		const themeButton = document.getElementById("theme-btn");
-		themeButton.innerHTML = isDarkModePreferred ? "Light Theme" : "Dark Theme";
+		themeButton.innerHTML = darkModePreferred ? "Light Theme" : "Dark Theme";
 	</script>
 	<hr />
 	<div class="sidebar-section">

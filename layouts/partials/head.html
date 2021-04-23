@@ -85,6 +85,16 @@
 			}
 		}
 
+		[site-theme="light"]:root {
+			--color: black;
+			--main-background-color: #fffaf0;
+			--consistent-link-color: blue;
+			--content-metadata-color: #484848;
+			--box-shadow-container-color: #cccccc;
+			--raised-backgroud-color: white;
+			--blockquote-background-color: #e5e5e5;
+		}
+
 		[site-theme="dark"]:root {
 			--color: white;
 			--main-background-color: #2d2d2d;
@@ -127,12 +137,12 @@
 		}
 
 		function overrideTheme(button) {
-			if (!isDarkModePreferred) {
-				isDarkModePreferred = true;
+			if (!darkModePreferred) {
+				darkModePreferred = true;
 				button.innerHTML = "Light Theme";
 				switchTheme("dark");
 			} else {
-				isDarkModePreferred = false;
+				darkModePreferred = false;
 				button.innerHTML = "Dark Theme";
 				switchTheme("light");
 			}
