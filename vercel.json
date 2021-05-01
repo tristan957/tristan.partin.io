@@ -15,13 +15,17 @@
         {
           "key": "Permissions-Policy",
           "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; publickey-credentials-get 'none'; usb 'none'; wake-lock 'none'; xr-spatial-tracking 'none'; interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' https://utteranc.es; img-src 'self' https:; media-src 'self' https:; connect-src 'self'; frame-src https://utteranc.es"
         }
       ]
     }
   ],
   "build": {
     "env": {
-      "HUGO_VERSION": "0.82.0"
+      "HUGO_VERSION": "0.83.0"
     }
   },
   "github": {
