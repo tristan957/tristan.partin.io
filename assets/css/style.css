@@ -128,10 +128,11 @@ ol.archive-list > li:last-child {
 }
 
 figure {
+  margin: 0;
   text-align: center;
 }
 
-figure > img {
+figure > picture > img {
   max-width: 75%;
   border: 2px solid var(--box-shadow-container-color);
 }
@@ -387,8 +388,9 @@ nav > ul > li > a:active {
 }
 
 #main {
-  min-width: 50%;
+  min-width: 200px;
   width: 50%;
+  max-width: 1250px;
   display: flex;
   flex-direction: column;
 }
@@ -573,7 +575,7 @@ a.footnote-ref {
  * Mobile
  */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 650px) {
   #content-container {
     flex-direction: column;
   }
@@ -601,5 +603,6 @@ a.footnote-ref {
 
   #sidebar {
     width: auto;
+    max-width: none;
   }
 }
