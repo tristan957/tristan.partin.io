@@ -1,6 +1,16 @@
 {{ $resource := .Page.Resources.GetMatch .Destination }}
 <figure>
-	<!--Use resource.Fit 350x350 when next version of hugo releases-->
-	<img loading="lazy" src="{{ $resource.RelPermalink | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+	<picture>
+		{{ if gt $resource.Width 450 }}
+			{{ $responsiveImage := $resource.Fit "450x450" }}
+			<source srcset="{{ $responsiveImage.RelPermalink }}" media="(max-width: 650px)" sizes="{{ $responsiveImage.Height }}*{{ $responsiveImage.Width }}">
+		{{ end }}
+		{{ range $w := seq 850 200 (cond (lt $resource.Width 800) (div (add $resource.Width 34) 0.375) 2250) }}
+			{{ $width := int (math.Round (sub (mul 0.375 $w) 34)) }}
+			{{ $responsiveImage := $resource.Fit (printf "%dx%d" $width $width) }}
+			<source srcset="{{ $responsiveImage.RelPermalink }}" media="(max-width: {{ $w }}px)" sizes="{{ $responsiveImage.Height }}*{{ $responsiveImage.Width }}">
+		{{ end }}
+		<img loading="lazy" src="{{ $resource.RelPermalink | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+	</picture>
 	{{ if .Title }}<figcaption {{ if eq .Title .Text }}aria-hidden="true"{{ end }}><i>{{ .Title }}</i></figcaption>{{ end }}
 </figure>
