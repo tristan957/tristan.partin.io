@@ -1,11 +1,27 @@
 :root {
-  --color: black;
-  --main-background-color: #fffaf0;
-  --consistent-link-color: blue;
-  --content-metadata-color: #484848;
-  --box-shadow-container-color: #cccccc;
-  --raised-backgroud-color: white;
-  --blockquote-background-color: #e5e5e5;
+  --light-color: black;
+  --light-main-background-color: #fffaf0;
+  --light-consistent-link-color: blue;
+  --light-content-metadata-color: #484848;
+  --light-box-shadow-container-color: #cccccc;
+  --light-raised-backgroud-color: white;
+  --light-blockquote-background-color: #e5e5e5;
+
+  --dark-color: white;
+  --dark-main-background-color: #2d2d2d;
+  --dark-consistent-link-color: #7db3e3;
+  --dark-content-metadata-color: #d4d4d4;
+  --dark-box-shadow-container-color: #222222;
+  --dark-raised-backgroud-color: #393939;
+  --dark-blockquote-background-color: #1b1b1b;
+
+  --color: var(--light-color);
+  --main-background-color: var(--light-main-background-color);
+  --consistent-link-color: var(--light-consistent-link-color);
+  --content-metadata-color: var(--light-content-metadata-color);
+  --box-shadow-container-color: var(--light-box-shadow-container-color);
+  --raised-backgroud-color: var(--light-raised-backgroud-color);
+  --blockquote-background-color: var(--light-raised-backgroud-color);
 
   --primary-accent-color: #f48024;
   --secondary-accent-color: #77216f;
@@ -15,14 +31,34 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color: white;
-    --main-background-color: #2d2d2d;
-    --consistent-link-color: #7db3e3;
-    --content-metadata-color: #d4d4d4;
-    --box-shadow-container-color: #222222;
-    --raised-backgroud-color: #393939;
-    --blockquote-background-color: #1b1b1b;
+    --color: var(--dark-color);
+    --main-background-color: var(--dark-main-background-color);
+    --consistent-link-color: var(--dark-consistent-link-color);
+    --content-metadata-color: var(--dark-content-metadata-color);
+    --box-shadow-container-color: var(--dark-box-shadow-container-color);
+    --raised-backgroud-color: var(--dark-raised-backgroud-color);
+    --blockquote-background-color: var(--dark-blockquote-background-color);
   }
+}
+
+[site-theme="light"]:root {
+  --color: var(--light-color);
+  --main-background-color: var(--light-main-background-color);
+  --consistent-link-color: var(--light-consistent-link-color);
+  --content-metadata-color: var(--light-content-metadata-color);
+  --box-shadow-container-color: var(--light-box-shadow-container-color);
+  --raised-backgroud-color: var(--light-raised-backgroud-color);
+  --blockquote-background-color: var(--light-blockquote-background-color);
+}
+
+[site-theme="dark"]:root {
+  --color: var(--dark-color);
+  --main-background-color: var(--dark-main-background-color);
+  --consistent-link-color: var(--dark-consistent-link-color);
+  --content-metadata-color: var(--dark-content-metadata-color);
+  --box-shadow-container-color: var(--dark-box-shadow-container-color);
+  --raised-backgroud-color: var(--dark-raised-backgroud-color);
+  --blockquote-background-color: var(--dark-blockquote-background-color);
 }
 
 * {
