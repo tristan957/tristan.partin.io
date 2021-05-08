@@ -33,17 +33,17 @@
         Have a comment or question on one of my posts?
         {{ with .mailingList }}
           Start a discussion in my
-          <a class="consistent-link" href="{{ .archiveURL }}" target="_blank" rel="noreferrer noopener">
+          <a class="consistent-link" href="{{ .archiveURL }}" target="_blank" rel="noopener">
           public inbox</a>
           by sending an email to <a class="consistent-link" href="mailto:{{ .address }}?Subject=Re: {{ $.Title }}">
           {{ .address }}</a>. If you are unfamiliar with mailing lists, start with
-          <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" target="_blank" rel="noreferrer noopener">mailing list etiquette</a>.
+          <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" target="_blank" rel="noopener">mailing list etiquette</a>.
           Otherwise just shoot me an email to my address which is linked in the sidebar.
         {{ end }}
         {{ if .utterances.enabled }}
           If you have a
           GitHub account and JavaScript enabled, then this site has support for comments through
-          <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noreferrer noopener">utteranc.es</a>.
+          <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noopener">utteranc.es</a>.
         {{ end }}
       {{ end }}
     </section>

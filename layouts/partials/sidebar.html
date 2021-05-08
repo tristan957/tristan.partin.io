@@ -3,7 +3,7 @@
 	<img id="profile-picture" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="{{ $profile.Width }}" height="{{ $profile.Height }}" />
 	{{ with .Site.Params.resume }}
 		<div id="resume" class="centered">
-			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">Resume</a>
+			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">Resume</a>
 		</div>
 	{{ end }}
 	<p>
@@ -26,25 +26,25 @@
 			{{ with .Site.Params.socials.sourceHut }}
 				<li>
 					<div>sourcehut</div>
-					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.gitHub }}
 				<li>
 					<div>github</div>
-					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.mastodon }}
 				<li>
 					<div>mastodon</div>
-					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="me noopener noreferrer">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="me noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.linkedIn }}
 				<li>
 					<div>linkedin</div>
-					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 		</ul>
@@ -64,9 +64,9 @@
 			<div class="sidebar-section-header">License</div>
 			<p class="sidebar-paragraph">
 				The content on this site is
-				<a class="consistent-link" href="{{ .content.url }}" target="_blank" rel="noopener noreferrer">{{ .content.spdx }}</a>.
+				<a class="consistent-link" href="{{ .content.url }}" target="_blank" rel="noopener">{{ .content.spdx }}</a>.
 				The code for this site is
-				<a class="consistent-link" href="{{ .code.url }}" target="_blank" rel="noopener noreferrer">{{ .code.spdx }}</a>.
+				<a class="consistent-link" href="{{ .code.url }}" target="_blank" rel="noopener">{{ .code.spdx }}</a>.
 			</p>
 		{{ end }}
 	</div>
@@ -74,7 +74,7 @@
 	{{ with .Site.Params.repository }}
 		<p class="small-text">
 			This code and content for this site can be found on
-			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .forge }}</a>.
+			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .forge }}</a>.
 		</p>
 	{{ end }}
 	<p class="small-text">
@@ -83,7 +83,7 @@
 	{{ with .GitInfo }}
 		<hr />
 <pre class="monospace small-text" aria-label="Git Info">
-Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
+Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}" target="_blank" rel="noopener">{{ .AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
 </section>
