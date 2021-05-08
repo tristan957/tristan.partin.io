@@ -23,6 +23,14 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://tristan.partin.io"
+        },
+        {
+          "key": "Vary",
+          "value": "Origin"
         }
       ]
     }
