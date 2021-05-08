@@ -20,5 +20,8 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+  },
   "cSpell.words": ["Georgie", "Googler", "Librem", "Vercel", "glovebox"]
 }
