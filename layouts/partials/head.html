@@ -49,18 +49,15 @@
 	{{ $styleCss := resources.Get "css/style.css" | minify | fingerprint }}
 	<link rel="preload" href="{{ $styleCss.RelPermalink }}" type="text/css" as="style">
 	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
+	<noscript>
+		{{ $noJsCss := resources.Get "css/no-js.css" | minify | fingerprint }}
+		<link rel="preload" href="{{ $noJsCss.RelPermalink }}" type="text/css" as="style">
+		<link rel="stylesheet" href="{{ $noJsCss.RelPermalink }}" type="text/css">
+	</noscript>
 
 	{{ range .AlternativeOutputFormats -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{ end -}}
-
-	<noscript>
-		<style>
-			.no-js {
-				display: none !important;
-			}
-		</style>
-	</noscript>
 
 	<script type="text/javascript">
 		function isDarkModeEnabled() {

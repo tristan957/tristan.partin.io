@@ -4,8 +4,8 @@
   X-Frame-Options = "DENY"
   X-Content-Type-Options = "nosniff"
   Permissions-Policy = "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; publickey-credentials-get 'none'; usb 'none'; wake-lock 'none'; xr-spatial-tracking 'none'; interest-cohort=()"
-  # script-src has self for live reload on local server
-  Content-Security-Policy = "default-src 'none'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' https:; media-src 'self' https:; connect-src 'self'"
+  # script-src has self and connect-src exists for live reload on local server
+  Content-Security-Policy = "default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' https:; media-src 'self' https:; connect-src 'self'"
   Referrer-Policy = "strict-origin-when-cross-origin"
   Cross-Origin-Opener-Policy = "same-origin"
   Cross-Origin-Embedder-Policy = "require-corp"
