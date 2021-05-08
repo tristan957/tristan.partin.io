@@ -558,27 +558,6 @@ a.footnote-ref {
 }
 
 /*
- * Utterances
- */
-
-#comments-section {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding-bottom: unset;
-}
-
-#comments-section > button {
-  margin: auto;
-  margin-bottom: 1rem;
-}
-
-.utterances {
-  margin: auto;
-  margin-bottom: 1rem;
-}
-
-/*
  * Webring
  */
 

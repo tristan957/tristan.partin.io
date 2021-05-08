@@ -6,9 +6,7 @@ This is code used to create [tristan.partin.io](https://tristan.partin.io).
 
 ## Comments
 
-The site itself will function without JavaScript enabled. It has the ability to
-show comments on the page using [utteranc.es](https://utteranc.es), otherwise
-comments can be emailed to my
+Comments can be emailed to my
 [public inbox](mailto:tristan957/public-inbox@lists.sr.ht).
 
 ## Theme

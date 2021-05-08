@@ -40,69 +40,7 @@
           <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" target="_blank" rel="noopener">mailing list etiquette</a>.
           Otherwise just shoot me an email to my address which is linked in the sidebar.
         {{ end }}
-        {{ if .utterances.enabled }}
-          If you have a
-          GitHub account and JavaScript enabled, then this site has support for comments through
-          <a class="consistent-link" href="https://utteranc.es" target="_blank" rel="noopener">utteranc.es</a>.
-        {{ end }}
       {{ end }}
     </section>
-    <!--Keep development quick and stop spamming GitHub API-->
-    {{ with .Site.Params.utterances }}
-      {{ if and hugo.IsProduction .enabled }}
-        <section id="comments-section" class="no-js box-shadow-container">
-          <script type="text/javascript">
-            let toggled = false;
-            function toggleCommentsState(button) {
-              toggled = !toggled;
-              const utterancesFrame = document.getElementsByClassName("utterances-frame").item(0);
-              const utterances = document.getElementsByClassName("utterances").item(0);
-              if (toggled) {
-                const height = utterancesFrame.clientHeight;
-                utterancesFrame.classList.add("hidden");
-                utterances.style.marginBottom = `-${height}px`;
-                button.innerHTML = "Show Comments";
-              } else {
-                button.innerHTML = "Hide Comments";
-                utterancesFrame.classList.remove("hidden");
-                utterances.style.marginBottom = `0`;
-              }
-            }
-          </script>
-          <button class="btn" type="button" onclick="toggleCommentsState(this)">Hide Comments</button>
-          <script type="text/javascript">
-            function loadUtterances() {
-              const utterancesScript = document.createElement("script");
-              utterancesScript.setAttribute("id", "utterances-script");
-              utterancesScript.setAttribute("src", "https://utteranc.es/client.js");
-              utterancesScript.setAttribute("repo", "{{ .repo }}");
-              utterancesScript.setAttribute("issue-term", "{{ .issueTerm }}");
-              utterancesScript.setAttribute("label", "{{ .label }}");
-              utterancesScript.setAttribute("theme", isDarkModeEnabled() ? "github-dark" : "github-light");
-              utterancesScript.setAttribute("crossorigin", "anonymous");
-              utterancesScript.setAttribute("async", "true");
-
-              const commentsSection = document.getElementById("comments-section");
-              commentsSection.appendChild(utterancesScript);
-            }
-
-            loadUtterances();
-
-            new MutationObserver(function(mutations) {
-              const commentsSection = document.getElementById("comments-section");
-              mutations.forEach(function(mutation) {
-                if (mutation.type == "attributes") {
-                  const utterances = document.getElementsByClassName("utterances").item(0);
-                  if (utterances !== null) {
-                    utterances.remove();
-                    loadUtterances();
-                  }
-                }
-              })
-            }).observe(document.getElementsByTagName("html").item(0), { attributes: true });
-          </script>
-        </section>
-      {{ end }}
-    {{ end }}
   </section>
 {{ end }}

@@ -82,11 +82,6 @@ disableHugoGeneratorInject = false
     url = "https://linkedin.com/in/tristan-partin"
 [params.resume]
   url = "/documents/My_Resume.pdf"
-[params.utterances]
-  enabled = true
-  repo = "tristan957/tristan.partin.io"
-  issueTerm = "pathname"
-  label = "comments"
 [params.mailingList]
   address = "~tristan957/public-inbox@lists.sr.ht"
   archiveURL = "https://lists.sr.ht/~tristan957/public-inbox"
