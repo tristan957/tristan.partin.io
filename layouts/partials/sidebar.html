@@ -49,15 +49,7 @@
 			{{ end }}
 		</ul>
 	</address>
-	<button id="theme-btn" type="button" class="btn no-js" aria-label="Toggle Site Theme" onclick="overrideTheme(this)"></button>
-	<script text="text/javascript">
-		let darkModePreferred = isDarkModeEnabled();
-
-		switchTheme(darkModePreferred ? "dark" : "light");
-
-		const themeButton = document.getElementById("theme-btn");
-		themeButton.innerHTML = darkModePreferred ? "Light Theme" : "Dark Theme";
-	</script>
+	<button id="theme-btn" type="button" class="btn no-js">Toggle Theme</button>
 	<hr />
 	<div class="sidebar-section">
 		{{ with .Site.Params.licenses }}
