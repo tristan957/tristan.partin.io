@@ -81,7 +81,7 @@ disableHugoGeneratorInject = false
     username = "tristan-partin"
     url = "https://linkedin.com/in/tristan-partin"
 [params.resume]
-  url = "/documents/My_Resume.pdf"
+  url = "/documents/Tristan_Partin_Resume.pdf"
 [params.mailingList]
   address = "~tristan957/public-inbox@lists.sr.ht"
   archiveURL = "https://lists.sr.ht/~tristan957/public-inbox"
