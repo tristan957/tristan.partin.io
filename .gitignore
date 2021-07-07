@@ -3,3 +3,4 @@ node_modules/
 /hint-report/
 /resources/_gen
 # layouts/partials/webring-out.html
+/bin/
