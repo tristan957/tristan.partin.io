@@ -44,6 +44,10 @@ _build:
   list: never
 ```
 
+### Permissions-Policy
+
+https://www.permissionspolicy.com/ generates a valid `Permissions-Policy` value.
+
 ## Licenses
 
 The code is licensed under the AGPL-3.0.
