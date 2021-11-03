@@ -89,7 +89,7 @@ code > * {
 
 body {
   margin: 0px;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background-color: var(--main-background-color);
 }
