@@ -4,3 +4,4 @@ node_modules/
 /resources/_gen
 # layouts/partials/webring-out.html
 /bin/
+.hugo_build.lock
