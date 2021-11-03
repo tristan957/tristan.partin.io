@@ -615,4 +615,18 @@ a.footnote-ref {
     width: auto;
     max-width: none;
   }
+
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+/*
+ * Desktop
+ */
+
+@media only screen and (min-width: 650px) {
+  .desktop-hide {
+    display: none !important;
+  }
 }

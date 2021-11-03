@@ -1,6 +1,11 @@
 <section id="sidebar" class="box-shadow-container">
 	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
-	<img id="profile-picture" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="{{ $profile.Width }}" height="{{ $profile.Height }}" />
+	<!--
+		Don't lazy load on desktop. Lighthouse reports this as an issue because
+		the image is visible right off the bat.
+	-->
+	<img id="profile-picture" class="mobile-hide" src="{{ $profile.RelPermalink }}" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="{{ $profile.Width }}" height="{{ $profile.Height }}" />
+	<img id="profile-picture" class="desktop-hide" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="{{ $profile.Width }}" height="{{ $profile.Height }}" />
 	{{ with .Site.Params.resume }}
 		<div id="resume" class="centered">
 			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">Resume</a>
