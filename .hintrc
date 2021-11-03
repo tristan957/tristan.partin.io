@@ -1,9 +1,0 @@
-{
-	"connector": {
-		"name": "jsdom"
-	},
-	"extends": [
-		"web-recommended",
-		"accessibility"
-	]
-}
