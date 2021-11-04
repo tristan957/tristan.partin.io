@@ -38,13 +38,19 @@
  * Code
  */
 
-.highlight pre {
-  padding: 0.25rem 0;
+div.highlight {
+  overflow-x: auto;
+  border: 2px solid var(--box-shadow-container-color);
+  border-radius: var(--border-radius);
 }
 
-pre {
+.highlight code {
+  color: white;
+}
+
+div.highlight pre {
   margin: 0;
-  overflow-x: auto;
+  padding: 0.25rem 0;
 }
 
 tr > td:first-child > pre {
@@ -53,23 +59,6 @@ tr > td:first-child > pre {
 
 tr > td:last-child > pre {
   padding-right: 0.25rem;
-}
-
-code {
-  word-wrap: break-word;
-}
-
-a > code {
-  color: inherit;
-}
-
-.highlight {
-  border: 2px solid var(--box-shadow-container-color);
-  border-radius: var(--border-radius);
-}
-
-.highlight code {
-  color: white;
 }
 
 .monospace {
