@@ -383,7 +383,7 @@ nav > ul > li > a:active {
  * Sidebar
  */
 
-#profile-picture {
+.profile-picture {
   border-radius: var(--border-radius);
   display: block;
   margin: auto;

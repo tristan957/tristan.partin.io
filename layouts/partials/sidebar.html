@@ -4,8 +4,8 @@
 		Don't lazy load on desktop. Lighthouse reports this as an issue because
 		the image is visible right off the bat.
 	-->
-	<img id="profile-picture" class="mobile-hide" src="{{ $profile.RelPermalink }}" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="200" height="200" />
-	<img id="profile-picture" class="desktop-hide" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="200" height="200" />
+	<img class="profile-picture mobile-hide" src="{{ $profile.RelPermalink }}" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="200" height="200" />
+	<img class="profile-picture desktop-hide" src="{{ $profile.RelPermalink }}" loading="lazy" alt="Profile picture of Tristan Partin" title="Tristan Partin" width="200" height="200" />
 	{{ with .Site.Params.resume }}
 		<div id="resume" class="centered">
 			<a class="consistent-link" href="{{ .url }}" target="_blank" rel="noopener">Resume</a>
