@@ -2,7 +2,8 @@
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.formatOnSave": false,
@@ -22,6 +23,5 @@
   },
   "[javascript]": {
     "editor.formatOnSave": true,
-  },
-  "cSpell.words": ["Georgie", "Googler", "Librem", "Vercel", "glovebox"]
+  }
 }
