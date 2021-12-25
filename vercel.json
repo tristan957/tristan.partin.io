@@ -96,7 +96,7 @@
   ],
   "build": {
     "env": {
-      "HUGO_VERSION": "0.89.0"
+      "HUGO_VERSION": "0.91.2"
     }
   },
   "github": {
