@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-cd openring
+cd openring || exit
 go build -o ../bin/openring

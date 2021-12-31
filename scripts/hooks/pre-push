@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Don't run the script twice...
-if [ "$2" == "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
+if [ "$2" = "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
 	./scripts/openring/generate.sh
 fi

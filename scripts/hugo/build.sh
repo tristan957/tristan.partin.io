@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-cd hugo
+cd hugo || exit
 CGO_ENABLED=1 go build --tags extended -o ../bin/hugo

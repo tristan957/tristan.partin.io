@@ -3,9 +3,13 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
   - go
   - hugo
+  - shellcheck
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
+  - lint: |
+      cd tristan.partin.io
+      shellcheck $(find scripts/ -type f)
   - openring: |
       cd tristan.partin.io
       ./scripts/openring/build.sh
