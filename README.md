@@ -12,9 +12,7 @@ Comments can be emailed to my
 ## Theme
 
 The site also includes dark mode support which will be handled by your system
-preferences, specifically `prefers-color-scheme`. Alternatively, there is a
-toggle if you prefer one theme over the other. The option is stored in local
-storage as `site-theme`. Note: the toggle requires JavaScript to be enabled.
+preferences, specifically `prefers-color-scheme`.
 
 It is inspired by an older iteration of
 [drewdevault.com](https://drewdevault.com).
