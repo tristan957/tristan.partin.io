@@ -76,8 +76,8 @@ disableHugoGeneratorInject = false
     username = "tristan957"
     url = "https://github.com/tristan957"
   [params.socials.mastodon]
-    username = "@tristan957@mastodon.social"
-    url = "https://mastodon.social/@tristan957"
+    username = "@tristan957@fosstodon.org"
+    url = "https://fosstodon.org/@tristan957"
   [params.socials.linkedIn]
     username = "tristan-partin"
     url = "https://linkedin.com/in/tristan-partin"
