@@ -22,11 +22,9 @@
 			<div id="page-controls">
 				<span id="page-controls-prev">
 					{{ if $paginator.HasPrev }}
-						{{ if and (ne $paginator.First.PageNumber $paginator.PageNumber) (ne $paginator.First.PageNumber $paginator.Prev.PageNumber) }}
-							<a aria-label="Go to first page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.First.URL }}">
-								First
-							</a>
-						{{ end }}
+						<a aria-label="Go to first page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.First.URL }}">
+							First
+						</a>
 						<a aria-label="Go to page {{ $paginator.Prev.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Prev.URL }}">
 							{{ $paginator.Prev.PageNumber }}
 						</a>
@@ -37,11 +35,9 @@
 						<a aria-label="Go to page {{ $paginator.Next.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Next.URL }}">
 							{{ $paginator.Next.PageNumber }}
 						</a>
-						{{ if and (ne $paginator.Last.PageNumber $paginator.PageNumber) (ne $paginator.Last.PageNumber $paginator.Next.PageNumber) }}
-							<a aria-label="Go to last page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Last.URL }}">
-								Last
-							</a>
-						{{ end }}
+						<a aria-label="Go to last page" class="btn btn-primary page-control undecorated-link" href="{{ $paginator.Last.URL }}">
+							Last
+						</a>
 					{{ end }}
 				</span>
 			</div>
