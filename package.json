@@ -11,6 +11,6 @@
     "format:ci": "prettier --config .prettierrc.yml --check '**/*.{md,css,json}'"
   },
   "devDependencies": {
-    "prettier": "^2.3.2"
+    "prettier": "^2.6.2"
   }
 }
