@@ -66,9 +66,9 @@ tr > td:last-child > pre {
 }
 
 code,
-code > * {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.9rem;
+code * {
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 0.9rem !important;
 }
 
 ::selection {
