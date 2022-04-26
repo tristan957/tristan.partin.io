@@ -23,7 +23,7 @@ disableHugoGeneratorInject = false
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
+    anchorLineNos = true
     codeFences = true
     guessSyntax = false
     hl_Lines = ""

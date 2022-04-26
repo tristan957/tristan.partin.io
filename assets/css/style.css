@@ -154,6 +154,10 @@ div.highlight code * {
   font-size: 0.9rem;
 }
 
+div.highlight code a:hover{
+  filter: brightness(175%);
+}
+
 /*
  * Taxonomy
  */
