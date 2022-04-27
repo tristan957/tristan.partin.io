@@ -46,9 +46,14 @@
 		<meta name="robots" content="noindex">
 	{{ end }}
 
+	{{ $syntaxDarkCss := resources.Get "css/syntax-dark.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $syntaxDarkCss.RelPermalink }}" type="text/css" media="screen and (prefers-color-scheme: dark)">
+
+	{{ $syntaxLightCss := resources.Get "css/syntax-light.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $syntaxLightCss.RelPermalink }}" type="text/css" media="screen and (prefers-color-scheme: light)">
+
 	{{ $styleCss := resources.Get "css/style.css" | minify | fingerprint }}
-	<link rel="preload" href="{{ $styleCss.RelPermalink }}" type="text/css" as="style">
-	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css">
+	<link rel="stylesheet" href="{{ $styleCss.RelPermalink }}" type="text/css" media="screen">
 
 	{{ range .AlternativeOutputFormats -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}

@@ -1,4 +1,9 @@
 :root {
+  --border-radius: 3px;
+  --primary-accent-color: #f48024;
+  --secondary-accent-color: #77216f;
+  --secondary-accent-color-hover: #833a72;
+
   --color: black;
   --main-background-color: #fffaf0;
   --consistent-link-color: blue;
@@ -7,11 +12,11 @@
   --raised-backgroud-color: white;
   --blockquote-background-color: #e5e5e5;
 
-  --primary-accent-color: #f48024;
-  --secondary-accent-color: #77216f;
-  --secondary-accent-color-hover: #833a72;
-  --border-radius: 3px;
+  /* Accessibility for code blocks */
+  --chroma-line-no-color: #767676;
+  --chrome-c1-color: #438282; /* Did not require overriding */
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,6 +27,10 @@
     --box-shadow-container-color: #222222;
     --raised-backgroud-color: #393939;
     --blockquote-background-color: #1b1b1b;
+
+    /* Accessibility for code blocks */
+    --chroma-line-no-color: #9f9f9f;
+    --chrome-c1-color: #8e8e8e;
   }
 }
 
@@ -128,6 +137,14 @@ figure > picture > img {
  * Code
  */
 
+.chroma .lnt {
+  color: var(--chroma-line-no-color);
+}
+
+.chroma .c1 {
+  color: var(--chrome-c1-color);
+}
+
 .monospace {
   font-family: "Courier New", Courier, monospace;
 }
@@ -139,7 +156,6 @@ div.highlight {
 }
 
 div.highlight code {
-  color: white;
   display: flex;
   flex-direction: column;
   row-gap: 2px;
