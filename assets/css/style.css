@@ -11,6 +11,7 @@
   --box-shadow-container-color: #cccccc;
   --raised-backgroud-color: white;
   --blockquote-background-color: #e5e5e5;
+  --filter: brightness(25%);
 
   /* Accessibility for code blocks */
   --chroma-line-no-color: #767676;
@@ -27,6 +28,7 @@
     --box-shadow-container-color: #222222;
     --raised-backgroud-color: #393939;
     --blockquote-background-color: #1b1b1b;
+    --filter: brightness(175%);
 
     /* Accessibility for code blocks */
     --chroma-line-no-color: #9f9f9f;
@@ -171,7 +173,7 @@ div.highlight code * {
 }
 
 div.highlight code a:hover{
-  filter: brightness(175%);
+  filter: var(--filter);
 }
 
 /*
