@@ -43,8 +43,8 @@ Technologies I will be showcasing within the series include:
 - `GObject` - Object-oriented type system for C. I could spend forever talking
   about this alone, but it wouldn't really stay on topic. If you see anything
   confusing, email me or leave a comment.
-- `libsoup` - GLib-based HTTP library.
-- `json-glib` - JSON support for GLib.
+- `libsoup` - `GLib`-based HTTP library.
+- `json-glib` - JSON support for `GLib`.
 
 You might be saying, "Tristan, but C lacks all the niceties that higher-level
 languages have so this feels like a waste of time." And to that I say time is
