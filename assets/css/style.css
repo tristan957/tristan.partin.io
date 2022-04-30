@@ -513,7 +513,7 @@ a.footnote-ref {
   text-align: center;
 }
 
-.summary > p {
+.summary > *:last-child {
   margin-bottom: 0rem;
 }
 
