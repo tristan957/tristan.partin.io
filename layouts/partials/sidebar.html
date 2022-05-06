@@ -1,4 +1,4 @@
-<section id="sidebar" class="box-shadow-container">
+<footer id="sidebar" class="box-shadow-container">
 	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
 	<!--
 		Don't lazy load on desktop. Lighthouse reports this as an issue because
@@ -82,4 +82,4 @@
 Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}"rel="noopener">{{ .AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
-</section>
+</footer>
