@@ -2,7 +2,8 @@
 	<nav id="nav">
 		<ul class="undecorated-list">
 			<li><a class="undecorated-link" href="/">Home</a></li>
-			<li><a class="undecorated-link" href="{{ (.GetPage "blog").RelPermalink }}">Blog</a></li>
+			<!-- Why does .GetPage not work here? Frustrating... -->
+			<li><a class="undecorated-link" href="/blog/">Blog</a></li>
 		</ul>
 	</nav>
 </header>
