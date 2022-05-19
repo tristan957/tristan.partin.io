@@ -23,5 +23,8 @@
   },
   "[javascript]": {
     "editor.formatOnSave": true,
+  },
+  "[xml]": {
+    "files.insertFinalNewline": false
   }
 }
