@@ -1,5 +1,9 @@
 <div id="title-container">
-	<h1 id="title" {{ if .Data.Singular }}class="monospace"{{ end }}>{{ .Title }}</h1>
+	{{ if eq .Title .Site.Author.name }}
+		<h1 id="title" {{ if .Data.Singular }}class="monospace"{{ end }}>Home</h1>
+	{{ else }}
+		<h1 id="title" {{ if .Data.Singular }}class="monospace"{{ end }}>{{ .Title }}</h1>
+	{{ end }}
 	<span id="page-links">
 		{{ if ne .Type "archive" }}
 			{{ with .GetPage "archive" }}

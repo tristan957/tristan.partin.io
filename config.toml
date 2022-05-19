@@ -1,7 +1,7 @@
 baseURL = "https://tristan.partin.io"
 languageCode = "en-US"
 defaultContentLanguage = "en"
-title = "Home"
+title = "Tristan Partin"
 static = ["static"]
 enableEmoji = true
 enableGitInfo = true
