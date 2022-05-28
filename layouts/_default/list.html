@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<section>
-		{{ $paginator := .Paginate (where .Pages "Type" "blog") }}
+		{{ $paginator := .Paginate (where .RegularPages "Params.hidden" "!=" true) }}
 		{{ partial "page-title.html" . }}
 		{{ if eq $paginator.PageNumber 1 }}
 			<p id="content-about" class="font-weight-normal">
