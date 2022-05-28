@@ -5,6 +5,8 @@
 		{{ end }}
 		<a class="font-weight-bold consistent-link" href="{{ .Permalink }}">{{ .Title }}</a>
 	</h2>
-	{{ partial "all-taxonomies.html" . }}
+	<div class="content-metadata">
+		{{ partial "taxonomies.html" . }}
+	</div>
 	{{ .Summary }}
 </li>

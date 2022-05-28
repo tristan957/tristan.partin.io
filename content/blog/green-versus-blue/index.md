@@ -1,6 +1,7 @@
 ---
 title: "Green Versus Blue"
 date: 2021-03-20T22:52:59-05:00
+toc: false
 tags:
   - commentary
 ---

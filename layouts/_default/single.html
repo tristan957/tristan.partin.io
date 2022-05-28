@@ -1,29 +1,37 @@
 {{ define "main" }}
   <section id="single-container">
     <article class="box-shadow-container">
-      <h1 id="content-title">{{ .Title }}</h1>
-      <div class="content-metadata">
-        <div>
-          {{ with .Date.Format "2006-01-02" }}
-            Published <time datetime="{{ . }}">{{ . }}</time> on
-          {{ end }}
-          <a class="content-metadata" href="{{ (.GetPage "blog").RelPermalink }}">
-            {{ if strings.HasSuffix .Site.Author.name "s" }}
-              {{ .Site.Author.name }}'
-            {{ else }}
-              {{ .Site.Author.name }}'s
+      <header>
+        <h1 id="content-title">{{ .Title }}</h1>
+        <div class="content-metadata">
+          <div>
+            {{ with .Date.Format "2006-01-02" }}
+              Published <time datetime="{{ . }}">{{ . }}</time> on
             {{ end }}
-            blog
-          </a>
-          —
-          <a class="content-metadata" href="{{ .Permalink }}">Permalink</a>
-          <br />
-          {{ with .Lastmod.Format "2006-01-02T15:04:05-0700" }}
-            Last modifed at <time datetime="{{ . }}">{{ . }}</time>
+            <a href="{{ (.GetPage "blog").RelPermalink }}">
+              {{ if strings.HasSuffix .Site.Author.name "s" }}
+                {{ .Site.Author.name }}'
+              {{ else }}
+                {{ .Site.Author.name }}'s
+              {{ end }}
+              blog
+            </a>
+            —
+            <a href="{{ .Permalink }}">Permalink</a>
+            <br />
+            {{ with .Lastmod.Format "2006-01-02T15:04:05-0700" }}
+              Last modifed at <time datetime="{{ . }}">{{ . }}</time>
+            {{ end }}
+          </div>
+          {{ partial "taxonomies.html" . }}
+          {{ if index .Params "toc" | default true }}
+            <details>
+              <summary>Table of Contents</summary>
+              {{ .TableOfContents }}
+            </details>
           {{ end }}
         </div>
-        {{ partial "all-taxonomies.html" . }}
-      </div>
+      </header>
       <div id="content">
         {{ .Content }}
       </div>

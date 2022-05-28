@@ -1,6 +1,7 @@
 ---
 title: "Introduction"
 date: 2020-04-11T22:12:20-05:00
+toc: false
 tags:
   - introduction
 series:

@@ -1,0 +1,16 @@
+<div class="taxonomy-metadata">
+	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+		{{ with $.GetTerms $taxonomyname }}
+			<div>
+				{{ title $taxonomyname }}:
+				<span class="">
+					<ul class="undecorated-list taxonomy-list">
+						{{ range . }}
+							<li><a class="taxonomy-value monospace" href="{{ .RelPermalink }}">{{ .LinkTitle | strings.ToLower }}</a></li>
+						{{ end }}
+					</ul>
+				</span>
+			</div>
+		{{ end }}
+	{{ end }}
+</div>

@@ -1,6 +1,7 @@
 ---
 title: "No More Analytics"
 date: 2021-03-24T22:22:17-05:00
+toc: false
 tags:
   - meta
   - ethics

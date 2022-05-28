@@ -1,6 +1,7 @@
 ---
 title: "The Worst Performing Website I Have Ever Found"
 date: 2021-03-13T19:30:30-06:00
+toc: false
 tags:
   - webdev
 ---

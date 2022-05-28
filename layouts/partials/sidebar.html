@@ -31,25 +31,31 @@
 			{{ with .Site.Params.socials.sourceHut }}
 				<li>
 					<div>sourcehut</div>
-					<a class="consistent-link" href="{{ .url }}"rel="noopener">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" rel="noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.gitHub }}
 				<li>
 					<div>github</div>
-					<a class="consistent-link" href="{{ .url }}"rel="noopener">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" rel="noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.mastodon }}
 				<li>
 					<div>mastodon</div>
-					<a class="consistent-link" href="{{ .url }}"rel="me noopener">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" rel="me noopener">{{ .username }}</a>
 				</li>
 			{{ end }}
 			{{ with .Site.Params.socials.linkedIn }}
 				<li>
 					<div>linkedin</div>
-					<a class="consistent-link" href="{{ .url }}"rel="noopener">{{ .username }}</a>
+					<a class="consistent-link" href="{{ .url }}" rel="noopener">{{ .username }}</a>
+				</li>
+			{{ end }}
+			{{ with .GetPage "uses" }}
+				<li>
+					<div>uses</div>
+					<a class="consistent-link monospace" href="{{ .RelPermalink}}">/uses</a>
 				</li>
 			{{ end }}
 		</ul>
@@ -57,7 +63,6 @@
 	<hr />
 	<div class="sidebar-section">
 		{{ with .Site.Params.licenses }}
-			<div class="sidebar-section-header">License</div>
 			<p class="sidebar-paragraph">
 				The content on this site is
 				<a class="consistent-link" href="{{ .content.url }}"rel="noopener">{{ .content.spdx }}</a>.

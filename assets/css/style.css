@@ -189,14 +189,6 @@ div.highlight code a:hover{
   line-height: 1.375rem;
 }
 
-.taxonomy-metadata > *:first-child {
-  margin-top: 1rem;
-}
-
-.content-metadata > *:last-child {
-  margin-bottom: 0;
-}
-
 .taxonomy-list > li {
   margin-right: 0.3rem;
 }
@@ -344,7 +336,7 @@ ul.contact-list > li:last-child {
  * Navbar
  */
 
-nav {
+#nav {
   display: flex;
   justify-content: center;
   background-color: #393939;
@@ -353,24 +345,24 @@ nav {
   box-shadow: 0 10px 10px -1px rgba(0, 0, 0, 0.25);
 }
 
-nav > ul {
+#nav > ul {
   display: flex;
   justify-content: start;
 }
 
-nav > ul > li {
+#nav > ul > li {
   margin-right: 0rem;
 }
 
-nav > ul > li > a {
+#nav > ul > li > a {
   color: #ffffff;
   display: block;
   padding: 1rem;
 }
 
-nav > ul > li > a:hover,
-nav > ul > li > a:focus,
-nav > ul > li > a:active {
+#nav > ul > li > a:hover,
+#nav > ul > li > a:focus,
+#nav > ul > li > a:active {
   transition: all 0.15s ease-in;
   background-color: #595959;
 }
@@ -491,8 +483,15 @@ a.footnote-ref {
   margin-bottom: 1rem;
 }
 
-.content-metadata,
 .content-metadata > * {
+  margin-bottom: 1rem;
+}
+
+.content-metadata > *:last-child {
+  margin-bottom: 0;
+}
+
+.content-metadata, .content-metadata * {
   color: var(--content-metadata-color);
 }
 

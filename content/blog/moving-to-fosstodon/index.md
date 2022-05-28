@@ -1,6 +1,7 @@
 ---
 title: "Moving to Fosstodon"
 date: 2022-04-15T19:50:30-05:00
+toc: false
 tags:
   - mastodon
   - fediverse
