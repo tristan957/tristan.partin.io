@@ -55,7 +55,7 @@
 			{{ with .GetPage "uses" }}
 				<li>
 					<div>uses</div>
-					<a class="consistent-link monospace" href="{{ .RelPermalink}}">/uses</a>
+					<a class="consistent-link monospace" href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>
 				</li>
 			{{ end }}
 		</ul>
@@ -81,10 +81,10 @@
 	<p class="small-text">
 		This site uses absolutely no analytics or tracking mechanisms.
 	</p>
-	{{ with .GitInfo }}
+	{{ if .GitInfo }}
 		<hr />
 <pre class="monospace small-text" aria-label="Git Info">
-Commit:	<a class="consistent-link" href="{{ printf $.Site.Params.repository.commitURLPattern .Hash }}"rel="noopener">{{ .AbbreviatedHash }}</a>
+Commit:	<a class="consistent-link" href="{{ printf .Site.Params.repository.commitURLPattern .GitInfo.Hash }}"rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
 </footer>

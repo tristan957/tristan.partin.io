@@ -2,22 +2,18 @@
 	<div id="page-controls">
 		<span id="page-controls-prev">
 			{{ if .HasPrev }}
-				<a aria-label="Go to first page" class="btn btn-primary page-control undecorated-link" href="{{ .First.URL }}">
-					First
-				</a>
+				<a aria-label="Go to first page" class="btn btn-primary page-control undecorated-link" href="{{ .First.URL }}">First</a>
 				<a aria-label="Go to page {{ .Prev.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ .Prev.URL }}">
-					{{ .Prev.PageNumber }}
+					{{- .Prev.PageNumber -}}
 				</a>
 			{{ end }}
 		</span>
 		<span id="page-controls-next">
 			{{ if .HasNext }}
 				<a aria-label="Go to page {{ .Next.PageNumber }}" class="btn btn-primary page-control undecorated-link" href="{{ .Next.URL }}">
-					{{ .Next.PageNumber }}
+					{{- .Next.PageNumber -}}
 				</a>
-				<a aria-label="Go to last page" class="btn btn-primary page-control undecorated-link" href="{{ .Last.URL }}">
-					Last
-				</a>
+				<a aria-label="Go to last page" class="btn btn-primary page-control undecorated-link" href="{{ .Last.URL }}">Last</a>
 			{{ end }}
 		</span>
 	</div>

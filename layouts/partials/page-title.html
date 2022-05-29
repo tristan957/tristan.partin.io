@@ -1,8 +1,8 @@
 <div id="title-container">
 	{{ if .IsHome }}
-		<h1 id="title" {{ if .Data.Singular }}class="monospace"{{ end }}>Home</h1>
+		<h1 id="title">Home</h1>
 	{{ else }}
-		<h1 id="title" {{ if .Data.Singular }}class="monospace"{{ end }}>{{ .Title }}</h1>
+		<h1 id="title">{{ .Title }}</h1>
 	{{ end }}
 	<span id="page-links">
 		{{ if ne .Layout "archive" }}
