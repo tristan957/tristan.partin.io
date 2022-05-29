@@ -6,7 +6,9 @@
 			{{ range (where (.Site.Pages) "Type" "blog").GroupByDate "2006" }}
 				<li class="content-item">
 					<h2 class="summary-title">
-						<a id="{{ .Key }}" class="font-weight-bold consistent-link" href="#{{ .Key }}"><time datetime="{{ .Key }}">{{ .Key }}</time></a>
+						<a id="{{ .Key }}" class="font-weight-bold consistent-link" href="#{{ .Key }}">
+							<time datetime="{{ .Key }}">{{ .Key }}</time>
+						</a>
 					</h2>
 					<ol class="undecorated-list archive-list">
 						{{ range .ByPublishDate.Reverse }}
