@@ -3,7 +3,7 @@
 		{{ partial "page-title.html" . }}
 		<h2 id="content-about" class="font-weight-normal">{{ .Content }}</h2>
 		<ol class="undecorated-list content-list">
-			{{ range (where (where (.Site.RegularPages) "Type" .Params.type) "Params.hidden" "!=" true).GroupByDate "2006" }}
+			{{ range (where (where (.Site.RegularPages) "Type" .Params.archive) "Params.hidden" "!=" true).GroupByDate "2006" }}
 				<li class="content-item">
 					<h2 class="summary-title">
 						<a id="{{ .Key }}" class="font-weight-bold consistent-link" href="#{{ .Key }}"><time datetime="{{ .Key }}">{{ .Key }}</time></a>

@@ -1,7 +1,6 @@
 ---
 title: Blog Archive
-type: blog
-layout: archive
+archive: blog
 hidden: true
 ---
 

@@ -4,6 +4,7 @@
       <header>
         <h1 id="content-title">{{ .Title }}</h1>
         <div class="content-metadata">
+          {{ .Type }}
           <div>
             {{ with .Date.Format "2006-01-02" }}
               Published <time datetime="{{ . }}">{{ . }}</time> on
