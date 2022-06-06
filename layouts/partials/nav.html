@@ -2,8 +2,12 @@
 	<nav id="nav">
 		<ul class="undecorated-list">
 			<li><a class="undecorated-link" href="/">Home</a></li>
-			<!-- Why does .GetPage not work here? Frustrating... -->
-			<li><a class="undecorated-link" href="/blog/">Blog</a></li>
+			{{ with .Site.GetPage "blog" }}
+				<li><a class="undecorated-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+			{{ end }}
+			{{ with .Site.GetPage "archives" }}
+				<li><a class="undecorated-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+			{{ end }}
 		</ul>
 	</nav>
 </header>
