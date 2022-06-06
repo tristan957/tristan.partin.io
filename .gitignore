@@ -1,9 +1,9 @@
-/public/
-node_modules/
-/hint-report/
-/resources/_gen
-# layouts/partials/webring-out.html
+/.hugo_build.lock
 /bin/
-.hugo_build.lock
+/hint-report/
+# /layouts/partials/webring-out.html
+/node_modules/
+/resources/_gen
+/public/
 
 !/.vscode/
