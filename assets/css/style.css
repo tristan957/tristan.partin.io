@@ -46,6 +46,10 @@
   color: black;
 }
 
+address {
+  font-style: unset;
+}
+
 body {
   margin: 0px;
   width: 100%;
@@ -65,8 +69,8 @@ blockquote > p {
   padding: 0.75rem;
 }
 
-address {
-  font-style: unset;
+details > summary {
+  cursor: pointer;
 }
 
 time {
