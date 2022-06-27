@@ -38,7 +38,7 @@ Other Tales of Psychotherapy_:
 > known me. That's when I will be truly dead - when I exist in no one's memory.
 > I thought a lot about how someone very old is the last living individual to
 > have known some person or cluster of people. When that person dies, the whole
-> cluster dies,too, vanishes from the living memory. I wonder who that person
+> cluster dies, too, vanishes from the living memory. I wonder who that person
 > will be for me. Whose death will make me truly dead?
 
 I usually quote the [Banksy](https://en.wikipedia.org/wiki/Banksy) version of
