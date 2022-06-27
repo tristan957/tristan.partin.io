@@ -67,6 +67,8 @@ inner fence line of the cemetery. However, I am just one man. I wasn't able to
 get it all. There is a lot more trash on the other side of the fence. I think
 I'll go back to collect more garbage in the future when I find a dull moment.
 
+![Cleaned cemetery fence line](fence-line.jpg "Cleaned cemetery fence line")
+
 Overall, the cemetery was a good experience. I got to learn a bit of history of
 my area, and I was able to say many of these people's names again, so on the
 chance souls are real, the deceased know that they aren't completely dead yet.
