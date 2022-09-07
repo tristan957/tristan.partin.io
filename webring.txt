@@ -11,3 +11,4 @@ https://tonsky.me/blog/atom.xml
 https://libera.chat/atom.xml
 https://refi64.com/atom.xml
 https://andrewkelley.me/rss.xml
+https://mochiro.moe/rss.xml
