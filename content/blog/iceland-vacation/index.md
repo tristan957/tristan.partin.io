@@ -1,6 +1,8 @@
 ---
 title: "Iceland Vacation"
 date: 2022-11-16T23:11:11-06:00
+tags:
+  - vacation
 ---
 
 Musings of my vacation in Iceland.
