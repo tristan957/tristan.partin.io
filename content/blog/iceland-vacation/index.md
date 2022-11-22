@@ -11,7 +11,7 @@ Musings of my vacation in Iceland.
 
 ## Departure
 
-My vacation started on the morning of {{< time "October 7th, 2021" >}} with a
+My vacation started on the morning of {{< time "October 7th, 2022" >}} with a
 trip to the Austin airport in preparation for noon-ish flight. This happened to
 be my first time using my new TSA Pre-Check/Global Entry access, so after
 checking my bag with Delta, went through security and went straight for a
@@ -32,7 +32,7 @@ some curry and Corona beers.
 
 Later that evening we boarded the next flight. Unfortunately, I never sleep well
 on airplanes, mostly due to my height. The head rests never go up high enough,
-and my knees are almost always in the back of the seet in front of me. Like the
+and my knees are almost always in the back of the seat in front of me. Like the
 last flight, I ended up watching movies for the duration of the 5-6 hour flight.
 
 At around {{< time "9:00 AM" >}} local time in Keflavik, Iceland, we deplaned,
@@ -47,10 +47,10 @@ where I had fish and chips for the first time and walked about this portion of
 the city that included coffee shops and stores. On this first day in Iceland, we
 had a reservation at the [Blue Lagoon](https://www.bluelagoon.com/), so after
 our time in the city, we went over to have our first experience in the heated
-sulfurours lagoon.
+sulfurous lagoon.
 
 The first thing that hits you when you arrive is definitely the smell. It is
-unmistakeably sulfur. The location is fairly good looking, a large pool
+unmistakably sulfur. The location is fairly good looking, a large pool
 essentially surrounded by volcanic rock. The water is a milky blue. It is
 naturally heated seawater pumped from underneath the ground. I ended up having
 my first Icelandic beer, a Gull. I had no complaints about it, and felt that it

@@ -200,7 +200,7 @@ without them, this PR may not have ever gotten merged.
 
 [^1]:
     If you are using an application that doesn't use `GtkFileChooserNative`, it
-    could be worth opening a dialogue with the maintainer to better support
+    could be worth opening a dialog with the maintainer to better support
     alternative platforms.
 
 [^2]:

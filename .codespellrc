@@ -1,0 +1,4 @@
+[codespell]
+builtin = clear,en-GB_to_en-US,rare
+ignore-words = ./.codespellignore
+skip = ./.git/**,./hugo/**,./node_modules/**,./openring/**,./public/**,*.css,./codespellignore,./layouts/partials/webring-out.html

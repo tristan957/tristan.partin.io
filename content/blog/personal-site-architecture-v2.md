@@ -89,7 +89,7 @@ Google Analytics on my site or frankly any analytics. I figured with the money I
 was saving no longer paying for an EC2 and Route 53, I would evaluate
 Plausible's free trial and see what I thought of it. With that goal in mind, I
 setup my trial account to today for free, and am going to see what types of
-things I can learn about my miniscule amount of readers, and see if it is worth
+things I can learn about my minuscule amount of readers, and see if it is worth
 the couple dollars a month for the hosted variant. The service itself is open
 source, and the code is hosted on GitHub which immediately caught my attention.
 Plausible also isn't an advertising company, so the small amount of data they

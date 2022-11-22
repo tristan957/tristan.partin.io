@@ -50,12 +50,11 @@ middle-aged men also made sure I was ok before heading on their way to an
 appointment.
 
 The elderly couple stayed with me. Eventually the husband offered to ride my
-bike home for me. He happended to be a motorcycle rider himself at the age of
-76! I eventually relented not wanting to burden this couple anymore than I
-already had. I hopped in their Porsche which the wife drove. She ranted her
-husband's own crash in Patagonia. Nice to know you're not alone sometimes! A
-couple minutes later we were back to my apartment and the couple was on their
-way.
+bike home for me. He happened to be a motorcycle rider himself at the age of 76!
+I eventually relented not wanting to burden this couple anymore than I already
+had. I hopped in their Porsche which the wife drove. She ranted her husband's
+own crash in Patagonia. Nice to know you're not alone sometimes! A couple
+minutes later we were back to my apartment and the couple was on their way.
 
 ## Problem
 

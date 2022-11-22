@@ -77,12 +77,12 @@ highlights of the trip. The tour was more like a history lesson into the
 founders of the distillery. I found it quite interesting. During the tasting, I
 learned how to "chew" my whiskey. We tried a total of 4 drinks. The first one
 was the Tennessee Whiskey. Normally I am not a whiskey guy, but I found this to
-be fairly palatable. Good flavor and didn't hit you with the tast of alcohol so
+be fairly palatable. Good flavor and didn't hit you with the taste of alcohol so
 hard. Next up was the Bell Meade Bourbon. This one was a tad sweeter and a bit
 lighter. Couldn't go wrong with either of these first two in my opinion, and
 much better than the Russell's I have sitting at home currently. The third
 whiskey was their Reserve. Of the three whiskeys, I would say this one was my
-favority which makes the most sense since it is also the priciest. It felt more
+favorite which makes the most sense since it is also the priciest. It felt more
 full-bodied than the rest. For the last tasting, it was a coffee liqueor. I have
 to say this was probably one of the best liqueors I have ever tasted. It
 reminded me of caramel popcorn, which might be a turn off for some people, but
@@ -104,7 +104,7 @@ the basement/wine cellar. Our table was very secluded which was a huge plus.
 Clare had mentioned that getting that room cost an extra $200, but we actually
 didn't pay for it. Just by a stroke of total luck did we get seated there. I
 would say it was probably the best table I have ever sat at, private and just a
-beautiful setting. I happended to order the Chilean Sea Bass which may have been
+beautiful setting. I happened to order the Chilean Sea Bass which may have been
 one of the flakiest pieces of fish I had ever had. I would recommend this dish
 to anyone not eyeing the steaks.
 
@@ -141,7 +141,7 @@ I really appreciated getting more background into their lives and careers.
 
 Saturday night was our second night on Broadway. We did a little bit more bar
 hopping this night, but honestly none of the acts lived up to the 80s cover band
-of the prevoius night.
+of the previous night.
 
 ## Sunday
 
