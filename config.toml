@@ -51,42 +51,42 @@ disableHugoGeneratorInject = false
 [params]
   defaultDescription = "Tristan Partin's personal website. This is a peek into my life including things that I blog about or links to my various profiles around the web."
   webring = true
-[params.licenses]
-  [params.licenses.content]
-    spdx = "CC-BY-SA-4.0"
-    url = "https://creativecommons.org/licenses/by-sa/4.0/"
-  [params.licenses.code]
-    spdx = "AGPL-3.0"
-    url = "https://opensource.org/licenses/AGPL-3.0"
-[params.siteImage]
-  resourcePath = "images/astronaut-on-the-moon-with-a-beer-looking-at-earth.jpg"
-  alt = "An astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon"
-[params.repository]
-  forge = "SourceHut"
-  url = "https://sr.ht/~tristan957/tristan.partin.io"
-  commitURLPattern = "https://git.sr.ht/~tristan957/tristan.partin.io/commit/%s"
-[params.email]
-  beforeAt = "tristan"
-  afterAtBeforeDot = "partin"
-  tld = "io"
-[params.gpg]
-  fingerprint = "CC00 0B6D 725F AEB6 E8CE  E5FD 5AD0 4761 01F9 899D"
-  path = "/gpg.txt"
-[params.socials]
-  [params.socials.sourceHut]
-    username = "~tristan957"
-    url = "https://git.sr.ht/~tristan957"
-  [params.socials.gitHub]
-    username = "tristan957"
-    url = "https://github.com/tristan957"
-  [params.socials.mastodon]
-    username = "@tristan957@fosstodon.org"
-    url = "https://fosstodon.org/@tristan957"
-  [params.socials.linkedIn]
-    username = "tristan-partin"
-    url = "https://linkedin.com/in/tristan-partin"
-[params.resume]
-  url = "/documents/Tristan_Partin_Resume.pdf"
-[params.mailingList]
-  address = "~tristan957/public-inbox@lists.sr.ht"
-  archiveURL = "https://lists.sr.ht/~tristan957/public-inbox"
+  [params.licenses]
+    [params.licenses.content]
+      spdx = "CC-BY-SA-4.0"
+      url = "https://creativecommons.org/licenses/by-sa/4.0/"
+    [params.licenses.code]
+      spdx = "AGPL-3.0"
+      url = "https://opensource.org/licenses/AGPL-3.0"
+  [params.siteImage]
+    resourcePath = "images/astronaut-on-the-moon-with-a-beer-looking-at-earth.jpg"
+    alt = "An astronaut with a beer sitting in a lawn chair looking at the Earth from the Moon"
+  [params.repository]
+    forge = "SourceHut"
+    url = "https://sr.ht/~tristan957/tristan.partin.io"
+    commitURLPattern = "https://git.sr.ht/~tristan957/tristan.partin.io/commit/%s"
+  [params.email]
+    beforeAt = "tristan"
+    afterAtBeforeDot = "partin"
+    tld = "io"
+  [params.gpg]
+    fingerprint = "CC00 0B6D 725F AEB6 E8CE  E5FD 5AD0 4761 01F9 899D"
+    path = "/gpg.txt"
+  [params.socials]
+    [params.socials.sourceHut]
+      username = "~tristan957"
+      url = "https://git.sr.ht/~tristan957"
+    [params.socials.gitHub]
+      username = "tristan957"
+      url = "https://github.com/tristan957"
+    [params.socials.mastodon]
+      username = "@tristan957@fosstodon.org"
+      url = "https://fosstodon.org/@tristan957"
+    [params.socials.linkedIn]
+      username = "tristan-partin"
+      url = "https://linkedin.com/in/tristan-partin"
+  [params.resume]
+    url = "/documents/Tristan_Partin_Resume.pdf"
+  [params.mailingList]
+    address = "~tristan957/public-inbox@lists.sr.ht"
+    archiveURL = "https://lists.sr.ht/~tristan957/public-inbox"
