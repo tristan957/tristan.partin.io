@@ -44,6 +44,10 @@ disableHugoGeneratorInject = false
 [author]
   name = "Tristan Partin"
 
+[security]
+  [security.funcs]
+    getenv = ["^HUGO_", "^VERCEL$"]
+
 [params]
   defaultDescription = "Tristan Partin's personal website. This is a peek into my life including things that I blog about or links to my various profiles around the web."
   webring = true
