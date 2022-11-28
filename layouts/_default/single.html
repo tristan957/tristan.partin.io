@@ -36,19 +36,16 @@
         {{ .Content }}
       </div>
     </article>
-    <section class="box-shadow-container">
-      {{ with .Site.Params }}
-        Have a comment or question on one of my posts?
-        {{ with .mailingList }}
-          Start a discussion in my
-          <a class="consistent-link" href="{{ .archiveURL }}" rel="noopener">
-          public inbox</a>
-          by sending an email to <a class="consistent-link" href="mailto:{{ .address }}?Subject=Re: {{ $.Title }}">
-          {{ .address }}</a>. If you are unfamiliar with mailing lists, start with reading about
-          <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" rel="noopener">mailing list etiquette</a>.
-          Otherwise just shoot me an email to my address which is linked in the sidebar.
-        {{ end }}
-      {{ end }}
-    </section>
+    {{ with .Site.Params.mailingList }}
+      <section class="box-shadow-container">
+        Have a comment or question on one of my posts? Start a discussion in my
+        <a class="consistent-link" href="{{ .archiveURL }}" rel="noopener">
+        public inbox</a> by sending an email to
+        <a class="consistent-link" href="mailto:{{ .address }}?Subject=Re: {{ $.Title }}">
+        {{ .address }}</a>. If you are unfamiliar with mailing lists, start with reading about
+        <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" rel="noopener">mailing list etiquette</a>.
+        Otherwise just shoot me an email to my address which is linked in the sidebar.
+      </section>
+    {{ end }}
   </section>
 {{ end }}

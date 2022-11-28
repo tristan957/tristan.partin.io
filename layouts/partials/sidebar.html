@@ -58,16 +58,16 @@
 		</ul>
 	</address>
 	<hr />
-	<div class="sidebar-section">
-		{{ with .Site.Params.licenses }}
+	{{ with .Site.Params.licenses }}
+		<div class="sidebar-section">
 			<p class="sidebar-paragraph small-text">
 				The content on this site is
 				<a class="consistent-link" href="{{ .content.url }}"rel="noopener">{{ .content.spdx }}</a>.
 				The code for this site is
 				<a class="consistent-link" href="{{ .code.url }}"rel="noopener">{{ .code.spdx }}</a>.
 			</p>
-		{{ end }}
-	</div>
+		</div>
+	{{ end }}
 	<hr />
 	{{ with .Site.Params.repository }}
 		<p class="small-text">
