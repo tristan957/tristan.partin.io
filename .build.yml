@@ -6,8 +6,11 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
   - go
   - hugo
+  - hut
   - reuse
   - shellcheck
+environment:
+  site: tristan957.srht.site
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
@@ -23,10 +26,10 @@ tasks:
   - build: |
       cd tristan.partin.io
       ./scripts/openring/generate.sh
-      hugo --baseURL=https://tristan957.srht.site
+      hugo --baseURL="https://$site"
   - package: |
       cd tristan.partin.io
       tar -C public -cvz . > site.tar.gz
   - upload: |
       cd tristan.partin.io
-      acurl -f https://pages.sr.ht/publish/tristan957.srht.site -Fcontent=@site.tar.gz
+      hut pages publish -d "$site" site.tar.gz
