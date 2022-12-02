@@ -4,7 +4,6 @@
 image: alpine/edge
 oauth: pages.sr.ht/PAGES:RW
 packages:
-  - git
   - go
   - hugo
   - reuse
@@ -13,6 +12,7 @@ sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
   - reuse: |
+      cd tristan.partin.io
       reuse lint
   - shellcheck: |
       cd tristan.partin.io
