@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: CC0-1.0
+SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
+-->
+
 [![builds.sr.ht status](https://builds.sr.ht/~tristan957/tristan.partin.io.svg)](https://builds.sr.ht/~tristan957/tristan.partin.io?)
 
 # tristan.partin.io

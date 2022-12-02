@@ -1,13 +1,20 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
+
 image: alpine/edge
 oauth: pages.sr.ht/PAGES:RW
 packages:
+  - git
   - go
   - hugo
+  - reuse
   - shellcheck
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
-  - lint: |
+  - reuse: |
+      reuse lint
+  - shellcheck: |
       cd tristan.partin.io
       shellcheck $(find scripts/ -type f)
   - openring: |

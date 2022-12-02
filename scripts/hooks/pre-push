@@ -1,6 +1,9 @@
 #!/bin/sh
 
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
+
 # Don't run the script twice...
 if [ "$2" = "git@git.sr.ht:~tristan957/tristan.partin.io" ]; then
-	./scripts/openring/generate.sh
+    ./scripts/openring/generate.sh
 fi
