@@ -4,7 +4,9 @@
 [submodule "openring"]
 	path = openring
 	url = https://git.sr.ht/~sircmpwn/openring
+	shallow = true
 [submodule "hugo"]
 	path = hugo
 	url = https://github.com/gohugoio/hugo.git
 	branch = stable
+	shallow = true
