@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# SPDX-License-Identifier: CC0-1.0
+# SPDX-License-Identifier: Unlicense
 # SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 
 # Don't run the script twice...

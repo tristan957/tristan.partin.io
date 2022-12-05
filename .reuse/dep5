@@ -7,34 +7,38 @@ Files: *.html *.xml assets/*
 Copyright: Tristan Partin <tristan@partin.io>
 License: AGPL-3.0-or-later
 
-Files: *.jpg *.webp archetypes/* content/*.md static/*
+Files: *.jpg *.webp archetypes/* static/*
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
+
+Files: content/*.md
+Copyright: Tristan Partin <tristan@partin.io>
+License: CC-BY-SA-4.0
 
 Files: .vscode/*
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: layouts/robots.txt
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: layouts/sitemap.xml
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: package.json
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: vercel.json
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: webring.txt
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
 
 Files: yarn.lock
 Copyright: Tristan Partin <tristan@partin.io>
-License: CC0-1.0
+License: Unlicense
