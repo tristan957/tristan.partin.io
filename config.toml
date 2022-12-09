@@ -25,6 +25,11 @@ disableHugoGeneratorInject = false
   tags = "tags"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
