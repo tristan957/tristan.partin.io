@@ -13,3 +13,4 @@ https://refi64.com/atom.xml
 https://andrewkelley.me/rss.xml
 https://mochiro.moe/rss.xml
 https://harelang.org/blog/index.xml
+https://nibblestew.blogspot.com/feeds/posts/default?alt=rss
