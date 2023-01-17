@@ -6,7 +6,7 @@
 [headers.values]
   X-Content-Type-Options = "nosniff"
   Permissions-Policy = "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=()"
-  # script-src has self/unsafe-inline and connect-src exists for live reload on local server
+  # script-src has self, unsafe-inline, and connect-src for live reload on local server
   Content-Security-Policy = "default-src 'none'; style-src 'unsafe-inline' 'self'; script-src 'self'; img-src 'self' https:; media-src 'self' https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
   Referrer-Policy = "strict-origin-when-cross-origin"
   Cross-Origin-Opener-Policy = "same-origin"
