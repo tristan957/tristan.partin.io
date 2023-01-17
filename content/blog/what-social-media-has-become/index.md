@@ -1,6 +1,8 @@
 ---
 title: "What Social Media Has Become"
 date: 2023-01-17T00:09:00-06:00
+tags:
+  - commentary
 ---
 
 My commentary on what social media _was_ and the problems that it has today.
