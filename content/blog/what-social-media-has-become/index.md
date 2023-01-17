@@ -21,7 +21,7 @@ media.
 Email is great at replacing a lot of what postal services have to offer or even
 faxes. Where it starts to fall apart as a social media replacement is that there
 is a high barrier of entry for both a producer and a consumer. The consumer has
-to setup a mailing list[^1], and consumer for every producer they follow, have
+to setup a mailing list[^1], and a consumer for every producer they follow, have
 to subscribe to a mailing list. RSS is essentially a single producer, multiple
 consumer format, but consumers have no real way to interact with content easily
 in a way that isn't just read-only[^2].
