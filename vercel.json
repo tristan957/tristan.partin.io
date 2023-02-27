@@ -1,6 +1,12 @@
 {
+  "framework": "hugo",
   "cleanUrls": true,
   "trailingSlash": true,
+  "buildCommand": "hugo --gc --baseURL https://${SITE_URL:-VERCEL_URL}",
+  "devCommand": "hugo server -D -w -p $PORT",
+  "github": {
+    "autoJobCancelation": true
+  },
   "headers": [
     {
       "source": "/(.*\\.pdf)",
@@ -98,13 +104,5 @@
         }
       ]
     }
-  ],
-  "build": {
-    "env": {
-      "HUGO_VERSION": "0.110.0"
-    }
-  },
-  "github": {
-    "autoJobCancelation": true
-  }
+  ]
 }
