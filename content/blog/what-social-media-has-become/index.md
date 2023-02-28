@@ -1,6 +1,7 @@
 ---
 title: "What Social Media Has Become"
 date: 2023-01-17T00:09:00-06:00
+toc: false
 tags:
   - commentary
 ---

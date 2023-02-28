@@ -1,6 +1,7 @@
 ---
 title: "I Got Laid Off"
 date: 2023-02-28T13:52:16-06:00
+toc: false
 tags:
   - layoffs
 ---
