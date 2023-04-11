@@ -18,7 +18,6 @@
   --chrome-c1-color: #408080; /* Did not require overriding */
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --color: white;
@@ -120,7 +119,8 @@ ol.archive-list > li:last-child {
   transition: background-color ease-in 0.1s;
 }
 
-code, code * {
+code,
+code * {
   color: inherit;
   font-family: "Courier New", Courier, monospace;
 }
@@ -176,7 +176,7 @@ div.highlight code * {
   font-size: 0.9rem;
 }
 
-div.highlight code a:hover{
+div.highlight code a:hover {
   filter: var(--filter);
   font-weight: bold;
 }
@@ -496,7 +496,8 @@ a.footnote-ref {
   margin-bottom: 0;
 }
 
-.content-metadata, .content-metadata * {
+.content-metadata,
+.content-metadata * {
   color: var(--content-metadata-color);
 }
 
