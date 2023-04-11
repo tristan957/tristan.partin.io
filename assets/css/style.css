@@ -178,6 +178,7 @@ div.highlight code * {
 
 div.highlight code a:hover{
   filter: var(--filter);
+  font-weight: bold;
 }
 
 /*
