@@ -4,7 +4,7 @@ date: 2023-04-10T20:46:39-05:00
 toc: false
 ---
 
-[`libmerr`](https://github.com/tristan957/libmerr) is a error tracking static
+[`libmerr`](https://github.com/tristan957/libmerr) is an error tracking static
 library for C99+. During this [involuntary
 vacation]({{< relref "blog/i-got-laid-off/index.md">}}), I have spent some time
 taking code out of the
@@ -18,14 +18,12 @@ system/POSIX/UNIX APIs will return various values on error or set
 generally tell you the reason an error occurred, but it doesn't provide extra
 information like file, line number, or any extra context.
 
-To overcome this issue, the authors of the
-[Heterogeneous-Memory Storage Engine](https://github.com/hse-project/hse) (HSE)
-came up with `merr`. An `merr_t` is an error value which can encode all this
-information in just a 64-bit unsigned integer. This repository is essentially a
-copy and paste of what exists within HSE. Because of that you will see the
-original `Micron Technology, Inc.` copyright in addition to the dual licensing
-of this code as `Apache-2.0` or `MIT` depending on what best fits within your
-constraints.
+To overcome this issue, the authors of HSE came up with `merr`. An `merr_t` is
+an error value which can encode all this information in just a 64-bit unsigned
+integer. This repository is essentially a copy and paste of what exists within
+HSE. Because of that you will see the original `Micron Technology, Inc.`
+copyright in addition to the dual licensing of this code as `Apache-2.0` or
+`MIT` depending on what best fits within your constraints.
 
 `libmerr` can be used in the following ways:
 
