@@ -2,6 +2,10 @@
 title: "Introducing libmerr"
 date: 2023-04-10T20:46:39-05:00
 toc: false
+tags:
+  - C
+series:
+  - libmerr
 ---
 
 [`libmerr`](https://github.com/tristan957/libmerr) is an error tracking static
