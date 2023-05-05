@@ -33,7 +33,7 @@ It is inspired by an older iteration of
 - Clone the repo
 - Run `git submodule update --init`
 - Run the `bootstrap.sh` script from the project root
-- Run the `openring/build.sh` script from the project root
+- Run the `scripts/openring/build.sh` script from the project root
 - Run `hugo -D server` to get live reloading in a development environment
 
 ## Miscellaneous
