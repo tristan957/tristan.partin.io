@@ -2,8 +2,6 @@
 title: "A Love Letter to Typst"
 date: 2023-08-30T17:42:59-05:00
 toc: false
-_build:
-  list: never
 ---
 
 I rewrote my resume in a new markup-based typesetting system called
