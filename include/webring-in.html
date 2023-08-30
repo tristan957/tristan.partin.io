@@ -3,10 +3,10 @@
 	<section class="webring-articles box-shadow-container">
 		{{ range .Articles }}
 			<div class="webring-article">
-				<h3 class="webring-title">
+				<h3 class="webring-title" dir="auto">
 					<a class="consistent-link font-weight-bold" href="{{ .Link }}" rel="noopener">{{ .Title }}</a>
 				</h3>
-				<p class="webring-summary">{{ .Summary }}</p>
+				<p class="webring-summary" dir="auto">{{ .Summary }}</p>
 				<small class="webring-source">
 					via <a class="consistent-link font-weight-bold" href="{{ .SourceLink }}" rel="noopener">{{ .SourceTitle }}</a>
 				</small>
