@@ -4,7 +4,12 @@ SPDX-License-Identifier: Unlicense
 SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 -->
 
+<!-- prettier-ignore-start -->
+
+<!-- markdownlint-disable-next-line MD041 -->
 [![builds.sr.ht status](https://builds.sr.ht/~tristan957/tristan.partin.io.svg)](https://builds.sr.ht/~tristan957/tristan.partin.io?)
+
+<!-- prettier-ignore-end -->
 
 # tristan.partin.io
 
@@ -50,7 +55,7 @@ _build:
 
 ### Permissions-Policy
 
-https://www.permissionspolicy.com/ generates a valid `Permissions-Policy` value.
+Generate a `Permissions-Policy` [here](https://www.permissionspolicy.com/).
 
 ## Licenses
 

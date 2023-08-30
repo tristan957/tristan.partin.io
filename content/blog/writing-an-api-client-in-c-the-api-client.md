@@ -94,12 +94,16 @@ These struct members and the request object I am given are all that I need to
 successfully make a request to the Harvest API. The API client has two public
 functions to be aware of.
 
+<!-- markdownlint-disable MD013 -->
+
 ```c
 // harvest-api-client.h
 HarvestResponse *harvest_api_client_execute_request_sync(
   HarvestApiClient *self, HarvestRequest *req);
 void harvest_api_client_execute_request_async(HarvestApiClient *self, HarvestRequest *req);
 ```
+
+<!-- markdownlint-enable MD013 -->
 
 You see the types `HarvestRequest` and `HarvestResponse` in the code. We will
 ignore that for now since it will be talked about later in the series. Just know

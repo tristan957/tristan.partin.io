@@ -1,16 +1,13 @@
 {
-  "name": "tristan.partin.io",
-  "version": "1.0.0",
-  "description": "My personal website and blog.",
-  "repository": "https://git.sr.ht/~tristan957/tristan.partin.io",
-  "author": "Tristan Partin <tristan@partin.io>",
   "private": true,
   "scripts": {
     "clean": "rm -rf public hint-report node_modules",
-    "format": "prettier --config .prettierrc.yml --write '**/*.{md,css,json}'",
-    "format:ci": "prettier --config .prettierrc.yml --check '**/*.{md,css,json}'"
+    "markdownlint:check": "markdownlint-cli2 '**/*.md' !hugo !openring !node_modules",
+    "prettier:check": "prettier --config .prettierrc.yml --check '**/*.{md,css,json}' !.vscode !hugo !openring !assets/css/syntax-*.css",
+    "prettier:format": "prettier --config .prettierrc.yml --write '**/*.{md,css,json}' !.vscode !hugo !openring !assets/css/syntax-*.css"
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "markdownlint-cli2": "^0.9.2",
+    "prettier": "^3.0.0"
   }
 }

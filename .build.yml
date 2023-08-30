@@ -10,6 +10,8 @@ packages:
   - hut
   - reuse
   - shellcheck
+  - shfmt
+  - yarn
 environment:
   site: tristan957.srht.site
 sources:
@@ -20,7 +22,19 @@ tasks:
       reuse lint
   - shellcheck: |
       cd tristan.partin.io
-      shellcheck $(find scripts/ -type f)
+      ./scripts/shellcheck.sh
+  - shfmt: |
+      cd tristan.partin.io
+
+  - yarn: |
+      cd tristan.partin.io
+      yarn
+  - markdownlint: |
+      cd tristan.partin.io
+      yarn run markdownlint:check
+  - prettier: |
+      cd tristan.partin.io
+      yarn run prettier:check
   - openring: |
       cd tristan.partin.io
       ./scripts/openring/build.sh

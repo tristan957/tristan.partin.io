@@ -1,30 +1,33 @@
 {
-  "[markdown]": {
+  "[css]": {
     "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
   },
   "[html]": {
     "editor.formatOnSave": false,
     "editor.tabSize": 2,
     "editor.insertSpaces": false,
-    "files.insertFinalNewline": false
-  },
-  "[css]": {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "editor.insertSpaces": false
+    "files.insertFinalNewline": false,
   },
   "[json]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
+    "editor.formatOnSave": true,
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+  },
+  "[shellscript]": {
     "editor.formatOnSave": true,
   },
   "[xml]": {
     "files.insertFinalNewline": false,
   },
   "markdown.validate.ignoredLinks": [
-    "/documents/Tristan_Partin_Resume.pdf"
+    "/documents/Tristan_Partin_Resume.pdf",
   ],
 }

@@ -39,4 +39,6 @@ simple through their tooling exposed on your profile page.
 I am extremely happy with my decision to move. Please, if you see me on
 Fosstodon, don't be afraid to say hi.
 
+<!-- markdownlint-disable MD034 -->
+
 [^1]: https://github.com/mastodon/mastodon-ios/issues/221#issuecomment-890335633
