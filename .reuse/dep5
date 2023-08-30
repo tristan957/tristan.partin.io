@@ -9,7 +9,7 @@ License: AGPL-3.0-or-later
 
 Files: *.jpg *.webp archetypes/* static/*
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: content/*.md
 Copyright: Tristan Partin <tristan@partin.io>
@@ -17,28 +17,28 @@ License: CC-BY-SA-4.0
 
 Files: .vscode/*
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: layouts/robots.txt
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: layouts/sitemap.xml
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: package.json
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: vercel.json
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: webring.txt
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
 
 Files: yarn.lock
 Copyright: Tristan Partin <tristan@partin.io>
-License: Unlicense
+License: CC0-1.0
