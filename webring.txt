@@ -13,3 +13,6 @@ https://andrewkelley.me/rss.xml
 https://mochiro.moe/rss.xml
 https://harelang.org/blog/index.xml
 https://nibblestew.blogspot.com/feeds/posts/default?alt=rss
+https://blogs.gnome.org/chergert/feed/
+https://blogs.gnome.org/shell-dev/feed/
+https://www.bassi.io/feeds/all.atom.xml
