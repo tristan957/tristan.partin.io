@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "clean": "rm -rf public hint-report node_modules",
+    "clean": "rm -rf .hugo_build.lock bin public node_modules",
     "markdownlint:check": "markdownlint-cli2 '**/*.md' !hugo !openring !node_modules",
     "prettier:check": "prettier --config .prettierrc.yml --check '**/*.{md,css,json}' !.vscode !hugo !openring !assets/css/syntax-*.css",
     "prettier:format": "prettier --config .prettierrc.yml --write '**/*.{md,css,json}' !.vscode !hugo !openring !assets/css/syntax-*.css"
