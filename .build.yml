@@ -25,7 +25,7 @@ tasks:
       ./scripts/shellcheck.sh
   - shfmt: |
       cd tristan.partin.io
-
+      ./scripts/shfmt.sh
   - yarn: |
       cd tristan.partin.io
       yarn
