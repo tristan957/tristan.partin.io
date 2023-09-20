@@ -15,7 +15,7 @@
 
   /* Accessibility for code blocks */
   --chroma-line-no-color: #767676;
-  --chrome-c1-color: #408080; /* Did not require overriding */
+  --chroma-c1-color: #408080; /* Did not require overriding */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +31,7 @@
 
     /* Accessibility for code blocks */
     --chroma-line-no-color: #9f9f9f;
-    --chrome-c1-color: #8e8e8e;
+    --chroma-c1-color: #8e8e8e;
   }
 }
 
@@ -148,7 +148,7 @@ figure > picture > img {
 }
 
 .chroma .c1 {
-  color: var(--chrome-c1-color);
+  color: var(--chroma-c1-color);
 }
 
 .monospace {
