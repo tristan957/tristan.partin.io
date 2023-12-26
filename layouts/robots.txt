@@ -1,2 +1,8 @@
 User-Agent: *
 Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+
+User-Agent: GPTBot
+Disallow: /
+
+User-Agent: Google-Extended
+Disallow: /
