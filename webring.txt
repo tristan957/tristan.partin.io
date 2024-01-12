@@ -17,3 +17,4 @@ https://blogs.gnome.org/chergert/feed/
 https://blogs.gnome.org/shell-dev/feed/
 https://www.bassi.io/feeds/all.atom.xml
 https://proton.me/blog/feed
+https://feaneron.com/feed/
