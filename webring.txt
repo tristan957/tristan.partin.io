@@ -20,3 +20,4 @@ https://proton.me/blog/feed
 https://zed.dev/blog.rss
 https://feaneron.com/feed/
 https://rhaas.blogspot.com/feeds/posts/default?alt=rss
+https://mitchellh.com/feed.xml
