@@ -1,4 +1,4 @@
-https://drewdevault.com/feed.xml
+https://drewdevault.com/blog/index.xml
 https://emersion.fr/blog/rss.xml
 https://blog.rust-lang.org/feed.xml
 https://blog.mozilla.org/feed/
