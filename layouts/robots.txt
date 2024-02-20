@@ -2,7 +2,7 @@
 # https://technicalseo.com/tools/robots-txt/
 
 User-Agent: *
-Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
 
 User-Agent: Amazonbot
 Disallow: /
