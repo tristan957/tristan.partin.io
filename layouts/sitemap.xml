@@ -1,9 +1,9 @@
-{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	{{ range .Data.Pages }}
 		<!--Filter out taxonomy pages-->
-		{{ if not .Data.Singular }}
+		{{ if and (not .Data.Singular) .Permalink }}
 			<url>
 				<loc>{{ .Permalink }}</loc>
 				{{ if .Lastmod.IsZero }}
@@ -19,13 +19,13 @@
 					{{ range .Translations }}
 						<xhtml:link
 							rel="alternate"
-							hreflang="{{ .Lang }}"
+							hreflang="{{ .Language.LanguageCode }}"
 							href="{{ .Permalink }}"
 							/>
 					{{ end }}
 					<xhtml:link
 						rel="alternate"
-						hreflang="{{ .Lang }}"
+						hreflang="{{ .Language.LanguageCode }}"
 						href="{{ .Permalink }}"/>
 				{{ end }}
 			</url>
