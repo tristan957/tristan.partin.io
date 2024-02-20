@@ -1,35 +1,19 @@
 # https://darkvisitors.com/agents
 # https://technicalseo.com/tools/robots-txt/
 
-User-Agent: *
 Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
 
-User-Agent: Amazonbot
-Disallow: /
+User-agent: *
+Allow: /
 
-User-Agent: Applebot
-Disallow: /
-
-User-Agent: Bytespider
-Disallow: /
-
-User-Agent: ChatGPT-User
-Disallow: /
-
-User-Agent: FacebookBot
-Disallow: /
-
-User-Agent: GPTBot
-Disallow: /
-
-User-Agent: Google-Extended
-Disallow: /
-
-User-Agent: omgili
-Disallow: /
-
-User-Agent: PerplexityBot
-Disallow: /
-
-User-Agent: YouBot
+User-agent: Amazonbot
+User-agent: Applebot
+User-agent: Bytespider
+User-agent: ChatGPT-User
+User-agent: FacebookBot
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: omgili
+User-agent: PerplexityBot
+User-agent: YouBot
 Disallow: /
