@@ -1,19 +1,12 @@
-# https://darkvisitors.com/agents
-# https://technicalseo.com/tools/robots-txt/
-
+{{- if ne (path.Clean .Site.BaseURL) "tristan957.srht.site" -}}
 Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
 
 User-agent: *
 Allow: /
 
-User-agent: Amazonbot
-User-agent: Applebot
-User-agent: Bytespider
-User-agent: ChatGPT-User
-User-agent: FacebookBot
-User-agent: GPTBot
-User-agent: Google-Extended
-User-agent: omgili
-User-agent: PerplexityBot
-User-agent: YouBot
+{{- else -}}
+
+User-agent: *
 Disallow: /
+
+{{- end }}

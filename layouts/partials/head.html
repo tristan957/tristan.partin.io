@@ -72,6 +72,6 @@
 	{{ else }}
 		<title>{{ .Title }} - {{ .Site.Params.Author.name }}</title>
 	{{ end }}
-	<link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="canonical" href={{ path.Join "https://tristan.partin.io" .RelPermalink }} />
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
