@@ -50,8 +50,6 @@ disableHugoGeneratorInject = false
 [outputs]
   home = ["HTML"]
 
-[author]
-  name = "Tristan Partin"
 
 [security]
   [security.funcs]
@@ -60,6 +58,8 @@ disableHugoGeneratorInject = false
 [params]
   defaultDescription = "Tristan Partin's personal website. This is a peek into my life including things that I blog about or links to my various profiles around the web."
   webring = true
+  [params.author]
+    name = "Tristan Partin"
   [params.licenses]
     [params.licenses.content]
       spdx = "CC-BY-SA-4.0"

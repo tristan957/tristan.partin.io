@@ -5,13 +5,13 @@
 	{{ if .IsHome }}
 		<meta name="title" content="{{ .Title }}">
 	{{ else }}
-		<meta name="title" content="{{ .Title }} - {{ .Site.Author.name }}">
+		<meta name="title" content="{{ .Title }} - {{ .Site.Params.Author.name }}">
 	{{ end }}
 	<meta
 		name="description"
 		content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}"
 	>
-	<meta name="author" content="{{ .Site.Author.name }}">
+	<meta name="author" content="{{ .Site.Params.Author.name }}">
 	<meta name="rating" content="general">
 
 	{{ if eq .Type "blog" }}
@@ -28,7 +28,7 @@
 	{{ if .IsHome }}
 		<meta property="og:title" content="{{ .Title }}">
 	{{ else }}
-		<meta property="og:title" content="{{ .Title }} - {{ .Site.Author.name }}">
+		<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Author.name }}">
 	{{ end }}
 	<meta property="og:url" content="{{ .Permalink }}">
 	<meta
@@ -70,7 +70,7 @@
 	{{ if .IsHome }}
 		<title>{{ .Title }}</title>
 	{{ else }}
-		<title>{{ .Title }} - {{ .Site.Author.name }}</title>
+		<title>{{ .Title }} - {{ .Site.Params.Author.name }}</title>
 	{{ end }}
 	<link rel="canonical" href="{{ .Permalink }}" />
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />

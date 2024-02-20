@@ -9,10 +9,10 @@
               Published <time datetime="{{ . }}">{{ . }}</time> on
             {{ end }}
             <a href="{{ (.GetPage "blog").RelPermalink }}">
-              {{ if strings.HasSuffix .Site.Author.name "s" }}
-                {{ .Site.Author.name }}'
+              {{ if strings.HasSuffix .Site.Params.Author.name "s" }}
+                {{ .Site.Params.Author.name }}'
               {{ else }}
-                {{ .Site.Author.name }}'s
+                {{ .Site.Params.Author.name }}'s
               {{ end }}
               blog
             </a>
