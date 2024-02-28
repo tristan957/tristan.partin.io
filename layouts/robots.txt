@@ -3,6 +3,7 @@ Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
 
 User-agent: *
 Allow: /
+Disallow: /gpg.txt
 
 {{- else -}}
 
