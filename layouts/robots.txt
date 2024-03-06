@@ -1,13 +1,7 @@
 {{- if ne (path.Clean .Site.BaseURL) "tristan957.srht.site" -}}
-Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
+  Sitemap: {{ path.Join .Site.BaseURL "sitemap.xml" }}
+{{- end }}
 
 User-agent: *
 Allow: /
 Disallow: /gpg.txt
-
-{{- else -}}
-
-User-agent: *
-Disallow: /
-
-{{- end }}
