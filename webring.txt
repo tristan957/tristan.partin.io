@@ -22,3 +22,4 @@ https://feaneron.com/feed/
 https://rhaas.blogspot.com/feeds/posts/default?alt=rss
 https://mitchellh.com/feed.xml
 https://www.fastmail.com/blog/feed/
+https://blogs.gnome.org/chergert/feed/
