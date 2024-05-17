@@ -9,7 +9,7 @@ tags:
 
 I moved from [Proton](https://proton.me) to [Fastmail](https://fastmail.com)!
 
-<!-- more -->
+<!--more-->
 
 My email history began with an `swbell.net` account, created by my dad. It was
 and probably still is managed by Yahoo, but whether or not I still have access
