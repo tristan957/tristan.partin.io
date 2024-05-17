@@ -10,7 +10,7 @@
   --content-metadata-color: #484848;
   --box-shadow-container-color: #cccccc;
   --raised-backgroud-color: white;
-  --blockquote-background-color: #e5e5e5;
+  --aside-blockquote-background-color: #e5e5e5;
   --filter: brightness(25%);
 
   /* Accessibility for code blocks */
@@ -26,7 +26,7 @@
     --content-metadata-color: #d4d4d4;
     --box-shadow-container-color: #222222;
     --raised-backgroud-color: #393939;
-    --blockquote-background-color: #1b1b1b;
+    --aside-blockquote-background-color: #1b1b1b;
     --filter: brightness(175%);
 
     /* Accessibility for code blocks */
@@ -49,6 +49,15 @@ address {
   font-style: unset;
 }
 
+aside {
+  border-left: 4px solid var(--secondary-accent-color);
+  border-radius: var(--border-radius);
+  background-color: var(--aside-blockquote-background-color);
+  margin: auto 2rem;
+  padding: 0.75rem;
+  font-style: italic;
+}
+
 body {
   margin: 0px;
   width: 100%;
@@ -60,7 +69,7 @@ blockquote {
   margin-left: 2rem;
   border-left: 4px solid var(--secondary-accent-color);
   border-radius: var(--border-radius);
-  background-color: var(--blockquote-background-color);
+  background-color: var(--aside-blockquote-background-color);
 }
 
 blockquote > p {
