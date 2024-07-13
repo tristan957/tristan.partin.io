@@ -93,6 +93,7 @@ greatest part of moving to Fastmail.
 
 {{< aside >}}
 
+<!-- markdownlint-disable-next-line MD034 -->
 If you're on the PostgreSQL mailing lists, you'll see me as tristan@partin.io in
 the future.
 
