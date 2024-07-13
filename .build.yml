@@ -41,7 +41,7 @@ tasks:
   - build: |
       cd tristan.partin.io
       ./scripts/openring/generate.sh
-      hugo --baseURL "$site"
+      hugo --baseURL "https://$site"
   - package: |
       cd tristan.partin.io
       tar -C public -cvz . > site.tar.gz
