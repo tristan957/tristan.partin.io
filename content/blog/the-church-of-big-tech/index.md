@@ -162,8 +162,11 @@ bring what we've built crumbling to the ground.
 <!-- markdownlint-disable MD034 -->
 
 [^1]: https://en.wikipedia.org/wiki/IBM_and_the_Holocaust
+
 [^2]: https://www.macrumors.com/2019/08/07/apple-response-to-right-to-repair/
+
 [^3]: https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
+
 [^4]:
     https://www.cnbc.com/2019/09/24/facebook-bought-instagram-because-it-was-scared-of-twitter-and-google.html
 

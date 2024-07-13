@@ -93,9 +93,13 @@ greatest part of moving to Fastmail.
 
 {{< aside >}}
 
+<!-- prettier-ignore-start -->
+
 <!-- markdownlint-disable-next-line MD034 -->
 If you're on the PostgreSQL mailing lists, you'll see me as tristan@partin.io in
 the future.
+
+<!-- prettier-ignore-end -->
 
 {{< /aside >}}
 
@@ -107,7 +111,9 @@ Here's to the continued success of both Proton and Fastmail, as well as the
 continued development of aerc and JMAP[^3]!
 
 [^1]: Eventually JMAP will get support for contacts and calendars too.
+
 [^2]: I must admit these guys had a huge effect on me switching to Fastmail.
+
 [^3]:
     Also, shoutout to the people that make great apps to consume these
     standardized protocols.

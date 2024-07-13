@@ -10,9 +10,9 @@ series:
 
 [`libmerr`](https://github.com/tristan957/libmerr) is an error tracking static
 library for C99+. During this [involuntary
-vacation]({{< relref "blog/i-got-laid-off/index.md">}}), I have spent some time
-taking code out of the
-[Heterogeneous-Memory Storage Engine](https://github.com/hse-project/hse) (HSE).
+vacation]({{< relref "blog/i-got-laid-off/index.md">}}), I have spent some time taking
+code out of the [Heterogeneous-Memory Storage Engine](https://github.com/hse-project/hse)
+(HSE).
 
 <!--more-->
 

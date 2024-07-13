@@ -118,6 +118,9 @@ charging me \$50, plus the \$50 dollar charge to transfer the domain. Overall a
 little bit of cost savings without the stress of managing my own web server.
 
 [^1]: He is already on his way to making a new and improved site :).
+
 [^2]: I haven't gotten to any other sections yet.
+
 [^3]: Procrastination is my strong suit.
+
 [^4]: Your mileage may vary.

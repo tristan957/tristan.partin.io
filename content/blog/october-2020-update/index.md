@@ -85,4 +85,5 @@ While my friends were in town, "someone" broke my glovebox, so I will be working
 to fix that next month hopefully. Gonna be awkward if I get pulled over...
 
 [^1]: Casio DBC32-1A
+
 [^2]: Image is definitely not me
