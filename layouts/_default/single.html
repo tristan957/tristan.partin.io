@@ -1,51 +1,50 @@
 {{ define "main" }}
-  <section id="single-container">
-    <article class="box-shadow-container">
-      <header>
-        <h1 id="content-title">{{ .Title }}</h1>
-        <div class="content-metadata">
-          <div>
-            {{ with .Date.Format "2006-01-02" }}
-              Published <time datetime="{{ . }}">{{ . }}</time> on
+  <article class="box-shadow-container">
+    <header id="article-header">
+      <h1 id="content-title">{{ .Title }}</h1>
+      <div class="content-metadata">
+        <div>
+          {{ with .Date.Format "2006-01-02" }}
+            Published <time datetime="{{ . }}">{{ . }}</time> on
+          {{ end }}
+          <a href="{{ (.GetPage "blog").RelPermalink }}">
+            {{ if strings.HasSuffix .Site.Params.Author.name "s" }}
+              {{ .Site.Params.Author.name }}'
+            {{ else }}
+              {{ .Site.Params.Author.name }}'s
             {{ end }}
-            <a href="{{ (.GetPage "blog").RelPermalink }}">
-              {{ if strings.HasSuffix .Site.Params.Author.name "s" }}
-                {{ .Site.Params.Author.name }}'
-              {{ else }}
-                {{ .Site.Params.Author.name }}'s
-              {{ end }}
-              blog
-            </a>
-            —
-            <a href="{{ .Permalink }}">Permalink</a>
-            <br />
-            {{ with .Lastmod.Format "2006-01-02T15:04:05-0700" }}
-              Last modified at <time datetime="{{ . }}">{{ . }}</time>
-            {{ end }}
-          </div>
-          {{ partial "taxonomies.html" . }}
-          {{ if index .Params "toc" | default true }}
-            <details>
-              <summary>Table of Contents</summary>
-              {{ .TableOfContents }}
-            </details>
+            blog
+          </a>
+          —
+          <a href="{{ .Permalink }}">Permalink</a>
+          <br />
+          {{ with .Lastmod.Format "2006-01-02T15:04:05-0700" }}
+            Last modified at <time datetime="{{ . }}">{{ . }}</time>
           {{ end }}
         </div>
-      </header>
-      <div id="content">
-        {{ .Content }}
+        {{ partial "taxonomies.html" . }}
+        {{ if index .Params "toc" | default true }}
+          <details>
+            <summary>Table of Contents</summary>
+            {{ .TableOfContents }}
+          </details>
+        {{ end }}
       </div>
-    </article>
+    </header>
+    <div id="article-content">
+      {{ .Content }}
+    </div>
     {{ with .Site.Params.mailingList }}
-      <section class="box-shadow-container">
-        Have a comment or question on one of my posts? Start a discussion in my
+      <hr />
+      <footer id="article-footer">
+        Have a comment or question on this post? Start a discussion in my
         <a class="consistent-link" href="{{ .archiveURL }}" rel="noopener">
         public inbox</a> by sending an email to
         <a class="consistent-link" href="mailto:{{ .address }}?subject={{ printf "Re: %s" $.Title | urlize }}">
         {{ .address }}</a>. If you are unfamiliar with mailing lists, start with reading about
         <a class="consistent-link" href="https://man.sr.ht/lists.sr.ht/etiquette.md" rel="noopener">mailing list etiquette</a>.
         Otherwise just shoot me an email to my address which is linked in the sidebar.
-      </section>
+      </footer>
     {{ end }}
-  </section>
+  </article>
 {{ end }}

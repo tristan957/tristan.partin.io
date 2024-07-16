@@ -49,6 +49,10 @@ address {
   font-style: unset;
 }
 
+article > *:last-child {
+  margin: 0rem;
+}
+
 aside {
   border-left: 4px solid var(--secondary-accent-color);
   border-radius: var(--border-radius);
@@ -150,6 +154,15 @@ figure > picture > img {
 
 .hidden {
   height: 0;
+}
+
+/*
+ * Article
+ */
+
+#article-footer {
+  margin: 0rem;
+  margin-top: 1rem;
 }
 
 /*
@@ -452,14 +465,6 @@ ul.contact-list > li:last-child {
   margin-bottom: 0;
 }
 
-#single-container > * {
-  margin-bottom: 1rem;
-}
-
-#single-container > *:last-child {
-  margin-bottom: 0;
-}
-
 /*
  * Footnotes
  */
@@ -474,6 +479,10 @@ ul.contact-list > li:last-child {
 
 .footnotes p {
   margin: 1rem;
+}
+
+.footnotes > ol > li:first-child > p {
+  margin-top: 0;
 }
 
 .footnotes > ol > li:last-child > p {
@@ -512,10 +521,6 @@ a.footnote-ref {
 .content-metadata,
 .content-metadata * {
   color: var(--content-metadata-color);
-}
-
-#content > *:last-child {
-  margin-bottom: 0;
 }
 
 .box-shadow-container {
@@ -623,10 +628,6 @@ a.footnote-ref {
 
   #content-container > *:last-child {
     margin-bottom: 0rem;
-  }
-
-  #single-container > * {
-    margin-bottom: 1rem;
   }
 
   #main {

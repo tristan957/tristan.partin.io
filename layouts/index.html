@@ -6,17 +6,15 @@
 	<div id="page-container">
 		<div id="content-container">
 			<main id="main">
-				<section>
-					{{ partial "page-title.html" . }}
-					<p id="content-about" class="font-weight-normal">
-							Welcome to my site. Here are the things I have recently posted.
-					</p>
-					<ul class="undecorated-list content-list">
-						{{ range first 10 (where .Site.RegularPages "Params.hidden" "!=" true) }}
-							{{ partial "summary.html" . }}
-						{{ end }}
-					</ul>
-				</section>
+				{{ partial "page-title.html" . }}
+				<p id="content-about" class="font-weight-normal">
+						Welcome to my site. Here are the things I have recently posted.
+				</p>
+				<ul class="undecorated-list content-list">
+					{{ range first 10 (where .Site.RegularPages "Params.hidden" "!=" true) }}
+						{{ partial "summary.html" . }}
+					{{ end }}
+				</ul>
 				{{ if .Site.Params.webring }}
 					{{ partial "webring-out.html" }}
 				{{ end }}

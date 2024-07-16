@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<section>
+	<article>
 		{{ partial "page-title.html" . }}
 		{{ .Content }}
 		<ul class="undecorated-list">
@@ -7,5 +7,5 @@
 				<li><a class="consistent-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 			{{ end }}
 		</ul>
-	</section>
+	</article>
 {{ end }}
