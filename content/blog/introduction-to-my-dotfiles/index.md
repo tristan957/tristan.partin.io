@@ -7,7 +7,7 @@ series: dotfiles
 Over time, I've accrued a fair amount of dotfiles. I thought I would share an
 overview of them through a series of blog posts, starting now!
 
-<!-- more -->
+<!--more-->
 
 ## Background
 
