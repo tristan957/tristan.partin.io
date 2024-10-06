@@ -28,14 +28,16 @@ disableHugoGeneratorInject = false
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
       wrapStandAloneImageWithinParagraph = false
       [markup.goldmark.parser.attribute]
         block = true
+        title = true
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
     guessSyntax = false
-    hl_Lines = ""
     lineNoStart = 1
     lineNos = true
     lineNumbersInTable = true
