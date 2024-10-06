@@ -28,16 +28,12 @@
     --raised-backgroud-color: #393939;
     --aside-blockquote-background-color: #1b1b1b;
     --filter: brightness(175%);
-
-    /* Accessibility for code blocks */
-    --chroma-line-no-color: #9f9f9f;
-    --chroma-c1-color: #8e8e8e;
   }
 }
 
 * {
-  font-family: sans-serif, Arial, Helvetica;
   color: var(--color);
+  font-family: sans-serif, Arial, Helvetica;
 }
 
 ::selection {
