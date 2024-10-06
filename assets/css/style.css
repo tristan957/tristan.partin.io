@@ -12,10 +12,6 @@
   --raised-backgroud-color: white;
   --aside-blockquote-background-color: #e5e5e5;
   --filter: brightness(25%);
-
-  /* Accessibility for code blocks */
-  --chroma-line-no-color: #767676;
-  --chroma-c1-color: #408080; /* Did not require overriding */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -164,14 +160,6 @@ figure > picture > img {
 /*
  * Code
  */
-
-.chroma .lnt {
-  color: var(--chroma-line-no-color);
-}
-
-.chroma .c1 {
-  color: var(--chroma-c1-color);
-}
 
 .monospace {
   font-family: "Courier New", Courier, monospace;
