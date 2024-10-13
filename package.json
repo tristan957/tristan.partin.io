@@ -7,7 +7,7 @@
     "prettier:format": "prettier --config .prettierrc.yml --write '**/*.{md,css,json}' !.vscode !hugo !openring !assets/css/syntax-*.css"
   },
   "devDependencies": {
-    "markdownlint-cli2": "^0.9.2",
+    "markdownlint-cli2": "^0.14.0",
     "prettier": "^3.0.0"
   }
 }
