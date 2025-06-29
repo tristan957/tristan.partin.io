@@ -8,6 +8,7 @@ packages:
   - go
   - hugo
   - hut
+  - openring
   - reuse
   - shellcheck
   - shfmt
@@ -35,9 +36,6 @@ tasks:
   - prettier: |
       cd tristan.partin.io
       yarn run prettier:check
-  - openring: |
-      cd tristan.partin.io
-      ./scripts/openring/build.sh
   - build: |
       cd tristan.partin.io
       ./scripts/openring/generate.sh
