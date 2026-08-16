@@ -12,7 +12,7 @@ sources:
 tasks:
   - check: |
       cd tristan.partin.io
-      nix flake check
+      nix flake check --print-build-logs
   - build: |
       cd tristan.partin.io
       nix develop --command ./scripts/openring/generate.sh
