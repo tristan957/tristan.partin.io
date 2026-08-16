@@ -3,14 +3,18 @@
 # SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 
 baseURL = "https://tristan.partin.io"
-languageCode = "en-US"
-defaultContentLanguage = "en"
+defaultContentLanguage = "en-US"
 title = "Tristan Partin"
 static = ["static"]
 enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 disableHugoGeneratorInject = false
+
+[languages]
+  [languages.en-US]
+    direction = "ltr"
+    tag = "en-US"
 
 [minify]
   minifyOutput = true
