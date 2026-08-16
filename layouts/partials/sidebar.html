@@ -1,4 +1,4 @@
-<footer id="sidebar" class="box-shadow-container">
+<aside id="sidebar" class="box-shadow-container">
 	{{ $profile := resources.Get "images/profile.webp" | fingerprint }}
 	<!--
 		Don't lazy load on desktop. Lighthouse reports this as an issue because
@@ -62,16 +62,16 @@
 		<div class="sidebar-section">
 			<p class="sidebar-paragraph small-text">
 				The content on this site is
-				<a class="consistent-link" href="{{ .content.url }}"rel="noopener">{{ .content.spdx }}</a>.
+				<a class="consistent-link" href="{{ .content.url }}" rel="noopener">{{ .content.spdx }}</a>.
 				The code for this site is
-				<a class="consistent-link" href="{{ .code.url }}"rel="noopener">{{ .code.spdx }}</a>.
+				<a class="consistent-link" href="{{ .code.url }}" rel="noopener">{{ .code.spdx }}</a>.
 			</p>
 		</div>
 	{{ end }}
 	{{ with .Site.Params.repository }}
 		<p class="small-text">
 			This code and content for this site can be found on
-			<a class="consistent-link" href="{{ .url }}"rel="noopener">{{ .forge }}</a>.
+			<a class="consistent-link" href="{{ .url }}" rel="noopener">{{ .forge }}</a>.
 		</p>
 	{{ end }}
 	<p class="small-text">
@@ -84,7 +84,7 @@
 	{{ if and (eq (getenv "VERCEL") "") .GitInfo }}
 		<hr />
 <pre class="monospace small-text" aria-label="Git Info">
-Commit:	<a class="consistent-link" href="{{ printf .Site.Params.repository.commitURLPattern .GitInfo.Hash }}"rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
+Commit:	<a class="consistent-link" href="{{ printf .Site.Params.repository.commitURLPattern .GitInfo.Hash }}" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
 </pre>
 	{{ end }}
-</footer>
+</aside>

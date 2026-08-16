@@ -4,7 +4,7 @@
 	{{ else }}
 		<h1 id="title">{{ .Title }}</h1>
 	{{ end }}
-	<span id="page-links">
+	<div id="page-links">
 		{{ if ne .Layout "archive" }}
 			{{ with .GetPage (printf "archives/%s" .Type) }}
 				<a class="consistent-link monospace" href="{{ .RelPermalink }}">archive</a>
@@ -13,5 +13,5 @@
 		{{ with .OutputFormats.Get "RSS" }}
 			<a class="consistent-link monospace" href="{{ .RelPermalink }}">rss</a>
 		{{ end }}
-	</span>
+	</div>
 </header>
