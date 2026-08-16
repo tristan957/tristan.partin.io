@@ -29,9 +29,10 @@ keep a mirror to this day.
 
 ## Structure
 
-I use [GNU Stow] to manage my dotfiles. It is packaged on the systems I care about,
-semi-maintained, not some cobbled together symlink kludge of my own doing. I learned
-about stow early on in my dotfiles history, and my original commit made use of it.
+I use [GNU Stow] to manage my dotfiles. It is packaged on the systems I care
+about, semi-maintained, not some cobbled together symlink kludge of my own
+doing. I learned about stow early on in my dotfiles history, and my original
+commit made use of it.
 
 [GNU Stow]: https://www.gnu.org/software/stow/stow.html
 
