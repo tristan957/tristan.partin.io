@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: CC0-1.0
-#
-# SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
-
-[codespell]
-builtin = clear,en-GB_to_en-US,rare
-ignore-words = ./.codespellignore
-skip = ./.git/**,./hugo/**,./node_modules/**,./openring/**,./public/**,*.css,./codespellignore,./layouts/partials/webring-out.html
