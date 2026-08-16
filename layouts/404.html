@@ -1,8 +1,20 @@
-{{ define "main"}}
-	<div>
-		<h1 id="content-title">Whoops!</h1>
-		<p>
-			Sorry! This page does not exist.
-		</p>
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+{{ partial "head.html" . }}
+<body>
+	{{ partial "nav.html" . }}
+	<div id="page-container">
+		<div id="content-container">
+			<main id="main">
+				<div>
+					<h1 id="content-title">Whoops!</h1>
+					<p>
+						Sorry! This page does not exist.
+					</p>
+				</div>
+			</main>
+			{{ partial "sidebar.html" . }}
+		</div>
 	</div>
-{{ end }}
+</body>
+</html>
