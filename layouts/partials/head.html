@@ -2,7 +2,7 @@
 	{{ if .IsHome }}
 		<title>{{ .Title }}</title>
 	{{ else }}
-		<title>{{ .Title }} - {{ .Site.Params.Author.name }}</title>
+		<title>{{ .Title }} - {{ .Site.Params.author.name }}</title>
 	{{ end }}
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,13 +11,13 @@
 	{{ if .IsHome }}
 		<meta name="title" content="{{ .Title }}">
 	{{ else }}
-		<meta name="title" content="{{ .Title }} - {{ .Site.Params.Author.name }}">
+		<meta name="title" content="{{ .Title }} - {{ .Site.Params.author.name }}">
 	{{ end }}
 	<meta
 		name="description"
 		content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}"
 	>
-	<meta name="author" content="{{ .Site.Params.Author.name }}">
+	<meta name="author" content="{{ .Site.Params.author.name }}">
 	<meta name="rating" content="general">
 
 	<meta property="og:site_name" content="{{ .Site.Title }}">
@@ -27,12 +27,12 @@
 	{{ if .IsHome }}
 		<meta property="og:title" content="{{ .Title }}">
 	{{ else }}
-		<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Author.name }}">
+		<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.author.name }}">
 	{{ end }}
 
 	{{ if eq .Type "blog" }}
 		<meta property="og:type" content="article">
-		<meta property="og:article:author" content="{{ .Site.Params.Author.name }}">
+		<meta property="og:article:author" content="{{ .Site.Params.author.name }}">
 		<meta property="og:article:published_time" content="{{ .Date }}">
 		<meta property="og:article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-0700" }}">
 		{{ range .Params.tags }}
