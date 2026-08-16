@@ -1,7 +1,3 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
-#
-# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
-
 version = 1
 SPDX-HomePage = "https://github.com/tristan957/tristan.partin.io"
 SPDX-PackageName = "tristan.partin.io"
@@ -11,6 +7,7 @@ path = [
     "**.html",
     "**.xml",
     "assets/**",
+    "flake.lock",
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "Tristan Partin <tristan@partin.io>"
@@ -20,15 +17,12 @@ SPDX-License-Identifier = "AGPL-3.0-or-later"
 path = [
     "**.jpg",
     "**.webp",
-    ".vscode/**",
     "archetypes/**",
     "layouts/robots.txt",
     "layouts/sitemap.xml",
-    "package.json",
     "static/**",
     "vercel.json",
     "webring.txt",
-    "yarn.lock",
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "Tristan Partin <tristan@partin.io>"

@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 
 /.hugo_build.lock
-/bin/
+/.pre-commit-config.yaml
 # /layouts/partials/webring-out.html
 /node_modules/
 /public/
