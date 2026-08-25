@@ -1,20 +1,48 @@
+{{/*
+	Responsive image rendering using a width-descriptor srcset (similar to
+	Next.js' image optimization approach) rather than <picture> sources tied
+	to hand-picked media-query breakpoints. The browser picks the best
+	candidate from the srcset based on the "sizes" hint and the viewport's
+	actual layout width/DPR, instead of us guessing exact breakpoints.
+*/}}
 {{ $resource := .Page.Resources.GetMatch .Destination }}
 {{ if $resource }}
-<figure>
-	<picture>
-		{{ if gt $resource.Width 450 }}
-			{{ $responsiveImage := $resource.Fit "450x450" }}
-			<source srcset="{{ $responsiveImage.RelPermalink }}" media="(max-width: 650px)" sizes="{{ $responsiveImage.Height }}*{{ $responsiveImage.Width }}">
+	{{/* Candidate widths, modeled after Next.js' default deviceSizes. */}}
+	{{ $widths := slice 640 750 828 1080 1200 1920 }}
+	{{ $candidates := slice }}
+	{{ range $w := $widths }}
+		{{ if le $w $resource.Width }}
+			{{ $candidates = $candidates | append $w }}
 		{{ end }}
-		{{ range $w := seq 850 200 (cond (lt $resource.Width 800) (div (add $resource.Width 34) 0.375) 2250) }}
-			{{ $width := int (math.Round (sub (mul 0.375 $w) 34)) }}
-			{{ $responsiveImage := $resource.Fit (printf "%dx%d" $width $width) }}
-			<source srcset="{{ $responsiveImage.RelPermalink }}" media="(max-width: {{ $w }}px)" sizes="{{ $responsiveImage.Height }}*{{ $responsiveImage.Width }}">
-		{{ end }}
-		<img loading="lazy" src="{{ $resource.RelPermalink | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
-	</picture>
-	{{ if .Title }}<figcaption {{ if eq .Title .Text }}aria-hidden="true"{{ end }}><i>{{ .Title }}</i></figcaption>{{ end }}
-</figure>
+	{{ end }}
+	{{/* Small source images: fall back to the image's native width. */}}
+	{{ if eq (len $candidates) 0 }}
+		{{ $candidates = slice $resource.Width }}
+	{{ end }}
+
+	{{ $srcsetParts := slice }}
+	{{ range $w := $candidates }}
+		{{ $resized := $resource.Resize (printf "%dx" $w) }}
+		{{ $srcsetParts = $srcsetParts | append (printf "%s %dw" $resized.RelPermalink $w) }}
+	{{ end }}
+
+	{{/* Use the largest candidate as the non-srcset-supporting fallback. */}}
+	{{ $fallbackWidth := index $candidates (sub (len $candidates) 1) }}
+	{{ $fallback := $resource.Resize (printf "%dx" $fallbackWidth) }}
+
+	<figure>
+		<img
+			loading="lazy"
+			src="{{ $fallback.RelPermalink | safeURL }}"
+			srcset="{{ delimit $srcsetParts ", " }}"
+			sizes="(max-width: 650px) 100vw, 50vw"
+			width="{{ $fallback.Width }}"
+			height="{{ $fallback.Height }}"
+			alt="{{ .Text }}"
+			{{ with .Title }}title="{{ . }}"{{ end }}
+		/>
+		{{ if .Title }}<figcaption {{ if eq .Title .Text }}aria-hidden="true"{{ end }}><i>{{ .Title }}</i></figcaption>{{ end }}
+	</figure>
 {{ else }}
 <figure>
 	<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />
