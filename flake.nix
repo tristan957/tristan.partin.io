@@ -53,11 +53,6 @@
           };
 
           settings = {
-            excludes = [
-              "assets/css/syntax-dark.css"
-              "assets/css/syntax-light.css"
-            ];
-
             formatter.shfmt.options = [
               "--case-indent"
               "--language-dialect"

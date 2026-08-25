@@ -1,3 +1,6 @@
+@import "css/syntax-light.css" (prefers-color-scheme: light);
+@import "css/syntax-dark.css" (prefers-color-scheme: dark);
+
 :root {
   --border-radius: 3px;
   --primary-accent-color: #f48024;
