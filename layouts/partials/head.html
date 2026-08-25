@@ -5,12 +5,29 @@
 		<title>{{ .Title }} - {{ .Site.Params.author.name }}</title>
 	{{ end }}
 
+	{{/*
+		Pages without their own Summary (taxonomy/term lists, section
+		lists, etc.) would otherwise all share the exact same
+		site-wide defaultDescription, which reads to search engines as
+		duplicate/thin content across many URLs.
+	*/}}
+	{{ $description := .Site.Params.defaultDescription }}
+	{{ if .Summary }}
+		{{ $description = .Summary | plainify }}
+	{{ else if eq .Kind "term" }}
+		{{ $description = printf "Posts related to %s on %s's blog." .Title .Site.Params.author.name }}
+	{{ else if eq .Kind "taxonomy" }}
+		{{ $description = printf "Browse all %s on %s's blog." (.Title | lower) .Site.Params.author.name }}
+	{{ else if .IsSection }}
+		{{ $description = printf "%s on %s's site." .Title .Site.Params.author.name }}
+	{{ end }}
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{{ hugo.Generator }}
 	<meta
 		name="description"
-		content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}"
+		content="{{ $description }}"
 	>
 	<meta name="author" content="{{ .Site.Params.author.name }}">
 	<meta name="rating" content="general">
@@ -41,7 +58,7 @@
 
 	<meta
 		property="og:description"
-		content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}"
+		content="{{ $description }}"
 	>
 
 	{{ with .Site.Params.siteImage }}
@@ -68,7 +85,7 @@
 			"@context" "https://schema.org"
 			"@type" "BlogPosting"
 			"headline" .Title
-			"description" (cond (ne .Summary "") (.Summary | plainify) .Site.Params.defaultDescription)
+			"description" $description
 			"datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
 			"dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
 			"author" $author
