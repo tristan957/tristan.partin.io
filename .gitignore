@@ -1,11 +1,15 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 
+# devenv
+/.devenv/
+/devenv.local.nix
+/devenv.local.yaml
+
+# Hugo
 /.hugo_build.lock
-/.pre-commit-config.yaml
-# /layouts/partials/webring-out.html
-/node_modules/
 /public/
 /resources/_gen
 
-!/.vscode/
+# pre-commit
+/.pre-commit-config.yaml

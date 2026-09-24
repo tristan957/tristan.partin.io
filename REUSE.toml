@@ -7,7 +7,7 @@ path = [
     "**.html",
     "**.xml",
     "assets/**",
-    "flake.lock",
+    "devenv.lock",
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "Tristan Partin <tristan@partin.io>"

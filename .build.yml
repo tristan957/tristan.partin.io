@@ -6,25 +6,26 @@ image: nixos/unstable
 oauth: pages.sr.ht/PAGES:RW
 environment:
   NIX_CONFIG: "experimental-features = nix-command flakes"
-  site: tristan957.srht.site
+  DOMAIN: tristan957.srht.site
+packages:
+  - nixpkgs#devenv
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
   - check: |
       cd tristan.partin.io
-      nix flake check --print-build-logs
+      devenv test
   - build: |
       cd tristan.partin.io
-      nix develop --command ./scripts/openring/generate.sh
-      nix develop --command hugo --baseURL "https://$site"
+      devenv tasks run openring:generate
+      devenv build outputs.site
   - package: |
       branch="$(basename "$GIT_REF")"
       if [ "$branch" != 'master' ]; then
         complete-build
       fi
 
-      cd tristan.partin.io
-      tar -C public -cvz . > site.tar.gz
+      devenv build outputs.archive
   - upload: |
       cd tristan.partin.io
-      nix develop --command hut pages publish -d "$site" site.tar.gz
+      devenv tasks run site:publish --input domain="$DOMAIN"
