@@ -17,34 +17,29 @@ This is code used to create [tristan.partin.io](https://tristan.partin.io).
 
 ## Comments
 
-Comments can be emailed to my
-[public inbox](mailto:tristan957/public-inbox@lists.sr.ht).
+Comments can be emailed to my [public inbox].
+
+[public inbox]: mailto:tristan957/public-inbox@lists.sr.ht
 
 ## Theme
 
 The site also includes dark mode support which will be handled by your system
 preferences, specifically `prefers-color-scheme`.
 
-It is inspired by an older iteration of
-[drewdevault.com](https://drewdevault.com).
+It is inspired by an older iteration of [drewdevault.com].
 
-## Dependencies
-
-- [`hugo`](https://gohugo.io)
-- [`openring`](https://git.sr.ht/~sircmpwn/openring)
-- [`prettier`](https://prettier.io/)
+[drewdevault.com]: https://drewdevault.com
 
 ## Contributing
 
 - Clone the repo
-- Run `git submodule update --init`
-- Run the `bootstrap.sh` script from the project root
-- Run the `scripts/openring/build.sh` script from the project root
-- Run `hugo -D server` to get live reloading in a development environment
+- Run `devenv shell` to get `hugo` and the other project tools
+- Run `devenv up` to start the Hugo development server with live reloading
+- Make any changes
 
 ## Miscellaneous
 
-### Marking a blog as unlisted
+### Marking a Blog as Unlisted
 
 Add the following to the front-matter
 
