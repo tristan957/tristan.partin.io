@@ -21,7 +21,10 @@ disableHugoGeneratorInject = false
   minifyOutput = true
 
 [imaging]
-  quality = 100
+  [imaging.jpeg]
+    quality = 100
+  [imaging.webp]
+    quality = 100
 
 [permalinks]
   blog = "/blog/:year/:month/:day/:slug/"
