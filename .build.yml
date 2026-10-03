@@ -20,6 +20,8 @@ tasks:
       devenv tasks run openring:generate
       devenv build outputs.site
   - package: |
+      cd tristan.partin.io
+
       branch="$(basename "$GIT_REF")"
       if [ "$branch" != 'master' ]; then
         complete-build
