@@ -8,7 +8,7 @@ environment:
   NIX_CONFIG: "experimental-features = nix-command flakes"
   DOMAIN: tristan957.srht.site
 packages:
-  - nixpkgs#devenv
+  - nixos.devenv
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
