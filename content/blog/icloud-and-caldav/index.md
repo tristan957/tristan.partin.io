@@ -2,6 +2,8 @@
 title: "iCloud and CalDAV"
 date: 2026-10-03T10:29:36-05:00
 toc: false
+tags:
+  - apple
 ---
 
 Recently I've become quite a calendar afficianado. However, I ran into a problem
