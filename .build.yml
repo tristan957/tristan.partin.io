@@ -9,6 +9,7 @@ environment:
   DOMAIN: tristan957.srht.site
 packages:
   - nixos.devenv
+  - nixos.jq
 sources:
   - https://git.sr.ht/~tristan957/tristan.partin.io
 tasks:
