@@ -59,9 +59,9 @@
       exec =
         # bash
         ''
-          hut pages publish
-            --domain "$(echo "$DEVENV_TASK_INPUT" | jq --raw-output '.domain')"
-          ${config.outputs.archive}
+          hut pages publish \
+            --domain "$(echo "$DEVENV_TASK_INPUT" | jq --raw-output '.domain')" \
+            ${config.outputs.archive}
         '';
       input = {
         domain = "tristan.partin.io";
