@@ -77,14 +77,10 @@
 	<p class="small-text">
 		This site uses absolutely no analytics or tracking mechanisms.
 	</p>
-	<!--
-		Vercel seems to clone with some depth that doesn't really allow this to work
-		unfortunately.
-	-->
-	{{ if and (eq (getenv "VERCEL") "") .GitInfo }}
+	{{ if .GitInfo }}
 		<hr />
-<pre class="monospace small-text" aria-label="Git Info">
+		<pre class="monospace small-text" aria-label="Git Info">
 Commit:	<a class="consistent-link" href="{{ printf .Site.Params.repository.commitURLPattern .GitInfo.Hash }}" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
-</pre>
+		</pre>
 	{{ end }}
 </aside>
