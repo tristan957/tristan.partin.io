@@ -6,7 +6,12 @@
   lib,
   config,
   ...
-}: {
+}: let
+  # Newer versions only run a prebuilt native binary on Linux, which can't
+  # execute on NixOS without nix-ld. This is the last release that is plain
+  # JavaScript.
+  vercelVersion = "58.11.0";
+in {
   imports = [./devenv-hugo.nix];
 
   treefmt = {
@@ -67,6 +72,35 @@
         domain = "tristan.partin.io";
       };
     };
+
+    "site:deploy" = {
+      exec =
+        # bash
+        ''
+          set -eu
+
+          : "''${VERCEL_TOKEN:?}" "''${VERCEL_ORG_ID:?}" "''${VERCEL_PROJECT_ID:?}"
+
+          target="$(echo "$DEVENV_TASK_INPUT" | jq --raw-output '.target')"
+          prod=
+          if [ "$target" = production ]; then
+              prod=--prod
+          fi
+
+          export SITE_OUTPUT='${config.outputs.site}'
+
+          vercel() {
+              npx --yes 'vercel@${vercelVersion}' --non-interactive "$@"
+          }
+
+          vercel pull --yes --environment="$target"
+          vercel build "$prod"
+          vercel deploy --prebuilt "$prod"
+        '';
+      input = {
+        target = "preview";
+      };
+    };
   };
 
   services.hugo.enable = true;
@@ -119,6 +153,7 @@
     hut
     jq
     nixd
+    nodejs
     openring
     tombi
     vscode-langservers-extracted

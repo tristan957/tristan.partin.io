@@ -1,11 +1,11 @@
 {
-  "framework": "hugo",
+  "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
-  "buildCommand": "hugo --gc --baseURL https://${SITE_URL:-VERCEL_URL}",
+  "buildCommand": "rm -rf public && cp -rL \"$SITE_OUTPUT\" public && chmod -R u+w public",
   "devCommand": "hugo server -D -w -p $PORT",
-  "github": {
-    "autoJobCancelation": true
+  "git": {
+    "deploymentEnabled": false
   },
   "headers": [
     {

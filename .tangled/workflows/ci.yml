@@ -13,8 +13,28 @@ dependencies:
   - devenv
 
 steps:
+  # The spindle clones with depth 1, but enableGitInfo in hugo.toml needs the
+  # full history to compute each page's last modified date and commit
+  - name: unshallow
+    command: |
+      if [ "$(git rev-parse --is-shallow-repository)" = true ]; then
+        git fetch --unshallow
+      fi
+
   - name: check
     command: devenv test
 
   - name: build
-    command: devenv build outputs.site
+    command: |
+      set -e
+      devenv tasks run openring:generate
+      devenv build outputs.site
+
+  - name: deploy
+    command: |
+      set -e
+      if [ "$TANGLED_PIPELINE_KIND" = pull_request ] || [ "$TANGLED_REF_NAME" != master ]; then
+        echo "Not deploying $TANGLED_REF_NAME"
+        exit 0
+      fi
+      devenv tasks run site:deploy --input target=production
