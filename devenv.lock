@@ -130,11 +130,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795496893,
-        "narHash": "sha256-5xv1xwG6yqcltwAKJ/EEG9gwdwSKtIxSx6df9ceVXZU=",
+        "lastModified": 1795499497,
+        "narHash": "sha256-b3ipz+EDboTvyJvHdzoNNhkfJzSpMEUQUtGo1oReotg=",
         "ref": "refs/heads/master",
-        "rev": "618474fed7fe1e9905ed4b8b66d90b2b2df3f260",
-        "revCount": 4,
+        "rev": "a04a24fec47469905cfa1f7c5341ff1b0bfe149b",
+        "revCount": 6,
         "type": "git",
         "url": "https://tangled.org/tristan.partin.io/talks"
       },
