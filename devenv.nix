@@ -17,6 +17,9 @@
   # and <slug>.yml, the last of which is read by the index at /talks
   talks = lib.attrValues (removeAttrs inputs.talks.packages.${pkgs.stdenv.system} ["default"]);
 
+  # Mounting anything into a Hugo component replaces that component's default
+  # mount, so the project's own static and data directories are restated here.
+  # Only each talk's slides are published; its metadata only feeds the index.
   talksConfig = (pkgs.formats.toml {}).generate "talks.toml" {
     module.mounts =
       [
