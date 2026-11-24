@@ -94,8 +94,13 @@ in {
           }
 
           vercel pull --yes --environment="$target"
-          vercel build "$prod"
-          vercel deploy --prebuilt "$prod"
+          vercel build ''${prod:+"$prod"}
+          # The dashboard titles a deployment from these keys, which Vercel's
+          # Git integration normally sets. Without them it shows the ID.
+          vercel deploy --prebuilt ''${prod:+"$prod"} \
+            --meta githubCommitMessage="$(git log -1 --pretty=%s)" \
+            --meta githubCommitSha="$(git rev-parse HEAD)" \
+            --meta githubCommitRef="''${TANGLED_REF_NAME:-$(git rev-parse --abbrev-ref HEAD)}"
         '';
       input = {
         target = "preview";
