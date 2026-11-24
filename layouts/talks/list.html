@@ -1,0 +1,24 @@
+{{ define "main" }}
+	<section>
+		{{ partial "page-title.html" . }}
+		{{ with .Content }}
+			<p id="content-about" class="font-weight-normal">{{ . }}</p>
+		{{ end }}
+		{{ $talks := slice }}
+		{{ range $slug, $talk := hugo.Data.talks }}
+			{{ $talks = $talks | append (dict "slug" $slug "title" $talk.title "abstract" $talk.abstract) }}
+		{{ end }}
+		<ul class="undecorated-list content-list">
+			{{ range sort $talks "title" }}
+				<li class="summary content-item box-shadow-container">
+					<h2 class="summary-title">
+						<a class="font-weight-bold consistent-link" href="{{ printf "/talks/%s.pdf" .slug | relURL }}">{{ .title }}</a>
+					</h2>
+					{{ with .abstract }}
+						<p>{{ . }}</p>
+					{{ end }}
+				</li>
+			{{ end }}
+		</ul>
+	</section>
+{{ end }}

@@ -5,6 +5,9 @@
 			{{ with .Site.GetPage "blog" }}
 				<li><a class="undecorated-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 			{{ end }}
+			{{ with .Site.GetPage "talks" }}
+				<li><a class="undecorated-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+			{{ end }}
 			{{ with .Site.GetPage "archives" }}
 				<li><a class="undecorated-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 			{{ end }}

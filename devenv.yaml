@@ -10,6 +10,15 @@ inputs:
         follows: nixpkgs
   nixpkgs:
     url: github:nixos/nixpkgs/nixpkgs-unstable
+  talks:
+    url: git+https://tangled.org/tristan.partin.io/talks
+    inputs:
+      git-hooks:
+        follows: git-hooks
+      nixpkgs:
+        follows: nixpkgs
+      treefmt-nix:
+        follows: treefmt-nix
   treefmt-nix:
     url: github:numtide/treefmt-nix
     inputs:
