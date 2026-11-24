@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: CC0-1.0
+#
+# SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
+
+when:
+  - event: [push, manual]
+    branch: ["**"]
+
+engine: microvm
+image: nixos
+
+dependencies:
+  - devenv
+
+steps:
+  - name: check
+    command: devenv test
+
+  - name: build
+    command: devenv build outputs.site
