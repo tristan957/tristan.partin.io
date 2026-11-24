@@ -117,6 +117,7 @@
 
   packages = with pkgs; [
     hut
+    jq
     nixd
     openring
     tombi
