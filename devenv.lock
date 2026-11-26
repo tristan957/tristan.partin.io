@@ -94,11 +94,11 @@
     "resume": {
       "flake": false,
       "locked": {
-        "lastModified": 1795657521,
-        "narHash": "sha256-+MFDxPwb4rywv48c3cFLzln6gRaF5BRlNsh89AIsfUM=",
+        "lastModified": 1795664419,
+        "narHash": "sha256-l4xioMzSs9kHBwP/QIwDNpH/pIyox4sLI1U+VmO+mwQ=",
         "ref": "refs/heads/master",
-        "rev": "f748e5391ad7a81d46970b88c6bb21b9f4bcb087",
-        "revCount": 66,
+        "rev": "0bbd758e290f196afca6b716df566839df75346b",
+        "revCount": 72,
         "type": "git",
         "url": "https://tangled.org/tristan.partin.io/resume"
       },
