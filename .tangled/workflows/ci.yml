@@ -21,14 +21,12 @@ steps:
         git fetch --unshallow
       fi
 
+  # devenv test builds outputs.site, so no separate build step is needed
   - name: check
-    command: devenv test
-
-  - name: build
     command: |
       set -e
       devenv tasks run openring:generate
-      devenv build outputs.site
+      devenv test
 
   - name: deploy
     command: |

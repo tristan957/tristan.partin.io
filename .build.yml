@@ -15,11 +15,8 @@ sources:
 tasks:
   - check: |
       cd tristan.partin.io
-      devenv test
-  - build: |
-      cd tristan.partin.io
       devenv tasks run openring:generate
-      devenv build outputs.site
+      devenv test
   - package: |
       cd tristan.partin.io
 
