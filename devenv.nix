@@ -36,6 +36,13 @@
           target = "data";
         }
       ]
+      ++ [
+        {
+          source = "${resume}";
+          target = "static/documents";
+          files = ["/Tristan_Partin_Resume.pdf"];
+        }
+      ]
       ++ lib.concatMap (talk: [
         {
           source = "${talk}";
@@ -52,6 +59,9 @@
   };
 in {
   imports = [./devenv-hugo.nix];
+
+  # Only consume the outputs, not its development environment
+  resume.development.enable = false;
 
   treefmt = {
     enable = true;

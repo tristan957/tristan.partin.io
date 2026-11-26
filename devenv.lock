@@ -91,11 +91,28 @@
         "type": "github"
       }
     },
+    "resume": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1795657521,
+        "narHash": "sha256-+MFDxPwb4rywv48c3cFLzln6gRaF5BRlNsh89AIsfUM=",
+        "ref": "refs/heads/master",
+        "rev": "f748e5391ad7a81d46970b88c6bb21b9f4bcb087",
+        "revCount": 66,
+        "type": "git",
+        "url": "https://tangled.org/tristan.partin.io/resume"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/tristan.partin.io/resume"
+      }
+    },
     "root": {
       "inputs": {
         "devenv": "devenv",
         "git-hooks": "git-hooks",
         "nixpkgs": "nixpkgs",
+        "resume": "resume",
         "talks": "talks",
         "treefmt-nix": "treefmt-nix"
       }

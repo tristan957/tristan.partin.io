@@ -2,6 +2,9 @@
 #
 # SPDX-FileCopyrightText: Tristan Partin <tristan@partin.io>
 
+imports:
+  - resume
+
 inputs:
   git-hooks:
     url: github:cachix/git-hooks.nix
@@ -10,6 +13,9 @@ inputs:
         follows: nixpkgs
   nixpkgs:
     url: github:nixos/nixpkgs/nixpkgs-unstable
+  resume:
+    url: git+https://tangled.org/tristan.partin.io/resume
+    flake: false
   talks:
     url: git+https://tangled.org/tristan.partin.io/talks
     inputs:
