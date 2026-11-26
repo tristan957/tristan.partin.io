@@ -17,10 +17,14 @@
   # and <slug>.yml, the last of which is read by the index at /talks
   talks = lib.attrValues (removeAttrs inputs.talks.packages.${pkgs.stdenv.system} ["default"]);
 
+  resume = pkgs.runCommand "resume" {} ''
+    install -Dm644 ${config.outputs.resume}/resume.pdf $out/Tristan_Partin_Resume.pdf
+  '';
+
   # Mounting anything into a Hugo component replaces that component's default
   # mount, so the project's own static and data directories are restated here.
   # Only each talk's slides are published; its metadata only feeds the index.
-  talksConfig = (pkgs.formats.toml {}).generate "talks.toml" {
+  mountsConfig = (pkgs.formats.toml {}).generate "mounts.toml" {
     module.mounts =
       [
         {
@@ -140,7 +144,7 @@ in {
 
   services.hugo = {
     enable = true;
-    extraArgs = ["--config" "hugo.toml,${talksConfig}"];
+    extraArgs = ["--config" "hugo.toml,${mountsConfig}"];
   };
 
   outputs.site = pkgs.stdenvNoCC.mkDerivation {
@@ -169,7 +173,7 @@ in {
     buildPhase = ''
       runHook preBuild
 
-      hugo --minify --gc --config hugo.toml,${talksConfig}
+      hugo --minify --gc --config hugo.toml,${mountsConfig}
 
       runHook postBuild
     '';
